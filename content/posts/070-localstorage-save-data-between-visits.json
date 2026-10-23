@@ -1,0 +1,12 @@
+{
+  "id": "070",
+  "tag": "browser-apis",
+  "level": "beginner",
+  "title": "localStorage: save data between visits",
+  "why_it_matters": "It is the quickest way to make an app remember things.",
+  "explanation": "localStorage keeps key and value pairs in the browser, with no expiry. Values must be strings, so use JSON.stringify to save objects and JSON.parse to read them back. It is synchronous and small, so keep it for light data.",
+  "code": "localStorage.setItem(\"cart\", JSON.stringify([{ id: 1, qty: 2 }]));\nconst cart = JSON.parse(localStorage.getItem(\"cart\"));\nconsole.log(cart[0].qty);",
+  "language": "js",
+  "try_it": "Save your name, refresh the page, and show it back.",
+  "read_time_sec": 30
+}

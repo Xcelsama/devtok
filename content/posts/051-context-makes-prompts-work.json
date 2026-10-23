@@ -1,0 +1,12 @@
+{
+  "id": "051",
+  "tag": "ai-assisted-dev",
+  "level": "beginner",
+  "title": "Context makes prompts work",
+  "why_it_matters": "Vague questions get vague code.",
+  "explanation": "Include your stack, what you want, what you already tried, and what 'done' looks like. For example: Next.js App Router, Supabase, mobile layout. One clear goal per prompt beats a giant request. The more specific, the less you rewrite.",
+  "code": null,
+  "language": null,
+  "try_it": "Rewrite your last vague prompt with stack, goal and constraints.",
+  "read_time_sec": 25
+}

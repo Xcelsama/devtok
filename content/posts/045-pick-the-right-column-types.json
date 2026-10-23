@@ -1,0 +1,12 @@
+{
+  "id": "045",
+  "tag": "supabase-sql",
+  "level": "beginner",
+  "title": "Pick the right column types",
+  "why_it_matters": "Wrong types cause rounding bugs and messy data later.",
+  "explanation": "Use text for words, integer for whole numbers, boolean for true or false, and timestamptz for date and time. For money, store integer cents instead of decimals. A uuid primary key with a default creates ids for you.",
+  "code": "create table bookings (\n  id uuid primary key default gen_random_uuid(),\n  guest_name text not null,\n  nights integer not null,\n  total_cents integer not null,\n  created_at timestamptz default now()\n);",
+  "language": "sql",
+  "try_it": "Sketch a table for something you build, and choose a type for each column.",
+  "read_time_sec": 35
+}

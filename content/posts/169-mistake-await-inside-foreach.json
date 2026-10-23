@@ -1,0 +1,12 @@
+{
+  "id": "169",
+  "tag": "javascript",
+  "level": "intermediate",
+  "title": "Mistake: await inside forEach",
+  "why_it_matters": "Your code says done while the work is still running.",
+  "explanation": "forEach doesn't wait for async callbacks, so it starts them all and moves on. Use a for...of loop when you need to wait for each item in order. Use Promise.all with map when order doesn't matter.",
+  "code": "const ids = [1, 2, 3];\nconst save = (id) => new Promise((r) => setTimeout(r, 100, id));\nids.forEach(async (id) => { await save(id); });\nconsole.log(\"after forEach: nothing finished yet\");\nfor (const id of ids) await save(id);\nconsole.log(\"after for...of: all finished\");",
+  "language": "js",
+  "try_it": "Run it and notice which message appears first.",
+  "read_time_sec": 30
+}

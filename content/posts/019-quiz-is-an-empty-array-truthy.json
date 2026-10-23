@@ -1,0 +1,12 @@
+{
+  "id": "019",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Quiz: is an empty array truthy?",
+  "why_it_matters": "Truthiness decides every if statement, so it pays to know it cold.",
+  "explanation": "In an if, JavaScript turns values into true or false. The falsy ones are false, 0, empty string, null, undefined and NaN. Everything else is truthy, including empty arrays and empty objects. That surprises people.",
+  "code": "const cart = [];\nif (cart) console.log(\"runs: arrays are truthy\");\nif (cart.length) console.log(\"never runs\");",
+  "language": "js",
+  "try_it": "Quiz: is the string '0' truthy or falsy? Check in the console. (Answer: truthy.)",
+  "read_time_sec": 30
+}

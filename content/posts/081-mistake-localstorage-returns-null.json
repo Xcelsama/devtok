@@ -1,0 +1,12 @@
+{
+  "id": "081",
+  "tag": "browser-apis",
+  "level": "beginner",
+  "title": "Mistake: localStorage returns null",
+  "why_it_matters": "JSON.parse(null) can crash a fresh visitor's first load.",
+  "explanation": "A key that was never saved returns null, and everything is stored as a string. Provide a fallback before parsing. Wrap in try and catch too, because storage can be blocked or the saved text could be corrupted.",
+  "code": "let cart;\ntry {\n  cart = JSON.parse(localStorage.getItem(\"cart\") ?? \"[]\");\n} catch {\n  cart = [];\n}\nconsole.log(cart);",
+  "language": "js",
+  "try_it": "Run it after localStorage.clear() and make sure nothing crashes.",
+  "read_time_sec": 35
+}

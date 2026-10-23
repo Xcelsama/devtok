@@ -1,0 +1,12 @@
+{
+  "id": "002",
+  "tag": "css",
+  "level": "beginner",
+  "title": "Center anything in three lines",
+  "why_it_matters": "Centering is the classic CSS fight, and grid ends it.",
+  "explanation": "Grid has a built-in shortcut. Make the parent a grid, then add place-items: center. The child lands in the middle both ways. The parent needs some height, otherwise there is no spare space to center inside.",
+  "code": ".parent {\n  display: grid;\n  place-items: center;\n  min-height: 300px;\n}",
+  "language": "css",
+  "try_it": "Give a div a border, put a button inside it, and center the button with only these lines.",
+  "read_time_sec": 35
+}

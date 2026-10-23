@@ -1,0 +1,12 @@
+{
+  "id": "090",
+  "tag": "browser-apis",
+  "level": "intermediate",
+  "title": "Myth: localStorage is safe for tokens",
+  "why_it_matters": "A stolen login token means a stolen account.",
+  "explanation": "Any script running on your page can read localStorage. If an attacker injects code, through a bad dependency or an unsafe innerHTML, they can copy what is stored there. Never put passwords or secrets in it, and prefer the session handling your auth library provides.",
+  "code": null,
+  "language": null,
+  "try_it": "Open DevTools, Application tab, and look at what your sites store.",
+  "read_time_sec": 25
+}

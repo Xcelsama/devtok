@@ -1,0 +1,12 @@
+{
+  "id": "052",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "map: turn one array into another",
+  "why_it_matters": "map powers almost every list you will render in React.",
+  "explanation": "map runs a function on every item and returns a new array of the same length. The original array stays untouched. Use it when you want a transformed copy, like pulling just the names out of a list of users.",
+  "code": "const users = [{ name: \"Ada\" }, { name: \"Linus\" }];\nconst names = users.map((u) => u.name);\nconsole.log(names); // [\"Ada\", \"Linus\"]",
+  "language": "js",
+  "try_it": "Use map to turn [1, 2, 3] into [10, 20, 30].",
+  "read_time_sec": 30
+}

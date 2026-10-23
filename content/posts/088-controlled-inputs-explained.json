@@ -1,0 +1,12 @@
+{
+  "id": "088",
+  "tag": "react",
+  "level": "beginner",
+  "title": "Controlled inputs, explained",
+  "why_it_matters": "Forms are everywhere, and this is the standard way to build them.",
+  "explanation": "A controlled input gets its value from state and updates state in onChange. React is the single source of truth, so you can validate, format or clear the input at any time. Forgetting onChange makes the field read-only.",
+  "code": "function NameField() {\n  const [name, setName] = useState(\"\");\n  return (\n    <input value={name} onChange={(e) => setName(e.target.value)} />\n  );\n}",
+  "language": "jsx",
+  "try_it": "Show the typed name in a paragraph under the input.",
+  "read_time_sec": 35
+}

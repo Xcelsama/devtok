@@ -1,0 +1,12 @@
+{
+  "id": "007",
+  "tag": "a11y-performance",
+  "level": "beginner",
+  "title": "Use a real button, not a clickable div",
+  "why_it_matters": "Real buttons work with keyboards and screen readers for free.",
+  "explanation": "A button is focusable, activates with Enter and Space, and is announced as a button. A div with onclick does none of that unless you rebuild it by hand. Reach for the right element first.",
+  "code": "<!-- before -->\n<div onclick=\"pay()\">Pay</div>\n\n<!-- after -->\n<button type=\"button\" onclick=\"pay()\">Pay</button>",
+  "language": "html",
+  "try_it": "Find one clickable div in your project and swap it for a button.",
+  "read_time_sec": 35
+}

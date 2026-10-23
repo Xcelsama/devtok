@@ -1,0 +1,12 @@
+{
+  "id": "043",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Arrays: counting starts at zero",
+  "why_it_matters": "Off-by-one errors start here.",
+  "explanation": "The first item is at index 0, and the last is at length minus 1. .length tells you how many items there are. .at(-1) grabs the last item without math. push adds to the end and returns the new length.",
+  "code": "const tabs = [\"Home\", \"Pay\", \"Profile\"];\nconsole.log(tabs[0], tabs.length, tabs.at(-1));\ntabs.push(\"Help\");\nconsole.log(tabs);",
+  "language": "js",
+  "try_it": "Without running it, predict tabs[3] before and after the push.",
+  "read_time_sec": 30
+}

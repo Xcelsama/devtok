@@ -1,0 +1,12 @@
+{
+  "id": "138",
+  "tag": "career",
+  "level": "beginner",
+  "title": "Project idea: an offline file tool",
+  "why_it_matters": "It shows off browser APIs and respect for user privacy.",
+  "explanation": "Build a client-side tool, like a text or image compressor or a document viewer, that works without uploading anything. Use the File API, make it a PWA and cache it for offline use. 'Your files never leave your device' is a strong pitch.",
+  "code": null,
+  "language": null,
+  "try_it": "List the browser APIs your favorite tool would need.",
+  "read_time_sec": 25
+}

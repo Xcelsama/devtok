@@ -1,0 +1,12 @@
+{
+  "id": "022",
+  "tag": "git-deploy",
+  "level": "beginner",
+  "title": "Before vs after: commit messages",
+  "why_it_matters": "Future you will search history to find out why something changed.",
+  "explanation": "Write what the commit does, in the present tense, in a short line. 'fix stuff' tells nobody anything. A good message says what changed and ideally why. You can read your whole project history in one skim.",
+  "code": "git commit -m \"stuff\"\ngit commit -m \"Fix cart total rounding\"",
+  "language": "bash",
+  "try_it": "Run git log --oneline and rewrite your three worst messages in your head.",
+  "read_time_sec": 30
+}

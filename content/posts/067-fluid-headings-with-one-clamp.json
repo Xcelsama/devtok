@@ -1,0 +1,12 @@
+{
+  "id": "067",
+  "tag": "css",
+  "level": "intermediate",
+  "title": "Fluid headings with one clamp()",
+  "why_it_matters": "Headings that scale smoothly mean fewer breakpoints to maintain.",
+  "explanation": "clamp takes a minimum, a preferred value and a maximum. The preferred value usually uses vw so it grows with the screen. The browser never goes below the minimum or above the maximum, so text stays readable on every device.",
+  "code": "h1 {\n  font-size: clamp(1.75rem, 5vw, 3rem);\n}",
+  "language": "css",
+  "try_it": "Apply clamp to your h1, then drag the browser width and watch it stop at both ends.",
+  "read_time_sec": 30
+}

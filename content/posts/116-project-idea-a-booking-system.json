@@ -1,0 +1,12 @@
+{
+  "id": "116",
+  "tag": "career",
+  "level": "beginner",
+  "title": "Project idea: a booking system",
+  "why_it_matters": "It combines SQL, auth and UI, which is exactly what teams build.",
+  "explanation": "Build a small booking app: services, available time slots, and user bookings. The interesting bit is preventing double bookings with a database constraint. Add auth with Supabase and row-level security so users only see their bookings.",
+  "code": null,
+  "language": null,
+  "try_it": "Sketch the tables you'd need: users, services, slots, bookings.",
+  "read_time_sec": 25
+}

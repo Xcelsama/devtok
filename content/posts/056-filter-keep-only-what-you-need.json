@@ -1,0 +1,12 @@
+{
+  "id": "056",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "filter: keep only what you need",
+  "why_it_matters": "Search boxes and tabs are all filter underneath.",
+  "explanation": "filter runs a test on each item and keeps the ones where your function returns true. You get a new, possibly shorter array. The test function should return true or false, not a value to transform.",
+  "code": "const todos = [\n  { text: \"a\", done: true },\n  { text: \"b\", done: false },\n];\nconst open = todos.filter((t) => !t.done);\nconsole.log(open.length); // 1",
+  "language": "js",
+  "try_it": "Filter an array of numbers to keep only the even ones.",
+  "read_time_sec": 35
+}

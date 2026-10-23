@@ -1,0 +1,12 @@
+{
+  "id": "136",
+  "tag": "javascript",
+  "level": "intermediate",
+  "title": "Why 0.1 + 0.2 isn't 0.3",
+  "why_it_matters": "Money bugs start when you store prices as decimals.",
+  "explanation": "Computers store decimals in binary, which can't represent some of them exactly. For money, store whole cents as integers, calculate with those, and divide by 100 only when displaying the result.",
+  "code": "console.log(0.1 + 0.2);   // 0.30000000000000004\nconst cents = 10 + 20;    // store integer cents\nconsole.log(cents / 100); // 0.3",
+  "language": "js",
+  "try_it": "Store a price of 19.99 as 1999 and display it back correctly.",
+  "read_time_sec": 30
+}

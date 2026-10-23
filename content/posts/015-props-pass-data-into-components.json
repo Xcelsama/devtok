@@ -1,0 +1,12 @@
+{
+  "id": "015",
+  "tag": "react",
+  "level": "beginner",
+  "title": "Props: pass data into components",
+  "why_it_matters": "Props make one component reusable everywhere.",
+  "explanation": "Props are the arguments of a component, passed like HTML attributes. Destructure them in the parameter list for tidy code. Strings go in quotes. Anything else, like numbers or variables, goes inside curly braces.",
+  "code": "function Price({ label, amount }) {\n  return <p>{label}: {amount}</p>;\n}\n\n// <Price label=\"Total\" amount={500} />",
+  "language": "jsx",
+  "try_it": "Add a third prop called currency and show it.",
+  "read_time_sec": 30
+}

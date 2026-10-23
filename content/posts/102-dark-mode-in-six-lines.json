@@ -1,0 +1,12 @@
+{
+  "id": "102",
+  "tag": "css",
+  "level": "intermediate",
+  "title": "Dark mode in six lines",
+  "why_it_matters": "Many phones are set to dark mode, so a bright white page feels harsh.",
+  "explanation": "The prefers-color-scheme media query reads the device setting. Define your colors as variables, then override just the variables in the dark query. Components keep using var(), so nothing else needs to change.",
+  "code": ":root { --bg: #fff; --text: #111; }\n@media (prefers-color-scheme: dark) {\n  :root { --bg: #111; --text: #eee; }\n}\nbody { background: var(--bg); color: var(--text); }",
+  "language": "css",
+  "try_it": "Switch your phone or OS to dark mode and reload your latest project.",
+  "read_time_sec": 30
+}

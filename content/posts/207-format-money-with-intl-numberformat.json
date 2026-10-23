@@ -1,0 +1,12 @@
+{
+  "id": "207",
+  "tag": "browser-apis",
+  "level": "intermediate",
+  "title": "Format money with Intl.NumberFormat",
+  "why_it_matters": "Fintech-style screens need correct currency formatting.",
+  "explanation": "Intl.NumberFormat formats numbers for a locale and currency, adding separators and symbols correctly. Keep amounts as integer cents in your data and divide by 100 only when formatting. Never build currency strings by hand.",
+  "code": "const fmt = new Intl.NumberFormat(\"en-US\", {\n  style: \"currency\",\n  currency: \"USD\",\n});\nconsole.log(fmt.format(123450 / 100)); // $1,234.50",
+  "language": "js",
+  "try_it": "Switch the locale and currency and compare outputs.",
+  "read_time_sec": 30
+}

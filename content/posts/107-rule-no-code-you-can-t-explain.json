@@ -1,0 +1,12 @@
+{
+  "id": "107",
+  "tag": "ai-assisted-dev",
+  "level": "beginner",
+  "title": "Rule: no code you can't explain",
+  "why_it_matters": "Unexplained code becomes a trap the day something breaks.",
+  "explanation": "If you can't say what a block does, don't merge it. Ask for a simpler version, or learn the concept first. This rule slows you slightly now and saves hours later. It is also exactly what interviewers probe for.",
+  "code": null,
+  "language": null,
+  "try_it": "Mark the parts of your project you couldn't explain, and study one.",
+  "read_time_sec": 25
+}

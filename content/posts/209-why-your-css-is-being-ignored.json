@@ -1,0 +1,12 @@
+{
+  "id": "209",
+  "tag": "css",
+  "level": "intermediate",
+  "title": "Why your CSS is being ignored",
+  "why_it_matters": "Specificity explains most 'my style does nothing' bugs.",
+  "explanation": "When two rules clash, the more specific selector wins, not the later one. An id beats a class, which beats an element. Fix it with a better selector, not !important. Check DevTools: the crossed-out rule lost the fight.",
+  "code": "p { color: black; }\n.note { color: blue; }      /* wins over p */\n#intro .note { color: red; } /* wins over both */",
+  "language": "css",
+  "try_it": "Inspect an element in DevTools and find a crossed-out rule. Why did it lose?",
+  "read_time_sec": 30
+}

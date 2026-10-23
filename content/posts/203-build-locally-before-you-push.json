@@ -1,0 +1,12 @@
+{
+  "id": "203",
+  "tag": "git-deploy",
+  "level": "beginner",
+  "title": "Build locally before you push",
+  "why_it_matters": "It catches errors that dev mode forgives.",
+  "explanation": "npm run dev is forgiving. npm run build is what Vercel runs, and it fails on things like type errors and missing imports. Also, Linux servers treat Button.js and button.js as different files, even if your computer doesn't.",
+  "code": "npm run build\nnpm run start",
+  "language": "bash",
+  "try_it": "Run a production build of your latest project and fix what appears.",
+  "read_time_sec": 25
+}

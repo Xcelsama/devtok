@@ -1,0 +1,12 @@
+{
+  "id": "010",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Before vs after: string building",
+  "why_it_matters": "Template literals make messages readable and cut missing-space bugs.",
+  "explanation": "Backticks let you drop values into text with ${ }. Anything inside the braces is real JavaScript, so you can do math or call functions. It beats gluing pieces together with plus signs.",
+  "code": "const name = \"Ada\";\nconst points = 3;\nconsole.log(\"Hi \" + name + \", you have \" + points * 2 + \" points\");\nconsole.log(`Hi ${name}, you have ${points * 2} points`);",
+  "language": "js",
+  "try_it": "Rewrite one string-with-plus in your project using backticks.",
+  "read_time_sec": 30
+}

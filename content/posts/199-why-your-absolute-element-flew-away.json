@@ -1,0 +1,12 @@
+{
+  "id": "199",
+  "tag": "css",
+  "level": "beginner",
+  "title": "Why your absolute element flew away",
+  "why_it_matters": "It explains every 'my badge is in the wrong corner' moment.",
+  "explanation": "An absolutely positioned element is placed relative to its nearest positioned ancestor. If none exists, it uses the whole page. Give the parent position: relative and the child's top and right values start making sense.",
+  "code": ".card { position: relative; }\n.badge {\n  position: absolute;\n  top: 8px;\n  right: 8px;\n}",
+  "language": "css",
+  "try_it": "Remove position: relative from .card and see where the badge goes.",
+  "read_time_sec": 35
+}

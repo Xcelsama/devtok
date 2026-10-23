@@ -1,0 +1,12 @@
+{
+  "id": "113",
+  "tag": "javascript",
+  "level": "intermediate",
+  "title": "Why setTimeout 0 runs last",
+  "why_it_matters": "Understanding the order of execution makes async code click.",
+  "explanation": "JavaScript finishes the current code first. Callbacks from timers, events and promises wait in a queue until it is free. So even with a delay of 0, a timeout runs after all the synchronous lines.",
+  "code": "console.log(\"A\");\nsetTimeout(() => console.log(\"B\"), 0);\nconsole.log(\"C\");\n// prints A, C, B",
+  "language": "js",
+  "try_it": "Predict the output order, then run it.",
+  "read_time_sec": 30
+}

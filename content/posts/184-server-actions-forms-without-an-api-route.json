@@ -1,0 +1,12 @@
+{
+  "id": "184",
+  "tag": "nextjs",
+  "level": "intermediate",
+  "title": "Server Actions: forms without an API route",
+  "why_it_matters": "You can run server code straight from a form.",
+  "explanation": "Put 'use server' inside an async function and pass it to a form's action. On submit, the function runs on the server and receives the FormData. It keeps secrets safe and removes a lot of fetch boilerplate.",
+  "code": "export default function Page() {\n  async function save(formData) {\n    \"use server\";\n    console.log(formData.get(\"note\"));\n  }\n  return <form action={save}><input name=\"note\" /><button>Save</button></form>;\n}",
+  "language": "jsx",
+  "try_it": "Submit the form and find the log in your terminal.",
+  "read_time_sec": 35
+}

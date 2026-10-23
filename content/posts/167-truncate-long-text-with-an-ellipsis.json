@@ -1,0 +1,12 @@
+{
+  "id": "167",
+  "tag": "css",
+  "level": "beginner",
+  "title": "Truncate long text with an ellipsis",
+  "why_it_matters": "Long names and titles will break your layout if you don't plan for them.",
+  "explanation": "Three rules together create a clean cut-off with three dots: no wrapping, hide the overflow, and set text-overflow. Inside flex items you also need min-width: 0, or the item refuses to shrink below its text.",
+  "code": ".title {\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  min-width: 0;\n}",
+  "language": "css",
+  "try_it": "Put a 60-character title inside a 200px card and apply these rules.",
+  "read_time_sec": 35
+}

@@ -1,0 +1,12 @@
+{
+  "id": "017",
+  "tag": "browser-apis",
+  "level": "beginner",
+  "title": "Read a text file in the browser",
+  "why_it_matters": "No upload, no server: the data never leaves the device.",
+  "explanation": "A File has a text() method that returns a promise of its contents. Use it for txt, csv, json and code files. For binary files use arrayBuffer() instead. It's the base of every in-browser viewer.",
+  "code": "const input = document.querySelector(\"input[type=file]\");\ninput.addEventListener(\"change\", async () => {\n  const text = await input.files[0].text();\n  console.log(text.slice(0, 200));\n});",
+  "language": "js",
+  "try_it": "Load a JSON file and pretty-print it with JSON.stringify(obj, null, 2).",
+  "read_time_sec": 30
+}

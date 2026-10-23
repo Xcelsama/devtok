@@ -1,0 +1,12 @@
+{
+  "id": "098",
+  "tag": "javascript",
+  "level": "intermediate",
+  "title": "Update an object without mutating it",
+  "why_it_matters": "It is the pattern behind every state update in React.",
+  "explanation": "Spread copies an object's keys into a new one. Put your changes after the spread, and they overwrite the old values. The original object stays exactly as it was, so nothing else breaks unexpectedly.",
+  "code": "const user = { name: \"Ada\", plan: \"free\" };\nconst upgraded = { ...user, plan: \"pro\" };\nconsole.log(user.plan);     // free\nconsole.log(upgraded.plan); // pro",
+  "language": "js",
+  "try_it": "Write a function that takes a user and returns a copy with a new name.",
+  "read_time_sec": 30
+}

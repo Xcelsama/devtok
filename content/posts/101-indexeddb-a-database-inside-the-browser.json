@@ -1,0 +1,12 @@
+{
+  "id": "101",
+  "tag": "browser-apis",
+  "level": "intermediate",
+  "title": "IndexedDB: a database inside the browser",
+  "why_it_matters": "It is where big, structured client-side data belongs.",
+  "explanation": "localStorage is small and text-only. IndexedDB holds much more, supports indexes and keeps data off the main thread. You open a database with a version, and create stores inside onupgradeneeded, which runs only when the version changes.",
+  "code": "const req = indexedDB.open(\"notes-db\", 1);\nreq.onupgradeneeded = () => {\n  req.result.createObjectStore(\"notes\", { keyPath: \"id\" });\n};\nreq.onsuccess = () => console.log(\"opened\", req.result.name);",
+  "language": "js",
+  "try_it": "Open DevTools, Application, IndexedDB and find your database.",
+  "read_time_sec": 30
+}

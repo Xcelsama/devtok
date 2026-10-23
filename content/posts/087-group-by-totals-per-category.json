@@ -1,0 +1,12 @@
+{
+  "id": "087",
+  "tag": "supabase-sql",
+  "level": "intermediate",
+  "title": "GROUP BY: totals per category",
+  "why_it_matters": "Dashboards and reports are built on it.",
+  "explanation": "GROUP BY collapses rows that share a value into one row. Combine it with aggregates like count, sum, avg, min and max. Every selected column must either be in the group or inside an aggregate.",
+  "code": "select booking_id,\n       count(*) as payments,\n       sum(amount_cents) as paid\nfrom payments\ngroup by booking_id;",
+  "language": "sql",
+  "try_it": "Count how many posts each author has written.",
+  "read_time_sec": 30
+}

@@ -1,0 +1,12 @@
+{
+  "id": "161",
+  "tag": "git-deploy",
+  "level": "beginner",
+  "title": "Every push to Vercel can get a preview",
+  "why_it_matters": "You can test a branch online before it reaches production.",
+  "explanation": "When Vercel is connected to your GitHub repo, pushes to the main branch update the live site. Pushes to other branches can get their own preview link. Check the preview on your phone before merging.",
+  "code": null,
+  "language": null,
+  "try_it": "Push a branch and open its preview link on your phone.",
+  "read_time_sec": 25
+}

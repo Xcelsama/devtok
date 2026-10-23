@@ -1,0 +1,12 @@
+{
+  "id": "078",
+  "tag": "ai-assisted-dev",
+  "level": "beginner",
+  "title": "Ask for the smallest change",
+  "why_it_matters": "Big rewrites hide bugs and teach you nothing.",
+  "explanation": "Ask for one step at a time and a minimal change, like 'add the loading state only'. Small diffs are easy to read and test. If a reply rewrites the whole file, ask which lines actually changed and why.",
+  "code": null,
+  "language": null,
+  "try_it": "Request a change and review only the diff before accepting.",
+  "read_time_sec": 25
+}

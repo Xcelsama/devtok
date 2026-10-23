@@ -1,0 +1,12 @@
+{
+  "id": "174",
+  "tag": "browser-apis",
+  "level": "beginner",
+  "title": "Detect offline with two events",
+  "why_it_matters": "Your app should say what's happening instead of failing silently.",
+  "explanation": "The browser fires offline and online events on window. navigator.onLine gives the current state. Treat true as 'probably connected', not guaranteed. Use the events to show a banner and to queue work for later.",
+  "code": "window.addEventListener(\"offline\", () => console.log(\"You are offline\"));\nwindow.addEventListener(\"online\", () => console.log(\"Back online\"));\nconsole.log(navigator.onLine);",
+  "language": "js",
+  "try_it": "Toggle offline in DevTools and watch the events fire.",
+  "read_time_sec": 30
+}

@@ -1,0 +1,12 @@
+{
+  "id": "201",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "JSON: the text format of the web",
+  "why_it_matters": "Every API and localStorage conversation uses it.",
+  "explanation": "JSON is text that looks like a JavaScript object. JSON.stringify turns a value into text so you can send or store it. JSON.parse turns text back into a value. Functions and undefined don't survive the trip.",
+  "code": "const text = JSON.stringify({ id: 1, tags: [\"a\", \"b\"] });\nconsole.log(typeof text); // string\nconst obj = JSON.parse(text);\nconsole.log(obj.tags[1]); // b",
+  "language": "js",
+  "try_it": "Stringify an object containing a function and see what disappears.",
+  "read_time_sec": 30
+}

@@ -1,0 +1,12 @@
+{
+  "id": "077",
+  "tag": "git-deploy",
+  "level": "beginner",
+  "title": "Work on branches, not main",
+  "why_it_matters": "A broken experiment shouldn't break your working app.",
+  "explanation": "A branch is a separate line of work. Create one for each feature, commit freely, then merge it back when ready. Branch names like feature/login describe their purpose. Main stays working, and your live site stays safe.",
+  "code": "git switch -c feature/login",
+  "language": "bash",
+  "try_it": "Create a branch for your next change instead of using main.",
+  "read_time_sec": 25
+}

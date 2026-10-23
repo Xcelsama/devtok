@@ -1,0 +1,12 @@
+{
+  "id": "024",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Two ways to write a function",
+  "why_it_matters": "You will see both styles in every codebase and AI answer.",
+  "explanation": "A function declaration starts with the word function and can be called before it appears in the file. An arrow function is stored in a variable and is shorter. Arrows are popular for small callbacks, like inside map.",
+  "code": "function add(a, b) {\n  return a + b;\n}\nconst addArrow = (a, b) => a + b;\nconsole.log(add(2, 3), addArrow(2, 3));",
+  "language": "js",
+  "try_it": "Turn one function you wrote into an arrow function and run it.",
+  "read_time_sec": 35
+}

@@ -1,0 +1,12 @@
+{
+  "id": "151",
+  "tag": "css",
+  "level": "intermediate",
+  "title": "Respect people who hate motion",
+  "why_it_matters": "Animations can cause real discomfort, and this is a one-time fix.",
+  "explanation": "Some users turn on a reduce-motion setting because movement makes them dizzy. The prefers-reduced-motion media query lets you detect it. Wrap your animations in it, or switch them off for those users.",
+  "code": "@media (prefers-reduced-motion: reduce) {\n  * {\n    animation: none !important;\n    transition: none !important;\n  }\n}",
+  "language": "css",
+  "try_it": "Turn on reduce motion in your OS settings and check that your site is calmer.",
+  "read_time_sec": 35
+}

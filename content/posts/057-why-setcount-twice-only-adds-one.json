@@ -1,0 +1,12 @@
+{
+  "id": "057",
+  "tag": "react",
+  "level": "intermediate",
+  "title": "Why setCount twice only adds one",
+  "why_it_matters": "State updates are scheduled, not instant.",
+  "explanation": "Within one event, count holds the same value on every line, so two setCount(count + 1) calls both set it to the same number. Pass a function to the setter instead. It receives the latest value, and updates stack up.",
+  "code": "// inside a click handler\nsetCount(count + 1);\nsetCount(count + 1);       // total: +1\nsetCount((c) => c + 1);\nsetCount((c) => c + 1);    // total: +2",
+  "language": "jsx",
+  "try_it": "Make a button that adds 3 in a single click using the function form.",
+  "read_time_sec": 35
+}

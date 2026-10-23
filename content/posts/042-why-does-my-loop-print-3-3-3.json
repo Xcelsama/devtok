@@ -1,0 +1,12 @@
+{
+  "id": "042",
+  "tag": "javascript",
+  "level": "intermediate",
+  "title": "Why does my loop print 3, 3, 3?",
+  "why_it_matters": "This classic trap explains how scope really works.",
+  "explanation": "var is function-scoped, so every callback shares one variable that ends at 3. let creates a fresh variable for each loop pass, so each callback keeps its own value. That is another reason to forget var.",
+  "code": "for (var i = 0; i < 3; i++) setTimeout(() => console.log(i));\n// 3 3 3\nfor (let j = 0; j < 3; j++) setTimeout(() => console.log(j));\n// 0 1 2",
+  "language": "js",
+  "try_it": "Run both loops in the console and predict the output first.",
+  "read_time_sec": 30
+}

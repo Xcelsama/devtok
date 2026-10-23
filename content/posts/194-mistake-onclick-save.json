@@ -1,0 +1,12 @@
+{
+  "id": "194",
+  "tag": "react",
+  "level": "beginner",
+  "title": "Mistake: onClick={save()}",
+  "why_it_matters": "The function runs during render, not on click.",
+  "explanation": "Parentheses call a function immediately. onClick needs the function itself, not its result. Pass the name, or wrap a call in an arrow function when you need to pass arguments.",
+  "code": "<button onClick={save()}>Save</button>      {/* runs on render */}\n<button onClick={save}>Save</button>        {/* runs on click */}\n<button onClick={() => remove(id)}>Delete</button>",
+  "language": "jsx",
+  "try_it": "Search your code for onClick={ followed by a function name with parentheses.",
+  "read_time_sec": 25
+}

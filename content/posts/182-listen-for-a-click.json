@@ -1,0 +1,12 @@
+{
+  "id": "182",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Listen for a click",
+  "why_it_matters": "Events are how a page responds to a person.",
+  "explanation": "addEventListener takes an event name and a function. The browser calls your function when it happens and passes an event object with details. Keep the function small, and move bigger logic into named functions.",
+  "code": "const btn = document.querySelector(\"#buy\");\nbtn.addEventListener(\"click\", () => {\n  console.log(\"clicked\");\n});",
+  "language": "js",
+  "try_it": "Log the event object by adding e as a parameter.",
+  "read_time_sec": 30
+}

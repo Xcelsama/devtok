@@ -1,0 +1,12 @@
+{
+  "id": "140",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "What is a Promise, really?",
+  "why_it_matters": "Every fetch and database call returns one.",
+  "explanation": "A Promise is a placeholder for a value that arrives later. It is pending, then either fulfilled with a value or rejected with an error. You attach .then for success and .catch for failure, or use await.",
+  "code": "const wait = new Promise((resolve) => {\n  setTimeout(() => resolve(\"done\"), 500);\n});\nwait.then((msg) => console.log(msg));",
+  "language": "js",
+  "try_it": "Change the timeout to 2000 and watch when 'done' appears.",
+  "read_time_sec": 30
+}

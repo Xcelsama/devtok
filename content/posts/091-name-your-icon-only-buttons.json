@@ -1,0 +1,12 @@
+{
+  "id": "091",
+  "tag": "a11y-performance",
+  "level": "beginner",
+  "title": "Name your icon-only buttons",
+  "why_it_matters": "A button with only an icon is announced as just 'button'.",
+  "explanation": "If a button has no visible text, give it an accessible name with aria-label. Describe the action, not the picture. Decorative symbols inside it don't need to be read out separately.",
+  "code": "<button aria-label=\"Close dialog\">✕</button>",
+  "language": "html",
+  "try_it": "Find every icon-only button in your app and check its name.",
+  "read_time_sec": 25
+}

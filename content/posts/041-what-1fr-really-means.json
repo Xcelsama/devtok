@@ -1,0 +1,12 @@
+{
+  "id": "041",
+  "tag": "css",
+  "level": "beginner",
+  "title": "What 1fr really means",
+  "why_it_matters": "The fr unit is the easiest way to mix fixed and flexible columns.",
+  "explanation": "1fr is one share of the leftover space, not a fixed size. Fixed columns take their space first. Whatever remains is split by fr values. A sidebar of 240px beside a 1fr column gives you a content area that always fills the rest.",
+  "code": ".layout {\n  display: grid;\n  grid-template-columns: 240px 1fr;\n  gap: 1rem;\n}",
+  "language": "css",
+  "try_it": "Try 1fr 2fr instead. Predict the widths before you check them in DevTools.",
+  "read_time_sec": 35
+}

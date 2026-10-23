@@ -1,0 +1,12 @@
+{
+  "id": "141",
+  "tag": "react",
+  "level": "intermediate",
+  "title": "Mistake: the infinite render loop",
+  "why_it_matters": "Your tab freezes, and the cause is two lines long.",
+  "explanation": "Setting state inside an effect with no dependency array re-renders, which runs the effect, which sets state again. Add a dependency array, and only set state when something actually needs to change.",
+  "code": "useEffect(() => {\n  setCount(count + 1);    // loops forever\n});\n\nuseEffect(() => {\n  setCount(1);            // runs once\n}, []);",
+  "language": "jsx",
+  "try_it": "Add a console.log in an effect to see how often it runs.",
+  "read_time_sec": 35
+}

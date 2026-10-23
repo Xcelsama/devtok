@@ -1,0 +1,12 @@
+{
+  "id": "155",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "fetch in two steps",
+  "why_it_matters": "Everyone gets stuck on why fetch needs two awaits.",
+  "explanation": "The first await gives you the response once headers arrive. The second await, on res.json(), waits for the body to be read and parsed. Both steps return promises, so each needs its own await.",
+  "code": "const res = await fetch(\"/api/items\");\nconst items = await res.json();\nconsole.log(items.length);",
+  "language": "js",
+  "try_it": "Log res.status before calling res.json().",
+  "read_time_sec": 25
+}

@@ -1,0 +1,12 @@
+{
+  "id": "150",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Catch errors from await",
+  "why_it_matters": "Networks fail, and your app shouldn't go blank when they do.",
+  "explanation": "Wrap awaited code in try and catch. If any await rejects, execution jumps to catch, where you can show a message. Without it, the error becomes an unhandled rejection and the user sees nothing happen.",
+  "code": "async function load() {\n  try {\n    const res = await fetch(\"/api/items\");\n    return await res.json();\n  } catch (err) {\n    console.error(\"Failed:\", err.message);\n  }\n}",
+  "language": "js",
+  "try_it": "Turn off your network in DevTools and call load().",
+  "read_time_sec": 35
+}

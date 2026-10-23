@@ -1,0 +1,12 @@
+{
+  "id": "073",
+  "tag": "css",
+  "level": "beginner",
+  "title": "rem vs px: why it matters",
+  "why_it_matters": "Using rem respects people who raise their default text size.",
+  "explanation": "px is a fixed size. rem is relative to the root font size, which users can change in their browser settings. Sizing text and spacing in rem lets your layout grow with their preference instead of ignoring it.",
+  "code": "/* ignores user settings */\np { font-size: 14px; }\n\n/* respects them */\np { font-size: 0.875rem; }",
+  "language": "css",
+  "try_it": "Raise your browser's default font size and see which of your pages ignore it.",
+  "read_time_sec": 35
+}

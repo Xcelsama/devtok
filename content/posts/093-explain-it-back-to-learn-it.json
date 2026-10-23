@@ -1,0 +1,12 @@
+{
+  "id": "093",
+  "tag": "ai-assisted-dev",
+  "level": "intermediate",
+  "title": "Explain it back to learn it",
+  "why_it_matters": "Teaching is the fastest way to find the gaps in your understanding.",
+  "explanation": "After getting code, write your own explanation of how it works. Then ask the AI to point out what you got wrong. Or ask it to quiz you with three questions about the code. You'll remember more and stop copying blindly.",
+  "code": null,
+  "language": null,
+  "try_it": "Explain one AI snippet in three sentences, then ask AI to grade you.",
+  "read_time_sec": 25
+}

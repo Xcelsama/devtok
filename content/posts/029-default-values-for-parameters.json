@@ -1,0 +1,12 @@
+{
+  "id": "029",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Default values for parameters",
+  "why_it_matters": "It saves you from undefined showing up in your output.",
+  "explanation": "If someone calls a function without an argument, the parameter becomes undefined. A default value fills in a fallback automatically. It only kicks in for undefined, not for null or empty strings.",
+  "code": "function greet(name = \"friend\") {\n  return `Hi ${name}`;\n}\nconsole.log(greet());       // Hi friend\nconsole.log(greet(\"Ada\"));  // Hi Ada",
+  "language": "js",
+  "try_it": "Add a default quantity of 1 to an addToCart function.",
+  "read_time_sec": 30
+}

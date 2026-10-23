@@ -1,0 +1,12 @@
+{
+  "id": "124",
+  "tag": "supabase-sql",
+  "level": "beginner",
+  "title": "Your first supabase-js select",
+  "why_it_matters": "This is the bridge from SQL knowledge to app code.",
+  "explanation": "supabase.from picks the table, select chooses columns like SQL's select, and order sorts. The call returns an object with data and error. Always handle both, because a failing query doesn't throw by itself.",
+  "code": "const { data, error } = await supabase\n  .from(\"posts\")\n  .select(\"id, title\")\n  .order(\"created_at\", { ascending: false });",
+  "language": "js",
+  "try_it": "Log data and error separately and break the table name on purpose.",
+  "read_time_sec": 30
+}

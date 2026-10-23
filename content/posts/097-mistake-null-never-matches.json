@@ -1,0 +1,12 @@
+{
+  "id": "097",
+  "tag": "supabase-sql",
+  "level": "beginner",
+  "title": "Mistake: = null never matches",
+  "why_it_matters": "Null means unknown, and unknown never equals anything.",
+  "explanation": "Comparing with = null returns nothing, not even for null values. Use is null and is not null instead. This also explains why a not-equal filter can silently skip rows where the column is null.",
+  "code": "select * from profiles where avatar_url = null;   -- no rows\nselect * from profiles where avatar_url is null;  -- correct",
+  "language": "sql",
+  "try_it": "Find all rows where a column is not null.",
+  "read_time_sec": 25
+}

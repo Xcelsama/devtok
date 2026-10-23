@@ -1,0 +1,12 @@
+{
+  "id": "133",
+  "tag": "a11y-performance",
+  "level": "intermediate",
+  "title": "Announce updates with aria-live",
+  "why_it_matters": "Toasts and form messages are silent to screen readers otherwise.",
+  "explanation": "When text changes without a page load, a screen reader won't notice. An element with role status and aria-live polite announces its new text politely. The live region must exist in the page before its content changes.",
+  "code": "<p id=\"msg\" role=\"status\" aria-live=\"polite\"></p>\n<script>\n  document.getElementById(\"msg\").textContent = \"Saved!\";\n</script>",
+  "language": "html",
+  "try_it": "Turn on a screen reader on your phone and trigger a message.",
+  "read_time_sec": 30
+}

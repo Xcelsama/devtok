@@ -1,0 +1,12 @@
+{
+  "id": "149",
+  "tag": "ai-assisted-dev",
+  "level": "intermediate",
+  "title": "Security red flags in AI code",
+  "why_it_matters": "AI optimizes for 'it works', not 'it's safe'.",
+  "explanation": "Watch for secret keys in client code, innerHTML or dangerouslySetInnerHTML with user input, tables without row-level security, and queries built from strings. If you see one, ask the AI to fix it and explain why it was risky.",
+  "code": null,
+  "language": null,
+  "try_it": "Search your project for dangerouslySetInnerHTML and innerHTML.",
+  "read_time_sec": 25
+}

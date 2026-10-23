@@ -1,0 +1,12 @@
+{
+  "id": "147",
+  "tag": "a11y-performance",
+  "level": "beginner",
+  "title": "Run Lighthouse, fix the top item",
+  "why_it_matters": "A score only helps if you act on it.",
+  "explanation": "Lighthouse is built into Chrome DevTools and audits performance, accessibility, SEO and best practices. Run it in an incognito window, on mobile mode. Don't chase 100. Pick the one issue with the biggest impact and fix that first.",
+  "code": null,
+  "language": null,
+  "try_it": "Run Lighthouse on your portfolio and fix one thing today.",
+  "read_time_sec": 25
+}

@@ -1,0 +1,12 @@
+{
+  "id": "061",
+  "tag": "javascript",
+  "level": "intermediate",
+  "title": "reduce: many values, one result",
+  "why_it_matters": "Cart totals and counters use this pattern constantly.",
+  "explanation": "reduce walks through an array while carrying an accumulator. Each step returns the new accumulator. You provide a starting value as the second argument. Sums, totals and grouping are all reduce at heart.",
+  "code": "const cart = [{ price: 5, qty: 2 }, { price: 3, qty: 1 }];\nconst total = cart.reduce((sum, item) => sum + item.price * item.qty, 0);\nconsole.log(total); // 13",
+  "language": "js",
+  "try_it": "Write a reduce that finds the highest number in an array.",
+  "read_time_sec": 30
+}

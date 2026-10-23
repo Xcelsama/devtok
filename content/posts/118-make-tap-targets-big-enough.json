@@ -1,0 +1,12 @@
+{
+  "id": "118",
+  "tag": "a11y-performance",
+  "level": "beginner",
+  "title": "Make tap targets big enough",
+  "why_it_matters": "Tiny buttons cause missed taps, especially for thumbs.",
+  "explanation": "Aim for roughly 44 by 44 pixels for anything tappable, with space between neighbors. If the icon looks small, keep it small and grow the padding or min size instead. This helps everyone, not only people with motor difficulties.",
+  "code": ".icon-btn {\n  min-width: 44px;\n  min-height: 44px;\n  display: grid;\n  place-items: center;\n}",
+  "language": "css",
+  "try_it": "Try tapping your smallest button with your thumb, one handed.",
+  "read_time_sec": 35
+}

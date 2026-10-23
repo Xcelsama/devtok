@@ -1,0 +1,12 @@
+{
+  "id": "172",
+  "tag": "react",
+  "level": "intermediate",
+  "title": "useRef for things that aren't state",
+  "why_it_matters": "It lets you touch the DOM or keep a value without re-rendering.",
+  "explanation": "A ref holds a value in .current. Changing it does not cause a re-render. Attach one to an element to focus it, scroll it or measure it. It is an escape hatch, so reach for state first.",
+  "code": "const inputRef = useRef(null);\n// <input ref={inputRef} />\n// <button onClick={() => inputRef.current.focus()}>\n//   Focus\n// </button>",
+  "language": "jsx",
+  "try_it": "Auto-focus a search input when a component first mounts.",
+  "read_time_sec": 30
+}

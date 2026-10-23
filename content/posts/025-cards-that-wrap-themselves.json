@@ -1,0 +1,12 @@
+{
+  "id": "025",
+  "tag": "css",
+  "level": "beginner",
+  "title": "Cards that wrap themselves",
+  "why_it_matters": "Wrapping rows are the base of most responsive card layouts.",
+  "explanation": "flex-wrap lets items drop to the next line instead of squashing. The flex shorthand sets grow, shrink and basis. flex: 1 1 220px means: start at 220px wide, share leftover space, and shrink if needed. Cards wrap when there is no room.",
+  "code": ".row {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 1rem;\n}\n.card { flex: 1 1 220px; }",
+  "language": "css",
+  "try_it": "Add six cards and resize the browser. Count how many fit per row at each width.",
+  "read_time_sec": 35
+}

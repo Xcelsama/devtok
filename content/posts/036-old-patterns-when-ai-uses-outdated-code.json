@@ -1,0 +1,12 @@
+{
+  "id": "036",
+  "tag": "ai-assisted-dev",
+  "level": "intermediate",
+  "title": "Old patterns: when AI uses outdated code",
+  "why_it_matters": "The code runs on yesterday's version of your framework.",
+  "explanation": "AI learned from years of old examples. It might hand you Pages Router code for an App Router project, or an old Supabase method name. Tell it your framework, version and router in the prompt. Check docs when something looks unfamiliar.",
+  "code": null,
+  "language": null,
+  "try_it": "Ask AI for the same task twice, mentioning your exact setup the second time.",
+  "read_time_sec": 25
+}

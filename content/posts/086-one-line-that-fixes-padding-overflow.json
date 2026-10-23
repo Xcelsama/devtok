@@ -1,0 +1,12 @@
+{
+  "id": "086",
+  "tag": "css",
+  "level": "beginner",
+  "title": "One line that fixes padding overflow",
+  "why_it_matters": "It stops the most common 'why is my box wider than 100%' bug.",
+  "explanation": "By default, width ignores padding and border, so a width: 100% box with padding sticks out. border-box makes width include them. Most projects reset it for every element at the top of the stylesheet.",
+  "code": "*, *::before, *::after {\n  box-sizing: border-box;\n}",
+  "language": "css",
+  "try_it": "Make an input with width: 100% and padding: 20px. Toggle border-box and compare.",
+  "read_time_sec": 30
+}

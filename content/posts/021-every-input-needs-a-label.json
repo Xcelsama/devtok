@@ -1,0 +1,12 @@
+{
+  "id": "021",
+  "tag": "a11y-performance",
+  "level": "beginner",
+  "title": "Every input needs a label",
+  "why_it_matters": "A placeholder disappears as you type and is not a label.",
+  "explanation": "A label tells screen readers what the field is for, and makes the label text tappable on a phone. Connect it with for and id. Keep it visible, since placeholders vanish once someone starts typing.",
+  "code": "<label for=\"email\">Email</label>\n<input id=\"email\" type=\"email\" autocomplete=\"email\">",
+  "language": "html",
+  "try_it": "Tap the label text on a phone and see whether the input gets focus.",
+  "read_time_sec": 30
+}

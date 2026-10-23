@@ -1,0 +1,12 @@
+{
+  "id": "192",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Stop the form from reloading the page",
+  "why_it_matters": "Forms refresh the page by default, wiping your JavaScript state.",
+  "explanation": "Submitting a form navigates by default. Call e.preventDefault() in the submit handler to stop that. Then read the values with FormData, using the name attribute of each input.",
+  "code": "const form = document.querySelector(\"form\");\nform.addEventListener(\"submit\", (e) => {\n  e.preventDefault();\n  const email = new FormData(form).get(\"email\");\n  console.log(email);\n});",
+  "language": "js",
+  "try_it": "Make sure your input has a name attribute, or get() returns null.",
+  "read_time_sec": 30
+}

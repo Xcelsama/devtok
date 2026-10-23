@@ -1,0 +1,12 @@
+{
+  "id": "034",
+  "tag": "a11y-performance",
+  "level": "beginner",
+  "title": "Check your text contrast",
+  "why_it_matters": "Faint grey text is unreadable outdoors on a phone.",
+  "explanation": "The common AA guideline asks for a contrast ratio of at least 4.5 to 1 for normal text. Light grey on white often fails. A grey like #767676 on white is about the lightest that still passes. Use DevTools to check ratios.",
+  "code": ".muted {\n  color: #767676;\n  background: #fff;\n}",
+  "language": "css",
+  "try_it": "Inspect a grey text color in DevTools and read its contrast ratio.",
+  "read_time_sec": 30
+}

@@ -1,0 +1,12 @@
+{
+  "id": "063",
+  "tag": "a11y-performance",
+  "level": "beginner",
+  "title": "'Click here' is a useless link",
+  "why_it_matters": "Screen reader users often jump through a list of links alone.",
+  "explanation": "Link text should make sense out of context. 'Click here' or 'read more' tells nobody anything when listed. Describe the destination instead. It also helps people scanning quickly on a phone and improves search results.",
+  "code": "<!-- weak -->\n<a href=\"/pricing\">Click here</a>\n\n<!-- better -->\n<a href=\"/pricing\">See pricing plans</a>",
+  "language": "html",
+  "try_it": "Search your pages for 'click here' and rewrite each link.",
+  "read_time_sec": 30
+}

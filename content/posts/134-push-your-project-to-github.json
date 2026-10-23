@@ -1,0 +1,12 @@
+{
+  "id": "134",
+  "tag": "git-deploy",
+  "level": "beginner",
+  "title": "Push your project to GitHub",
+  "why_it_matters": "It's your backup, your portfolio and your deploy source.",
+  "explanation": "Create an empty repo on GitHub, then link it as origin. The -u flag on the first push remembers the branch, so later you can just type git push. Commit your work first, since push sends commits, not edits.",
+  "code": "git remote add origin git@github.com:YOUR-USERNAME/YOUR-REPO.git\ngit push -u origin main",
+  "language": "bash",
+  "try_it": "Push a small project and open the repo page to check.",
+  "read_time_sec": 30
+}

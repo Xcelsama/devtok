@@ -1,0 +1,12 @@
+{
+  "id": "060",
+  "tag": "css",
+  "level": "beginner",
+  "title": "The missing viewport tag mistake",
+  "why_it_matters": "Without this tag your responsive CSS looks broken on a real phone.",
+  "explanation": "Mobile browsers pretend to be a wide desktop screen unless you tell them otherwise, then shrink the page down. Your media queries never fire as expected. One meta tag in the head fixes it. Put it in every project.",
+  "code": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">",
+  "language": "html",
+  "try_it": "Delete the tag from a test page, open it on your phone, and compare.",
+  "read_time_sec": 30
+}

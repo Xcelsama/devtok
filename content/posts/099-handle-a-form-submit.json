@@ -1,0 +1,12 @@
+{
+  "id": "099",
+  "tag": "react",
+  "level": "beginner",
+  "title": "Handle a form submit",
+  "why_it_matters": "Without preventDefault the page reloads and your state is gone.",
+  "explanation": "Attach onSubmit to the form, not onClick to the button, so pressing Enter works too. Call preventDefault, then read values from state or from FormData. Give each input a name attribute.",
+  "code": "function onSubmit(e) {\n  e.preventDefault();\n  const data = new FormData(e.currentTarget);\n  console.log(data.get(\"email\"));\n}\n// <form onSubmit={onSubmit}><input name=\"email\" /></form>",
+  "language": "jsx",
+  "try_it": "Add a password field and log both values.",
+  "read_time_sec": 30
+}

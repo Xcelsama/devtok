@@ -1,0 +1,12 @@
+{
+  "id": "153",
+  "tag": "nextjs",
+  "level": "intermediate",
+  "title": "Make an API route in 4 lines",
+  "why_it_matters": "You get a backend endpoint with no extra server.",
+  "explanation": "A route.js file inside the app folder defines an API endpoint. Export a function named after the HTTP method. Return a Response. The folder path becomes the URL, so app/api/hello/route.js serves /api/hello.",
+  "code": "// app/api/hello/route.js\nexport async function GET() {\n  return Response.json({ message: \"hi\" });\n}",
+  "language": "js",
+  "try_it": "Open /api/hello in your browser and read the JSON.",
+  "read_time_sec": 30
+}

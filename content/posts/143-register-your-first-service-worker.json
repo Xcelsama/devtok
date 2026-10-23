@@ -1,0 +1,12 @@
+{
+  "id": "143",
+  "tag": "browser-apis",
+  "level": "intermediate",
+  "title": "Register your first service worker",
+  "why_it_matters": "It is the engine behind offline PWAs.",
+  "explanation": "A service worker is a script that sits between your page and the network. Registering it is just a feature check and one call. The file must be served from the scope it controls, so put sw.js at the site root. Requires https or localhost.",
+  "code": "if (\"serviceWorker\" in navigator) {\n  navigator.serviceWorker\n    .register(\"/sw.js\")\n    .then(() => console.log(\"registered\"))\n    .catch((err) => console.error(err));\n}",
+  "language": "js",
+  "try_it": "Look in DevTools, Application, Service Workers after registering.",
+  "read_time_sec": 35
+}

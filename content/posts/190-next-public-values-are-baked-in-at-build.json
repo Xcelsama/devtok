@@ -1,0 +1,12 @@
+{
+  "id": "190",
+  "tag": "git-deploy",
+  "level": "intermediate",
+  "title": "NEXT_PUBLIC_ values are baked in at build",
+  "why_it_matters": "Changing one in Vercel does nothing until you redeploy.",
+  "explanation": "Next.js replaces NEXT_PUBLIC_ variables with their real values while building. The browser code contains the final text, not a lookup. So after changing one, trigger a new build. Server-only variables are read at runtime on the server.",
+  "code": null,
+  "language": null,
+  "try_it": "Change a public variable, redeploy, and confirm the new value appears.",
+  "read_time_sec": 25
+}

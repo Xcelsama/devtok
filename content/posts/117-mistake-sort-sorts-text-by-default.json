@@ -1,0 +1,12 @@
+{
+  "id": "117",
+  "tag": "javascript",
+  "level": "intermediate",
+  "title": "Mistake: sort() sorts text by default",
+  "why_it_matters": "Numbers come back in a confusing order unless you add a comparator.",
+  "explanation": "Without an argument, sort converts items to strings, so 10 comes before 9. Pass a compare function: a - b sorts ascending. Also remember sort changes the original array, so copy first if you need the old order.",
+  "code": "console.log([10, 9, 1].sort());                // [1, 10, 9]\nconsole.log([10, 9, 1].sort((a, b) => a - b)); // [1, 9, 10]",
+  "language": "js",
+  "try_it": "Sort a list of prices from highest to lowest.",
+  "read_time_sec": 30
+}

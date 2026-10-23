@@ -1,0 +1,12 @@
+{
+  "id": "016",
+  "tag": "nextjs",
+  "level": "beginner",
+  "title": "layout.js wraps your pages",
+  "why_it_matters": "Shared navbars and fonts live here, written once.",
+  "explanation": "A layout receives children, which is the current page, and wraps it. The root layout is required and holds the html and body tags. Layouts stay mounted as you navigate, so shared UI doesn't reload.",
+  "code": "export default function RootLayout({ children }) {\n  return (\n    <html lang=\"en\">\n      <body>{children}</body>\n    </html>\n  );\n}",
+  "language": "jsx",
+  "try_it": "Add a nav element above children in your root layout.",
+  "read_time_sec": 35
+}

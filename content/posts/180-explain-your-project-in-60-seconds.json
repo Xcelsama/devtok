@@ -1,0 +1,12 @@
+{
+  "id": "180",
+  "tag": "career",
+  "level": "beginner",
+  "title": "Explain your project in 60 seconds",
+  "why_it_matters": "Interviewers always start with 'tell me about your project'.",
+  "explanation": "Use three parts: the problem, what you built and how, and what you learned or would change. Mention one real decision, like picking Supabase, and why. Practice out loud so it sounds natural rather than memorized.",
+  "code": null,
+  "language": null,
+  "try_it": "Record yourself explaining a project and listen back.",
+  "read_time_sec": 25
+}

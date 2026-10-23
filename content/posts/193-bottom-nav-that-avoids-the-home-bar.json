@@ -1,0 +1,12 @@
+{
+  "id": "193",
+  "tag": "css",
+  "level": "intermediate",
+  "title": "Bottom nav that avoids the home bar",
+  "why_it_matters": "Fixed bottom bars on modern phones collide with the gesture area.",
+  "explanation": "Add viewport-fit=cover to your viewport meta tag, then pad fixed bottom elements with env(safe-area-inset-bottom). It is zero on devices without a notch or gesture bar, so it is safe everywhere. Great for PWAs and app-style layouts.",
+  "code": ".bottom-nav {\n  position: fixed;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  padding-bottom: env(safe-area-inset-bottom);\n}",
+  "language": "css",
+  "try_it": "Add viewport-fit=cover to your meta tag and test a bottom bar on a modern phone.",
+  "read_time_sec": 35
+}

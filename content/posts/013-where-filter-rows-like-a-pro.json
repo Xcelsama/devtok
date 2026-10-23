@@ -1,0 +1,12 @@
+{
+  "id": "013",
+  "tag": "supabase-sql",
+  "level": "beginner",
+  "title": "WHERE: filter rows like a pro",
+  "why_it_matters": "Almost every useful query has a WHERE clause.",
+  "explanation": "WHERE keeps only rows that match a condition. Combine conditions with and, or. Text values go in single quotes, never double quotes. Use = for equals, since SQL uses one equals sign, not two.",
+  "code": "select title\nfrom posts\nwhere published = true\n  and views > 100;",
+  "language": "sql",
+  "try_it": "Write a query for posts with fewer than 10 views.",
+  "read_time_sec": 30
+}

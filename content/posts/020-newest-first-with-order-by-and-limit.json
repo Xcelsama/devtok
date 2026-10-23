@@ -1,0 +1,12 @@
+{
+  "id": "020",
+  "tag": "supabase-sql",
+  "level": "beginner",
+  "title": "Newest first with ORDER BY and LIMIT",
+  "why_it_matters": "Feeds and 'latest' lists use this exact pair.",
+  "explanation": "ORDER BY sorts the results, ascending by default. Add desc for biggest or newest first. LIMIT caps how many rows return. Without ORDER BY, the row order is not guaranteed, so never rely on it.",
+  "code": "select title, created_at\nfrom posts\norder by created_at desc\nlimit 5;",
+  "language": "sql",
+  "try_it": "Get the 3 most expensive products from any table.",
+  "read_time_sec": 30
+}

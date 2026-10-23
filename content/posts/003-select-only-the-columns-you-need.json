@@ -1,0 +1,12 @@
+{
+  "id": "003",
+  "tag": "supabase-sql",
+  "level": "beginner",
+  "title": "SELECT only the columns you need",
+  "why_it_matters": "Asking for less data makes queries faster and responses smaller.",
+  "explanation": "SELECT picks which columns come back, and FROM names the table. The asterisk means every column, which is fine for exploring. In real apps list the columns you actually use, especially on phones with slow connections.",
+  "code": "select id, title from posts;\n\n-- exploring only:\nselect * from posts;",
+  "language": "sql",
+  "try_it": "Run a select on any table and list just two columns.",
+  "read_time_sec": 30
+}

@@ -1,0 +1,12 @@
+{
+  "id": "154",
+  "tag": "browser-apis",
+  "level": "intermediate",
+  "title": "Cache files for offline use",
+  "why_it_matters": "This is the difference between a website and a PWA.",
+  "explanation": "On install, the worker downloads and stores files in the Cache Storage. On every fetch, it answers from the cache first and falls back to the network. Bump the cache name when you ship new files, so old ones get replaced.",
+  "code": "const CACHE = \"v1\";\nself.addEventListener(\"install\", (e) => {\n  e.waitUntil(caches.open(CACHE).then((c) => c.addAll([\"/\", \"/offline.html\"])));\n});\nself.addEventListener(\"fetch\", (e) => {\n  e.respondWith(caches.match(e.request).then((hit) => hit || fetch(e.request)));\n});",
+  "language": "js",
+  "try_it": "Turn on offline mode in DevTools and reload your page.",
+  "read_time_sec": 35
+}

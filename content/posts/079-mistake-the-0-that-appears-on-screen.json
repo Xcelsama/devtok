@@ -1,0 +1,12 @@
+{
+  "id": "079",
+  "tag": "react",
+  "level": "intermediate",
+  "title": "Mistake: the 0 that appears on screen",
+  "why_it_matters": "A tiny condition bug can print a stray 0 in your UI.",
+  "explanation": "React renders numbers, and 0 is a number. So length && <List /> shows 0 when the array is empty. Compare explicitly with > 0, or use a ternary. Booleans, null and undefined render nothing.",
+  "code": "{items.length && <List items={items} />}      // shows 0\n{items.length > 0 && <List items={items} />}  // fixed\n{items.length ? <List items={items} /> : <p>Empty</p>}",
+  "language": "jsx",
+  "try_it": "Look for && with a number on the left in your code.",
+  "read_time_sec": 30
+}

@@ -1,0 +1,12 @@
+{
+  "id": "054",
+  "tag": "career",
+  "level": "beginner",
+  "title": "Pin your best repos only",
+  "why_it_matters": "Your profile should show your strongest work first.",
+  "explanation": "GitHub lets you pin up to six repositories. Pick finished, readable projects with a clear README and a live demo. Hide forks and tutorial copies from the spotlight. Quality shows more than quantity here.",
+  "code": null,
+  "language": null,
+  "try_it": "Choose the three projects you'd show a recruiter and pin them.",
+  "read_time_sec": 25
+}

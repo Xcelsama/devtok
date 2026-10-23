@@ -1,0 +1,12 @@
+{
+  "id": "126",
+  "tag": "javascript",
+  "level": "intermediate",
+  "title": "const doesn't freeze objects",
+  "why_it_matters": "Sharing one object by accident changes it everywhere.",
+  "explanation": "const stops you reassigning the variable, but the object inside can still change. Objects and arrays are passed by reference, so two variables can point to the same thing. Copy with spread when you need a separate one.",
+  "code": "const a = { n: 1 };\nconst b = a;\nb.n = 2;\nconsole.log(a.n); // 2, same object\nconst c = { ...a };\nc.n = 3;\nconsole.log(a.n); // still 2",
+  "language": "js",
+  "try_it": "Do the same experiment with an array and push.",
+  "read_time_sec": 35
+}

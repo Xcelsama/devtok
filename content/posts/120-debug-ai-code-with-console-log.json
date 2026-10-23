@@ -1,0 +1,12 @@
+{
+  "id": "120",
+  "tag": "ai-assisted-dev",
+  "level": "beginner",
+  "title": "Debug AI code with console.log",
+  "why_it_matters": "Printing what a value really is beats assuming.",
+  "explanation": "Most bugs are wrong assumptions about data. Log the variable right before the failing line, including its type. Compare it with what the code expects. console.log is still the quickest way to see what's really happening.",
+  "code": "const data = [1, 2, 3]; // whatever you are debugging\nconsole.log(\"data:\", data, typeof data);\nconsole.log(\"is array:\", Array.isArray(data));",
+  "language": "js",
+  "try_it": "Add two logs to the line that throws and read what they say.",
+  "read_time_sec": 30
+}

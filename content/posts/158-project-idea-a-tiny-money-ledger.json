@@ -1,0 +1,12 @@
+{
+  "id": "158",
+  "tag": "career",
+  "level": "intermediate",
+  "title": "Project idea: a tiny money ledger",
+  "why_it_matters": "Fintech-style projects test care with data and edge cases.",
+  "explanation": "Build an expense or wallet tracker. Store amounts as integer cents, format them with Intl, and never allow a negative balance without a rule. Add a transaction history and filters. Tests and clean data modelling will impress reviewers.",
+  "code": null,
+  "language": null,
+  "try_it": "Write down three rules your ledger must never break.",
+  "read_time_sec": 25
+}

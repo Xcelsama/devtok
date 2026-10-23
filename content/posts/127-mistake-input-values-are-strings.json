@@ -1,0 +1,12 @@
+{
+  "id": "127",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Mistake: input values are strings",
+  "why_it_matters": "Form totals turn into '510' instead of 15 without this.",
+  "explanation": "Everything read from an input is text. The plus sign joins text but adds numbers. Convert with Number() before doing math, and check for NaN if the user might type something odd.",
+  "code": "const a = \"5\";\nconst b = \"10\";\nconsole.log(a + b);                 // \"510\"\nconsole.log(Number(a) + Number(b)); // 15",
+  "language": "js",
+  "try_it": "Log Number('abc') and see what you get.",
+  "read_time_sec": 30
+}

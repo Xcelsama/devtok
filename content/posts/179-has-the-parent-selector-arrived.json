@@ -1,0 +1,12 @@
+{
+  "id": "179",
+  "tag": "css",
+  "level": "intermediate",
+  "title": ":has() — the parent selector arrived",
+  "why_it_matters": "You can style a parent based on its children, without JavaScript.",
+  "explanation": "The :has() selector matches an element if something inside it matches. Style a form field's wrapper when its input is invalid, or a card that contains a checked box. It replaces many small JS class toggles.",
+  "code": ".field:has(input:invalid) {\n  border-color: crimson;\n}\n.card:has(input:checked) {\n  background: #eef2ff;\n}",
+  "language": "css",
+  "try_it": "Highlight a label whenever its checkbox is checked using :has().",
+  "read_time_sec": 35
+}

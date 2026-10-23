@@ -1,0 +1,12 @@
+{
+  "id": "011",
+  "tag": "css",
+  "level": "beginner",
+  "title": "Quiz: justify-content or align-items?",
+  "why_it_matters": "Mixing up the two flexbox alignment properties costs beginners hours.",
+  "explanation": "Flexbox has a main axis and a cross axis. justify-content works along the main axis. align-items works along the cross axis. By default the main axis is horizontal, but flex-direction: column flips both of them.",
+  "code": ".row {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}",
+  "language": "css",
+  "try_it": "Quiz: after adding flex-direction: column, which property now centers items left to right? (Answer: align-items.)",
+  "read_time_sec": 30
+}

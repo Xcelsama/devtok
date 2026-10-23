@@ -1,0 +1,12 @@
+{
+  "id": "176",
+  "tag": "git-deploy",
+  "level": "beginner",
+  "title": "Environment variables on Vercel",
+  "why_it_matters": "'Works locally, breaks online' is often a missing variable.",
+  "explanation": "Your .env.local file stays on your machine. Add the same names and values in the Vercel project settings. Changes apply to new deployments, so redeploy after editing them. Names must match exactly, including NEXT_PUBLIC_ prefixes.",
+  "code": null,
+  "language": null,
+  "try_it": "Compare your .env.local names with the ones in Vercel.",
+  "read_time_sec": 25
+}

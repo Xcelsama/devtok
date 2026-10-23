@@ -1,0 +1,12 @@
+{
+  "id": "183",
+  "tag": "react",
+  "level": "intermediate",
+  "title": "Write your first custom hook",
+  "why_it_matters": "Hooks let you reuse logic, not just markup.",
+  "explanation": "A custom hook is a function whose name starts with use and that calls other hooks. It bundles state and behavior so many components can share it. Each component using it still gets its own separate copy of the state.",
+  "code": "function useToggle(initial = false) {\n  const [on, setOn] = useState(initial);\n  const toggle = () => setOn((v) => !v);\n  return [on, toggle];\n}",
+  "language": "jsx",
+  "try_it": "Use useToggle to show and hide a menu in two different components.",
+  "read_time_sec": 35
+}

@@ -1,0 +1,12 @@
+{
+  "id": "085",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Dot vs bracket: reading object keys",
+  "why_it_matters": "Dynamic keys and odd names need the bracket form.",
+  "explanation": "Dot notation is cleanest when you know the key. Bracket notation takes any string, so it works with variables and keys that contain dashes or spaces. Use brackets when the key is stored in a variable.",
+  "code": "const user = { name: \"Ada\", \"pay-method\": \"card\" };\nconst key = \"name\";\nconsole.log(user.name);\nconsole.log(user[key]);\nconsole.log(user[\"pay-method\"]);",
+  "language": "js",
+  "try_it": "Loop over ['name', 'pay-method'] and print each value using brackets.",
+  "read_time_sec": 30
+}

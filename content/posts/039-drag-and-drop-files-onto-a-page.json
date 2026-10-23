@@ -1,0 +1,12 @@
+{
+  "id": "039",
+  "tag": "browser-apis",
+  "level": "intermediate",
+  "title": "Drag and drop files onto a page",
+  "why_it_matters": "Dropping a file feels much nicer than the file picker.",
+  "explanation": "Listen to dragover and call preventDefault, or the browser won't allow a drop. In the drop handler, call preventDefault again and read e.dataTransfer.files. Always keep a normal file input too, for keyboard and phone users.",
+  "code": "const zone = document.querySelector(\"#drop\");\nzone.addEventListener(\"dragover\", (e) => e.preventDefault());\nzone.addEventListener(\"drop\", (e) => {\n  e.preventDefault();\n  const files = [...e.dataTransfer.files];\n  console.log(files.map((f) => f.name));\n});",
+  "language": "js",
+  "try_it": "Drop three files and log their combined size.",
+  "read_time_sec": 35
+}

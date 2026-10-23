@@ -1,0 +1,12 @@
+{
+  "id": "089",
+  "tag": "nextjs",
+  "level": "intermediate",
+  "title": "Redirect users who aren't signed in",
+  "why_it_matters": "Protected pages need a gate, and this is the simplest one.",
+  "explanation": "Import redirect from next/navigation and call it in a server component when a check fails. The user is sent elsewhere before the page renders. Always check on the server too, not only in the browser.",
+  "code": "import { redirect } from \"next/navigation\";\n\nexport default async function Dashboard() {\n  const user = null; // pretend: check auth here\n  if (!user) redirect(\"/login\");\n  return <h1>Welcome</h1>;\n}",
+  "language": "jsx",
+  "try_it": "Make the redirect go to /login and build a simple login page.",
+  "read_time_sec": 35
+}

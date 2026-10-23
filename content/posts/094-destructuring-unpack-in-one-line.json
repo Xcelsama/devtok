@@ -1,0 +1,12 @@
+{
+  "id": "094",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Destructuring: unpack in one line",
+  "why_it_matters": "You will see this in every React component and API response.",
+  "explanation": "Destructuring pulls properties out of an object into variables with matching names. You can set a default for missing ones, and rename with a colon. It makes functions that take objects much easier to read.",
+  "code": "const user = { name: \"Ada\", plan: \"pro\" };\nconst { name, plan, role = \"guest\" } = user;\nconsole.log(name, plan, role); // Ada pro guest",
+  "language": "js",
+  "try_it": "Destructure the first two items of an array: const [a, b] = ...",
+  "read_time_sec": 30
+}

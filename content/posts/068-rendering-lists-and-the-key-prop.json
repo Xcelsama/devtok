@@ -1,0 +1,12 @@
+{
+  "id": "068",
+  "tag": "react",
+  "level": "beginner",
+  "title": "Rendering lists and the key prop",
+  "why_it_matters": "Missing or bad keys cause weird bugs in lists that change.",
+  "explanation": "Use map to turn data into elements. Every item needs a key that is unique and stable, usually the database id. Avoid the array index when items can be reordered or deleted, because React may mix up which one is which.",
+  "code": "function TodoList({ todos }) {\n  return (\n    <ul>\n      {todos.map((t) => <li key={t.id}>{t.text}</li>)}\n    </ul>\n  );\n}",
+  "language": "jsx",
+  "try_it": "Check the console for the 'unique key' warning in your latest list.",
+  "read_time_sec": 35
+}

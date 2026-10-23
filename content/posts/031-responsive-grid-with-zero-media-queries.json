@@ -1,0 +1,12 @@
+{
+  "id": "031",
+  "tag": "css",
+  "level": "beginner",
+  "title": "Responsive grid with zero media queries",
+  "why_it_matters": "One line gives you a layout that adapts from phone to desktop.",
+  "explanation": "repeat(auto-fit, minmax(220px, 1fr)) tells the grid: make as many columns as fit, each at least 220px, and stretch them to fill the row. On a phone you get one column. On a laptop you get four. No breakpoints needed.",
+  "code": ".grid {\n  display: grid;\n  gap: 1rem;\n  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));\n}",
+  "language": "css",
+  "try_it": "Change 220px to 160px and watch how many columns appear on your phone.",
+  "read_time_sec": 35
+}

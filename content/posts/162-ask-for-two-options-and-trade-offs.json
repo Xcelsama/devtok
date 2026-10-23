@@ -1,0 +1,12 @@
+{
+  "id": "162",
+  "tag": "ai-assisted-dev",
+  "level": "intermediate",
+  "title": "Ask for two options and trade-offs",
+  "why_it_matters": "The first answer isn't always the best fit.",
+  "explanation": "Ask the AI for two different approaches and the pros and cons of each for your situation. You'll learn the design choices behind the code, and pick based on your project instead of whatever came first.",
+  "code": null,
+  "language": null,
+  "try_it": "Ask for two ways to store a cart: localStorage or database.",
+  "read_time_sec": 25
+}

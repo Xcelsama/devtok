@@ -1,0 +1,12 @@
+{
+  "id": "185",
+  "tag": "browser-apis",
+  "level": "intermediate",
+  "title": "IntersectionObserver: know what's on screen",
+  "why_it_matters": "It beats scroll listeners for lazy loading and animations.",
+  "explanation": "IntersectionObserver calls you when an element enters or leaves the viewport. No scroll events, no manual math. Use it to load content when it nears the screen, trigger animations once, or build infinite scroll.",
+  "code": "const io = new IntersectionObserver((entries) => {\n  entries.forEach((e) => {\n    if (e.isIntersecting) console.log(\"visible:\", e.target.id);\n  });\n});\ndocument.querySelectorAll(\"section\").forEach((s) => io.observe(s));",
+  "language": "js",
+  "try_it": "Fade in each section once as it scrolls into view.",
+  "read_time_sec": 30
+}

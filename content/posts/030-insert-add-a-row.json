@@ -1,0 +1,12 @@
+{
+  "id": "030",
+  "tag": "supabase-sql",
+  "level": "beginner",
+  "title": "INSERT: add a row",
+  "why_it_matters": "Creating data is the first half of CRUD.",
+  "explanation": "List the columns you are filling, then the values in the same order. Columns you skip use their default or null. Strings use single quotes, and booleans are true or false.",
+  "code": "insert into todos (title, done)\nvalues ('Learn SQL', false);",
+  "language": "sql",
+  "try_it": "Insert two rows in one statement by adding a comma and another set of values.",
+  "read_time_sec": 25
+}

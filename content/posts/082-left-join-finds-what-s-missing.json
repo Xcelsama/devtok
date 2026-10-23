@@ -1,0 +1,12 @@
+{
+  "id": "082",
+  "tag": "supabase-sql",
+  "level": "intermediate",
+  "title": "LEFT JOIN finds what's missing",
+  "why_it_matters": "'Which users have no orders?' is a very common question.",
+  "explanation": "A left join keeps every row from the left table, even without a match. The right side's columns become null. Filtering for null on the right table gives you exactly the rows with no matches, like unpaid bookings.",
+  "code": "select b.guest_name\nfrom bookings b\nleft join payments p on p.booking_id = b.id\nwhere p.id is null;",
+  "language": "sql",
+  "try_it": "Find users who have never posted anything.",
+  "read_time_sec": 30
+}

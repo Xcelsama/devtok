@@ -1,0 +1,12 @@
+{
+  "id": "125",
+  "tag": "css",
+  "level": "intermediate",
+  "title": "Myth: z-index 9999 always wins",
+  "why_it_matters": "Understanding stacking contexts ends the z-index guessing game.",
+  "explanation": "z-index only works on positioned elements, flex items and grid items. Also, some properties like transform or opacity create a stacking context, trapping children inside. A child with z-index 9999 can't escape a parent that sits below another element.",
+  "code": ".modal { position: fixed; z-index: 10; }\n.card  { position: relative; z-index: 1; }",
+  "language": "css",
+  "try_it": "Put transform: translateZ(0) on a parent and see if its child still overlaps the modal.",
+  "read_time_sec": 30
+}

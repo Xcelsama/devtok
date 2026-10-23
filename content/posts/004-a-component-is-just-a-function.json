@@ -1,0 +1,12 @@
+{
+  "id": "004",
+  "tag": "react",
+  "level": "beginner",
+  "title": "A component is just a function",
+  "why_it_matters": "Once this clicks, React stops feeling like magic.",
+  "explanation": "A React component is a function that returns JSX, the HTML-looking syntax. Its name starts with a capital letter. You use it like a custom tag. Return one root element, or wrap siblings in a fragment.",
+  "code": "function Welcome() {\n  return <h1>Hello, builder</h1>;\n}\n\nexport default Welcome;",
+  "language": "jsx",
+  "try_it": "Create a Footer component and render it twice.",
+  "read_time_sec": 30
+}

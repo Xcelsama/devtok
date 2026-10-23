@@ -1,0 +1,12 @@
+{
+  "id": "168",
+  "tag": "javascript",
+  "level": "intermediate",
+  "title": "Run requests in parallel with Promise.all",
+  "why_it_matters": "Waiting one by one makes screens load much slower than needed.",
+  "explanation": "If two requests don't depend on each other, start both at once. Promise.all takes an array of promises and waits for all of them. You get the results in the same order. If any one fails, the whole thing rejects.",
+  "code": "const [users, posts] = await Promise.all([\n  fetch(\"/api/users\").then((r) => r.json()),\n  fetch(\"/api/posts\").then((r) => r.json()),\n]);\nconsole.log(users.length, posts.length);",
+  "language": "js",
+  "try_it": "Time two sequential awaits against Promise.all using console.time.",
+  "read_time_sec": 35
+}

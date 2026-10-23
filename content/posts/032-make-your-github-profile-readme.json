@@ -1,0 +1,12 @@
+{
+  "id": "032",
+  "tag": "career",
+  "level": "beginner",
+  "title": "Make your GitHub profile README",
+  "why_it_matters": "It is the first page a curious recruiter will open.",
+  "explanation": "A repo named exactly like your username, with a README, shows on your profile. Keep it short: who you are, what you're learning, your best projects and how to contact you. Avoid pages of badges and statistics.",
+  "code": null,
+  "language": null,
+  "try_it": "Write a four-line profile README today and publish it.",
+  "read_time_sec": 25
+}

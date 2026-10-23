@@ -1,0 +1,12 @@
+{
+  "id": "114",
+  "tag": "supabase-sql",
+  "level": "intermediate",
+  "title": "Add an index to speed up reads",
+  "why_it_matters": "Slow queries on big tables usually need one.",
+  "explanation": "An index is like a book's index: the database jumps straight to matching rows instead of scanning the table. Index columns you filter or sort by often, like foreign keys. Too many indexes slow down writes, so don't add them blindly.",
+  "code": "create index bookings_created_at_idx\non bookings (created_at);",
+  "language": "sql",
+  "try_it": "Think of two columns in your app that you filter by often.",
+  "read_time_sec": 30
+}

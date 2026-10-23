@@ -1,0 +1,12 @@
+{
+  "id": "026",
+  "tag": "react",
+  "level": "beginner",
+  "title": "The children prop wraps content",
+  "why_it_matters": "It is how you build cards, modals and layouts.",
+  "explanation": "Anything you place between a component's opening and closing tags arrives as the children prop. That lets one Card component wrap any content. It is the same idea as a slot in other frameworks.",
+  "code": "function Card({ title, children }) {\n  return (\n    <section>\n      <h2>{title}</h2>\n      {children}\n    </section>\n  );\n}",
+  "language": "jsx",
+  "try_it": "Use Card twice with different content inside.",
+  "read_time_sec": 35
+}

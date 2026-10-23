@@ -1,0 +1,12 @@
+{
+  "id": "146",
+  "tag": "supabase-sql",
+  "level": "intermediate",
+  "title": "Join tables in one supabase-js call",
+  "why_it_matters": "You get nested data without writing SQL joins by hand.",
+  "explanation": "If tables are linked by a foreign key, name the related table inside select. Supabase returns it as a nested array on each row. One round trip replaces several requests and loops.",
+  "code": "const { data } = await supabase\n  .from(\"bookings\")\n  .select(\"guest_name, payments(amount_cents)\");\n\nconsole.log(data[0].payments);",
+  "language": "js",
+  "try_it": "Select a booking along with all its payments.",
+  "read_time_sec": 30
+}

@@ -1,0 +1,12 @@
+{
+  "id": "206",
+  "tag": "nextjs",
+  "level": "intermediate",
+  "title": "Fix 'window is not defined'",
+  "why_it_matters": "It is the most common Next.js error for people using browser APIs.",
+  "explanation": "Server code has no window, document or localStorage, and components are first rendered on the server. Read browser values inside useEffect, which only runs in the browser. Store them in state so the page can update.",
+  "code": "\"use client\";\nimport { useEffect, useState } from \"react\";\n\nexport default function Width() {\n  const [w, setW] = useState(0);\n  useEffect(() => { setW(window.innerWidth); }, []);\n  return <p>{w}px</p>;\n}",
+  "language": "jsx",
+  "try_it": "Move a localStorage read from the top of a component into useEffect.",
+  "read_time_sec": 35
+}

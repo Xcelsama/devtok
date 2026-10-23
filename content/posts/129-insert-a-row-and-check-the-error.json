@@ -1,0 +1,12 @@
+{
+  "id": "129",
+  "tag": "supabase-sql",
+  "level": "beginner",
+  "title": "Insert a row and check the error",
+  "why_it_matters": "Silent failures are the worst kind.",
+  "explanation": "insert takes an object whose keys match your column names. Supabase returns an error object instead of throwing, so check it every time. Row-level security problems and constraint failures show up there.",
+  "code": "const { error } = await supabase\n  .from(\"todos\")\n  .insert({ title: \"Ship it\" });\n\nif (error) console.error(error.message);",
+  "language": "js",
+  "try_it": "Insert a row with a column name that doesn't exist and read the message.",
+  "read_time_sec": 30
+}

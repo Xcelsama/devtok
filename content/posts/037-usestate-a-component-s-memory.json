@@ -1,0 +1,12 @@
+{
+  "id": "037",
+  "tag": "react",
+  "level": "beginner",
+  "title": "useState: a component's memory",
+  "why_it_matters": "Without state, nothing on your page can change.",
+  "explanation": "useState gives you a value and a function to update it. When you call the setter, React re-renders the component with the new value. Never change the variable directly. Always use the setter.",
+  "code": "import { useState } from \"react\";\n\nfunction Counter() {\n  const [count, setCount] = useState(0);\n  return <button onClick={() => setCount(count + 1)}>Taps: {count}</button>;\n}",
+  "language": "jsx",
+  "try_it": "Add a second button that resets the count to 0.",
+  "read_time_sec": 30
+}

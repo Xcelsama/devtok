@@ -1,0 +1,12 @@
+{
+  "id": "047",
+  "tag": "nextjs",
+  "level": "intermediate",
+  "title": "Before vs after: push 'use client' down",
+  "why_it_matters": "Smaller client components mean less JavaScript sent to the phone.",
+  "explanation": "Marking a whole page as client makes everything inside it client code. Instead, keep the page a server component and put the interactive bit, like a like button, in its own small client file. Import it where needed.",
+  "code": "// app/page.js (server)\nimport LikeButton from \"./LikeButton\"; // has \"use client\"\n\nexport default function Page() {\n  return <article><h1>Post</h1><LikeButton /></article>;\n}",
+  "language": "jsx",
+  "try_it": "Find a page marked 'use client' and extract only the interactive part.",
+  "read_time_sec": 35
+}

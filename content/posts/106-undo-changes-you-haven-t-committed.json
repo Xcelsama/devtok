@@ -1,0 +1,12 @@
+{
+  "id": "106",
+  "tag": "git-deploy",
+  "level": "beginner",
+  "title": "Undo changes you haven't committed",
+  "why_it_matters": "Everyone breaks a file at some point.",
+  "explanation": "git restore file throws away uncommitted edits in that file, permanently, so be sure. To unstage something you added by mistake, add --staged. Your edits stay in the file, but leave the next commit.",
+  "code": "git restore index.html\ngit restore --staged index.html",
+  "language": "bash",
+  "try_it": "Practice both commands on a throwaway file first.",
+  "read_time_sec": 25
+}

@@ -1,0 +1,12 @@
+{
+  "id": "046",
+  "tag": "react",
+  "level": "intermediate",
+  "title": "Before vs after: updating array state",
+  "why_it_matters": "Mutating state is the top reason a screen doesn't update.",
+  "explanation": "React compares state by reference. If you push into the same array and set it back, React sees no change and skips the update. Create a new array with spread instead. The same applies to objects.",
+  "code": "// inside your component\nfunction addBad() {\n  items.push(\"new\");\n  setItems(items);        // same array: no re-render\n}\nfunction addGood() {\n  setItems([...items, \"new\"]);\n}",
+  "language": "jsx",
+  "try_it": "Write a removeItem that uses filter to return a new array.",
+  "read_time_sec": 35
+}

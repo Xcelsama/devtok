@@ -1,0 +1,12 @@
+{
+  "id": "008",
+  "tag": "git-deploy",
+  "level": "beginner",
+  "title": "Git in three words: edit, stage, commit",
+  "why_it_matters": "The mental model matters more than the commands.",
+  "explanation": "You edit files in your working folder. git add moves chosen changes to the staging area. git commit saves that staged snapshot to history. Staging lets you commit related changes together instead of everything at once.",
+  "code": "git add index.html\ngit commit -m \"Add hero section\"\ngit log --oneline",
+  "language": "bash",
+  "try_it": "Make a tiny change and walk through all three steps.",
+  "read_time_sec": 30
+}

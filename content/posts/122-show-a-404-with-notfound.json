@@ -1,0 +1,12 @@
+{
+  "id": "122",
+  "tag": "nextjs",
+  "level": "beginner",
+  "title": "Show a 404 with notFound()",
+  "why_it_matters": "Missing data deserves a proper not found page.",
+  "explanation": "When a dynamic route can't find its record, call notFound() from next/navigation. Next.js renders the nearest not-found page and sends the right status code. It is cleaner than returning an empty page.",
+  "code": "import { notFound } from \"next/navigation\";\n\nexport default async function Page({ params }) {\n  const { id } = await params;\n  if (id !== \"1\") notFound();\n  return <h1>Item 1</h1>;\n}",
+  "language": "jsx",
+  "try_it": "Visit an id that doesn't exist and check what the browser shows.",
+  "read_time_sec": 35
+}

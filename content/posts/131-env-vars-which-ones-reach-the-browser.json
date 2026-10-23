@@ -1,0 +1,12 @@
+{
+  "id": "131",
+  "tag": "nextjs",
+  "level": "beginner",
+  "title": "Env vars: which ones reach the browser?",
+  "why_it_matters": "This one rule decides whether a secret leaks.",
+  "explanation": "Variables in .env.local are server-only by default. Only names starting with NEXT_PUBLIC_ are inlined into browser code. Never put a secret key behind that prefix, because anyone can read it in the page source.",
+  "code": "# .env.local\nNEXT_PUBLIC_SITE_NAME=DevTok\nDATABASE_SECRET=keep-me-server-only",
+  "language": "bash",
+  "try_it": "Log both variables in a client component and compare.",
+  "read_time_sec": 30
+}

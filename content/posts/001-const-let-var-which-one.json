@@ -1,0 +1,12 @@
+{
+  "id": "001",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "const, let, var: which one?",
+  "why_it_matters": "Picking the right keyword prevents a family of surprise bugs.",
+  "explanation": "Use const by default: the name can't be pointed at a new value. Use let when you must reassign, like a counter. Avoid var, because it ignores block boundaries and leaks out of if statements and loops.",
+  "code": "const price = 20;\nlet count = 0;\ncount = count + 1;\n// price = 30;  // would throw: assignment to constant variable\nconsole.log(price, count);",
+  "language": "js",
+  "try_it": "Uncomment the price line and read the error message out loud.",
+  "read_time_sec": 30
+}

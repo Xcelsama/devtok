@@ -1,0 +1,12 @@
+{
+  "id": "208",
+  "tag": "supabase-sql",
+  "level": "intermediate",
+  "title": "Private files need signed URLs",
+  "why_it_matters": "Public links to private documents are a serious leak.",
+  "explanation": "A public bucket serves files to anyone with the link. For sensitive files keep the bucket private and create a signed URL that expires. The second argument is how many seconds the link stays valid.",
+  "code": "const { data, error } = await supabase.storage\n  .from(\"documents\")\n  .createSignedUrl(`${user.id}/report.pdf`, 60);\n\nconsole.log(data?.signedUrl);",
+  "language": "js",
+  "try_it": "Generate a 60-second link and test that it stops working after.",
+  "read_time_sec": 30
+}

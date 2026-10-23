@@ -1,0 +1,12 @@
+{
+  "id": "014",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "== vs ===: the quiet bug maker",
+  "why_it_matters": "Loose equality gives odd results that are hard to spot.",
+  "explanation": "=== compares value and type. == quietly converts types first, so strange things become true, like 0 == false. Use === everywhere, and you only have to remember one set of rules.",
+  "code": "console.log(5 == \"5\");     // true (surprise)\nconsole.log(5 === \"5\");    // false\nconsole.log(0 == false);   // true\nconsole.log(0 === false);  // false",
+  "language": "js",
+  "try_it": "Search your code for == and replace each one with ===.",
+  "read_time_sec": 30
+}

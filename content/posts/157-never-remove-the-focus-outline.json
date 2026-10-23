@@ -1,0 +1,12 @@
+{
+  "id": "157",
+  "tag": "css",
+  "level": "beginner",
+  "title": "Never remove the focus outline",
+  "why_it_matters": "Keyboard users can't tell where they are on your page without it.",
+  "explanation": "outline: none removes the ring that shows which element is focused. Instead of deleting it, restyle it. :focus-visible only shows the ring for keyboard navigation, so mouse users don't see it on clicks.",
+  "code": "button:focus-visible {\n  outline: 3px solid #4f46e5;\n  outline-offset: 2px;\n}",
+  "language": "css",
+  "try_it": "Press Tab on your site. Can you always see where the focus is?",
+  "read_time_sec": 30
+}

@@ -1,0 +1,12 @@
+{
+  "id": "170",
+  "tag": "css",
+  "level": "intermediate",
+  "title": "Container queries: components that adapt themselves",
+  "why_it_matters": "Components stay reusable when they respond to their own space.",
+  "explanation": "A media query asks about the screen. A container query asks about the parent. Mark a parent with container-type: inline-size, then use @container to style children based on its width. The same card can look right in a sidebar or main column.",
+  "code": ".wrap { container-type: inline-size; }\n\n@container (min-width: 400px) {\n  .card { display: flex; gap: 1rem; }\n}",
+  "language": "css",
+  "try_it": "Place one card component in a narrow and a wide parent and compare.",
+  "read_time_sec": 35
+}

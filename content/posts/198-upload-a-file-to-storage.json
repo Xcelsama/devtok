@@ -1,0 +1,12 @@
+{
+  "id": "198",
+  "tag": "supabase-sql",
+  "level": "intermediate",
+  "title": "Upload a file to Storage",
+  "why_it_matters": "File uploads power avatars, documents and your own client-side tools.",
+  "explanation": "Pick a bucket with storage.from, then upload a path and a File object. Prefixing the path with the user's id keeps files organised and makes storage policies easy to write. Check error before assuming it worked.",
+  "code": "const { error } = await supabase.storage\n  .from(\"documents\")\n  .upload(`${user.id}/report.pdf`, file);\n\nif (error) console.error(error.message);",
+  "language": "js",
+  "try_it": "Create a private bucket and upload one file from the dashboard first.",
+  "read_time_sec": 30
+}

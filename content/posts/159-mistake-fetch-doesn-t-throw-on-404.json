@@ -1,0 +1,12 @@
+{
+  "id": "159",
+  "tag": "javascript",
+  "level": "intermediate",
+  "title": "Mistake: fetch doesn't throw on 404",
+  "why_it_matters": "Your app may treat error pages as real data.",
+  "explanation": "fetch only rejects for network failures. A 404 or 500 still resolves normally. Check res.ok, or the status code, and throw your own error when it is false. This single line prevents lots of confusing bugs.",
+  "code": "const res = await fetch(\"/api/items/999\");\nif (!res.ok) {\n  throw new Error(`Request failed: ${res.status}`);\n}\nconst item = await res.json();",
+  "language": "js",
+  "try_it": "Fetch a URL that doesn't exist and print res.ok.",
+  "read_time_sec": 30
+}

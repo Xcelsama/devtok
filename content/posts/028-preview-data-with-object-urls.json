@@ -1,0 +1,12 @@
+{
+  "id": "028",
+  "tag": "browser-apis",
+  "level": "intermediate",
+  "title": "Preview data with object URLs",
+  "why_it_matters": "It lets you show a file without reading it into memory twice.",
+  "explanation": "URL.createObjectURL makes a temporary link to a File or Blob that works inside your page. Use it as an iframe or link target. It holds memory until you call revokeObjectURL, so clean up when finished.",
+  "code": "const blob = new Blob([\"hello\"], { type: \"text/plain\" });\nconst url = URL.createObjectURL(blob);\nconsole.log(url);\nURL.revokeObjectURL(url);",
+  "language": "js",
+  "try_it": "Open the logged URL in a new tab before revoking it.",
+  "read_time_sec": 30
+}

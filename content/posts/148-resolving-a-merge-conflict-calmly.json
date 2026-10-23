@@ -1,0 +1,12 @@
+{
+  "id": "148",
+  "tag": "git-deploy",
+  "level": "intermediate",
+  "title": "Resolving a merge conflict calmly",
+  "why_it_matters": "Conflicts look scary, but they're just a text-editing task.",
+  "explanation": "Git marks the clashing lines with <<<<<<<, =======, and >>>>>>>. Edit the file to keep what you want, and delete all three markers. Then stage the file and commit. The app can't run until every marker is gone.",
+  "code": "git pull origin main\n# conflict: edit the file, remove the markers\ngit add .\ngit commit -m \"Resolve merge conflict\"",
+  "language": "bash",
+  "try_it": "Create a conflict deliberately in a test repo and resolve it.",
+  "read_time_sec": 30
+}

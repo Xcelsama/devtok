@@ -1,0 +1,12 @@
+{
+  "id": "062",
+  "tag": "supabase-sql",
+  "level": "intermediate",
+  "title": "Foreign keys connect your tables",
+  "why_it_matters": "Relational data is the whole point of SQL.",
+  "explanation": "A foreign key column stores the id of a row in another table. The database then refuses ids that don't exist. Here, each payment must belong to a real booking. This is how you avoid duplicated, drifting data.",
+  "code": "create table payments (\n  id uuid primary key default gen_random_uuid(),\n  booking_id uuid not null references bookings (id),\n  amount_cents integer not null\n);",
+  "language": "sql",
+  "try_it": "Try inserting a payment with a made-up booking_id.",
+  "read_time_sec": 30
+}

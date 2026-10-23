@@ -1,0 +1,12 @@
+{
+  "id": "110",
+  "tag": "react",
+  "level": "intermediate",
+  "title": "useEffect: run code after render",
+  "why_it_matters": "It is where side effects like fetching and timers live.",
+  "explanation": "useEffect runs your function after React updates the screen. The dependency array decides when it runs again: empty means once, a list means whenever those values change. Leave it out and it runs after every render.",
+  "code": "useEffect(() => {\n  document.title = `Taps: ${count}`;\n}, [count]);",
+  "language": "jsx",
+  "try_it": "Change the dependency array to [] and see what stops updating.",
+  "read_time_sec": 30
+}

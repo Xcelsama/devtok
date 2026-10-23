@@ -1,0 +1,12 @@
+{
+  "id": "076",
+  "tag": "a11y-performance",
+  "level": "beginner",
+  "title": "Use landmarks instead of divs everywhere",
+  "why_it_matters": "Screen reader users can jump straight to the main content.",
+  "explanation": "header, nav, main and footer tell assistive tech where things are. People can skip past the navigation directly to main. Use one main per page. Semantic elements are free accessibility with no extra attributes.",
+  "code": "<header>Logo</header>\n<nav>Links</nav>\n<main>Page content</main>\n<footer>Contact</footer>",
+  "language": "html",
+  "try_it": "Replace the outer divs of one page with these elements.",
+  "read_time_sec": 30
+}

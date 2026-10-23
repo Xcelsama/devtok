@@ -1,0 +1,12 @@
+{
+  "id": "069",
+  "tag": "nextjs",
+  "level": "intermediate",
+  "title": "Dynamic routes with [slug]",
+  "why_it_matters": "One file can serve thousands of pages.",
+  "explanation": "Wrap a folder name in square brackets to capture that URL part. app/blog/[slug]/page.js matches /blog/anything. The value arrives in params. In recent versions params is a promise, and awaiting it works either way.",
+  "code": "// app/blog/[slug]/page.js\nexport default async function Post({ params }) {\n  const { slug } = await params;\n  return <h1>Post: {slug}</h1>;\n}",
+  "language": "jsx",
+  "try_it": "Visit three different URLs under /blog and check the heading.",
+  "read_time_sec": 30
+}

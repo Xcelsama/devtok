@@ -1,0 +1,12 @@
+{
+  "id": "048",
+  "tag": "browser-apis",
+  "level": "intermediate",
+  "title": "Download a file you generated",
+  "why_it_matters": "Export buttons need no backend at all.",
+  "explanation": "Create a Blob from your data, make a link to it with an object URL, give it a download name and click it with code. This works for CSV exports, JSON backups and any text you generate in the page.",
+  "code": "const blob = new Blob([\"a,b\\n1,2\"], { type: \"text/csv\" });\nconst a = document.createElement(\"a\");\na.href = URL.createObjectURL(blob);\na.download = \"data.csv\";\na.click();\nURL.revokeObjectURL(a.href);",
+  "language": "js",
+  "try_it": "Export your localStorage cart as a JSON download.",
+  "read_time_sec": 35
+}

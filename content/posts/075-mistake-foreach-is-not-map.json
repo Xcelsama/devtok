@@ -1,0 +1,12 @@
+{
+  "id": "075",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Mistake: forEach is not map",
+  "why_it_matters": "Expecting a result from forEach is a very common stumble.",
+  "explanation": "forEach just runs a function for each item and returns undefined. If you want a new array, use map. If you only want side effects, like logging or updating the page, forEach is the right tool.",
+  "code": "const nums = [1, 2, 3];\nconst a = nums.forEach((n) => n * 2);\nconst b = nums.map((n) => n * 2);\nconsole.log(a, b); // undefined [2, 4, 6]",
+  "language": "js",
+  "try_it": "Change a forEach in your code to map if you assign its result.",
+  "read_time_sec": 30
+}

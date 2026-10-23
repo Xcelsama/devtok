@@ -1,0 +1,12 @@
+{
+  "id": "197",
+  "tag": "javascript",
+  "level": "intermediate",
+  "title": "textContent vs innerHTML: a security gap",
+  "why_it_matters": "innerHTML with user input lets attackers run code on your page.",
+  "explanation": "innerHTML parses a string as HTML, so a comment containing markup can run scripts through event attributes. textContent treats everything as plain text. Use it by default, and only use innerHTML for content you fully control.",
+  "code": "const comment = '<b onmouseover=\"alert(1)\">hover me</b>';\nconst box = document.querySelector(\"#box\");\nbox.innerHTML = comment;     // risky\nbox.textContent = comment;   // safe",
+  "language": "js",
+  "try_it": "Search your code for innerHTML and check where each value comes from.",
+  "read_time_sec": 30
+}

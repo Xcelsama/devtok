@@ -1,0 +1,12 @@
+{
+  "id": "144",
+  "tag": "css",
+  "level": "intermediate",
+  "title": "Build a spinner with pure CSS",
+  "why_it_matters": "Loading states show up in every app, so a tiny reusable one is useful.",
+  "explanation": "A circle with one colored border side, rotated forever, makes a spinner. @keyframes defines what changes over time. The animation property names it, sets the duration, the timing and how often it repeats.",
+  "code": ".spinner {\n  width: 24px; height: 24px;\n  border: 3px solid #ddd;\n  border-top-color: #4f46e5;\n  border-radius: 50%;\n  animation: spin 0.8s linear infinite;\n}\n@keyframes spin { to { transform: rotate(360deg); } }",
+  "language": "css",
+  "try_it": "Make the spinner bigger and change its speed to 2 seconds.",
+  "read_time_sec": 35
+}

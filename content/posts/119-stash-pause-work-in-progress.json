@@ -1,0 +1,12 @@
+{
+  "id": "119",
+  "tag": "git-deploy",
+  "level": "intermediate",
+  "title": "Stash: pause work in progress",
+  "why_it_matters": "Switching branches with unfinished edits can be awkward.",
+  "explanation": "git stash tucks away uncommitted changes and gives you a clean folder. Do what you need on another branch, then git stash pop to bring the work back. Commit small and often, so you need stash less.",
+  "code": "git stash\ngit switch other-branch\ngit stash pop",
+  "language": "bash",
+  "try_it": "Stash a change, check git status, then pop it.",
+  "read_time_sec": 30
+}

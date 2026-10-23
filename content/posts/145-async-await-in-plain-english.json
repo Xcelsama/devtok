@@ -1,0 +1,12 @@
+{
+  "id": "145",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "async/await in plain English",
+  "why_it_matters": "It makes asynchronous code read from top to bottom.",
+  "explanation": "Mark a function async and you can use await inside it. await pauses that function until the promise settles, without freezing the page. It reads like normal step-by-step code, and it is how most modern fetch code is written.",
+  "code": "const wait = (ms) => new Promise((r) => setTimeout(r, ms));\nasync function run() {\n  await wait(500);\n  console.log(\"half a second later\");\n}\nrun();",
+  "language": "js",
+  "try_it": "Add a second await wait(1000) and a second log message.",
+  "read_time_sec": 35
+}

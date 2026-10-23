@@ -1,0 +1,12 @@
+{
+  "id": "105",
+  "tag": "a11y-performance",
+  "level": "beginner",
+  "title": "Headings are an outline, not a font size",
+  "why_it_matters": "Screen reader users navigate by headings like a table of contents.",
+  "explanation": "Use one h1 for the page title, h2 for sections and h3 for subsections, without skipping levels. Choose the level for structure, then style its size with CSS. Never use a heading just because it looks bigger.",
+  "code": "<h1>Dashboard</h1>\n<h2>Recent bookings</h2>\n<h3>Today</h3>\n<h2>Payments</h2>",
+  "language": "html",
+  "try_it": "Read only the headings of your page. Does it still make sense?",
+  "read_time_sec": 30
+}

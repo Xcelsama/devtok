@@ -1,0 +1,12 @@
+{
+  "id": "115",
+  "tag": "css",
+  "level": "beginner",
+  "title": "Sticky header that actually sticks",
+  "why_it_matters": "A header that disappears on scroll is annoying on long mobile pages.",
+  "explanation": "position: sticky with a top value keeps an element visible once you scroll to it. Give it a background, or content will show through. If it fails, check the ancestors: overflow: hidden on a parent breaks it.",
+  "code": "header {\n  position: sticky;\n  top: 0;\n  background: white;\n  z-index: 10;\n}",
+  "language": "css",
+  "try_it": "Add overflow: hidden to the parent and watch the header stop sticking.",
+  "read_time_sec": 35
+}

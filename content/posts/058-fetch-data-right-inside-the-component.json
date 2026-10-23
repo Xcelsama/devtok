@@ -1,0 +1,12 @@
+{
+  "id": "058",
+  "tag": "nextjs",
+  "level": "intermediate",
+  "title": "Fetch data right inside the component",
+  "why_it_matters": "No useEffect, no loading state: the server does the waiting.",
+  "explanation": "A server component can be async. Await your data directly, and the page arrives with the content already filled in. Keep secrets like API keys in environment variables, since this code never ships to the browser.",
+  "code": "export default async function Page() {\n  const res = await fetch(`${process.env.API_URL}/items`);\n  const items = await res.json();\n  return <ul>{items.map((i) => <li key={i.id}>{i.name}</li>)}</ul>;\n}",
+  "language": "jsx",
+  "try_it": "Fetch data in a server component instead of useEffect in one page.",
+  "read_time_sec": 30
+}

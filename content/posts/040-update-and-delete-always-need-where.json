@@ -1,0 +1,12 @@
+{
+  "id": "040",
+  "tag": "supabase-sql",
+  "level": "beginner",
+  "title": "UPDATE and DELETE always need WHERE",
+  "why_it_matters": "Forgetting it changes or deletes every single row.",
+  "explanation": "Without WHERE, UPDATE and DELETE hit the whole table. Safer habit: write a SELECT with the same WHERE first and check the rows it returns. Then change select to update or delete.",
+  "code": "select * from todos where id = 42;   -- check first\nupdate todos set done = true where id = 42;\ndelete from todos where done = true;",
+  "language": "sql",
+  "try_it": "Practice on a throwaway table, never on real data.",
+  "read_time_sec": 25
+}

@@ -1,0 +1,12 @@
+{
+  "id": "092",
+  "tag": "git-deploy",
+  "level": "beginner",
+  "title": "Merge a finished branch",
+  "why_it_matters": "This is how your feature joins the main code.",
+  "explanation": "Switch to the branch you want to update, usually main, then merge the feature branch into it. Delete the old branch when done, since the commits stay in history. Conflicts only appear when both sides changed the same lines.",
+  "code": "git switch main\ngit merge feature/login\ngit branch -d feature/login",
+  "language": "bash",
+  "try_it": "Merge a small branch and view the result with git log --oneline.",
+  "read_time_sec": 30
+}

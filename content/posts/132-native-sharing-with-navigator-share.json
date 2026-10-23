@@ -1,0 +1,12 @@
+{
+  "id": "132",
+  "tag": "browser-apis",
+  "level": "intermediate",
+  "title": "Native sharing with navigator.share",
+  "why_it_matters": "On phones it opens the real share sheet, which feels app-like.",
+  "explanation": "navigator.share lets a PWA share text or links through the device's own sharing menu. It works only on secure pages, after a user gesture, and not on every browser. Always check that it exists and keep a fallback like copy link.",
+  "code": "if (navigator.share) {\n  navigator.share({ title: \"DevTok\", text: \"Check this tip\" });\n} else {\n  console.log(\"Share not supported here\");\n}",
+  "language": "js",
+  "try_it": "Wire this into a button and test on your phone.",
+  "read_time_sec": 35
+}

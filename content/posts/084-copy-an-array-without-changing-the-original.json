@@ -1,0 +1,12 @@
+{
+  "id": "084",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Copy an array without changing the original",
+  "why_it_matters": "Mutating shared data causes bugs that appear far from their cause.",
+  "explanation": "The spread operator ... unpacks an array into a new one. Use it to add or combine items without touching the original. React state updates depend on this habit.",
+  "code": "const a = [1, 2];\nconst b = [...a, 3];\nconsole.log(a); // [1, 2]\nconsole.log(b); // [1, 2, 3]",
+  "language": "js",
+  "try_it": "Combine two arrays into one with spread, then log all three.",
+  "read_time_sec": 30
+}

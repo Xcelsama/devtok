@@ -1,0 +1,12 @@
+{
+  "id": "035",
+  "tag": "git-deploy",
+  "level": "beginner",
+  "title": "Check before you commit",
+  "why_it_matters": "It catches stray files and half-finished changes.",
+  "explanation": "git status lists changed and untracked files. git diff shows exact line changes not yet staged. git diff --staged shows what will go into the next commit. Run them before every commit, like a spell check.",
+  "code": "git status\ngit diff\ngit diff --staged",
+  "language": "bash",
+  "try_it": "Run git diff --staged before your next commit and read it all.",
+  "read_time_sec": 30
+}

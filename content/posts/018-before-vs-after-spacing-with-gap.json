@@ -1,0 +1,12 @@
+{
+  "id": "018",
+  "tag": "css",
+  "level": "beginner",
+  "title": "Before vs after: spacing with gap",
+  "why_it_matters": "Less CSS means fewer spacing bugs on the last item.",
+  "explanation": "The old way puts a margin on every item, then removes it from the last one. The modern way sets gap on the parent. The gap only appears between items, never on the outside edges. It works in flexbox and grid.",
+  "code": "/* before */\n.card { margin-right: 16px; }\n.card:last-child { margin-right: 0; }\n\n/* after */\n.row { display: flex; gap: 16px; }",
+  "language": "css",
+  "try_it": "Find one place in your project that uses margins between siblings and swap it for gap.",
+  "read_time_sec": 35
+}

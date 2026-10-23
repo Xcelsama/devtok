@@ -1,0 +1,12 @@
+{
+  "id": "205",
+  "tag": "react",
+  "level": "beginner",
+  "title": "Pass functions as props",
+  "why_it_matters": "It's how a child component tells its parent something happened.",
+  "explanation": "Props can be functions too. The parent passes a callback, and the child calls it with data when something happens, like a click. Name them onSomething so their purpose is obvious. Data flows down as props, events flow up through callbacks.",
+  "code": "function Child({ onSave }) {\n  return <button onClick={() => onSave(\"note\")}>Save</button>;\n}\n\nfunction Parent() {\n  return <Child onSave={(text) => console.log(text)} />;\n}",
+  "language": "jsx",
+  "try_it": "Add an onDelete prop to a list item and log which id was clicked.",
+  "read_time_sec": 35
+}

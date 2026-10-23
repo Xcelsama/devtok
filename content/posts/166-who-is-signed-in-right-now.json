@@ -1,0 +1,12 @@
+{
+  "id": "166",
+  "tag": "supabase-sql",
+  "level": "beginner",
+  "title": "Who is signed in right now?",
+  "why_it_matters": "Almost every protected feature starts with this check.",
+  "explanation": "getUser asks Supabase's auth server who the current user is. It returns null when nobody is signed in. Prefer it over trusting stored session data when you make security decisions, because it verifies the token.",
+  "code": "const { data: { user } } = await supabase.auth.getUser();\nif (!user) console.log(\"not signed in\");\nelse console.log(user.id);",
+  "language": "js",
+  "try_it": "Show the user's email in your navbar when signed in.",
+  "read_time_sec": 30
+}

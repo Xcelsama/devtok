@@ -1,0 +1,12 @@
+{
+  "id": "187",
+  "tag": "javascript",
+  "level": "intermediate",
+  "title": "Event delegation for lists",
+  "why_it_matters": "One listener beats a hundred, and works on items added later.",
+  "explanation": "Events bubble up from the clicked element through its parents. Attach one listener to the list, then use e.target.closest to find which item was clicked. New items work automatically without any extra wiring.",
+  "code": "document.querySelector(\"ul\").addEventListener(\"click\", (e) => {\n  const item = e.target.closest(\"li\");\n  if (item) console.log(\"clicked\", item.textContent);\n});",
+  "language": "js",
+  "try_it": "Add an li with JavaScript and check that clicking it still works.",
+  "read_time_sec": 30
+}

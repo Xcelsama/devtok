@@ -1,0 +1,12 @@
+{
+  "id": "178",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Grab elements with querySelector",
+  "why_it_matters": "Everything in the DOM starts with finding the element.",
+  "explanation": "querySelector takes a CSS selector and returns the first match, or null. querySelectorAll returns all matches as a list. Once you have an element, you can change its text, classes and attributes.",
+  "code": "const title = document.querySelector(\"h1\");\nconst cards = document.querySelectorAll(\".card\");\ntitle.textContent = \"Hello\";\nconsole.log(cards.length);",
+  "language": "js",
+  "try_it": "Change the text of any heading on a page from the console.",
+  "read_time_sec": 30
+}

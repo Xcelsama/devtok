@@ -1,0 +1,12 @@
+{
+  "id": "111",
+  "tag": "nextjs",
+  "level": "intermediate",
+  "title": "error.js catches broken pages",
+  "why_it_matters": "One failed query shouldn't blank out the whole app.",
+  "explanation": "An error file in a route folder catches errors thrown while rendering that route. It must be a client component. It receives the error and a reset function, which lets the user try again without reloading.",
+  "code": "\"use client\";\n\nexport default function ErrorPage({ error, reset }) {\n  return <button onClick={() => reset()}>Something broke. Retry</button>;\n}",
+  "language": "jsx",
+  "try_it": "Throw an error in a page on purpose and see your error screen.",
+  "read_time_sec": 30
+}

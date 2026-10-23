@@ -1,0 +1,12 @@
+{
+  "id": "038",
+  "tag": "nextjs",
+  "level": "beginner",
+  "title": "When you need 'use client'",
+  "why_it_matters": "You will hit this error many times, so know the fix.",
+  "explanation": "Put 'use client' at the very top of a file when it needs state, effects, event handlers or browser APIs. Things like a file input, a click counter or localStorage all need it. Client-side tools are mostly client components.",
+  "code": "\"use client\";\nimport { useState } from \"react\";\n\nexport default function Counter() {\n  const [n, setN] = useState(0);\n  return <button onClick={() => setN(n + 1)}>{n}</button>;\n}",
+  "language": "jsx",
+  "try_it": "Remove 'use client' from a component using useState and read the error.",
+  "read_time_sec": 35
+}

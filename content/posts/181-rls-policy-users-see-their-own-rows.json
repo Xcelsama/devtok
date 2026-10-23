@@ -1,0 +1,12 @@
+{
+  "id": "181",
+  "tag": "supabase-sql",
+  "level": "intermediate",
+  "title": "RLS policy: users see their own rows",
+  "why_it_matters": "This single policy secures most beginner apps.",
+  "explanation": "A select policy adds a hidden where clause for every query. auth.uid() returns the signed-in user's id. Comparing it to a user_id column means each person only ever sees their own rows, even if your frontend has bugs.",
+  "code": "create policy \"read own todos\"\non todos for select\nto authenticated\nusing (auth.uid() = user_id);",
+  "language": "sql",
+  "try_it": "Sign in as two users and confirm neither sees the other's rows.",
+  "read_time_sec": 30
+}

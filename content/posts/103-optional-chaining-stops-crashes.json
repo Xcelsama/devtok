@@ -1,0 +1,12 @@
+{
+  "id": "103",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Optional chaining stops crashes",
+  "why_it_matters": "'Cannot read properties of undefined' is the error you will see most.",
+  "explanation": "Writing ?. means: if the thing on the left is null or undefined, stop and return undefined instead of crashing. Use it for data that may not exist yet, like API responses and optional fields.",
+  "code": "const order = { customer: null };\nconsole.log(order.customer?.name); // undefined\n// order.customer.name would throw a TypeError",
+  "language": "js",
+  "try_it": "Find a place in your code that reads two levels deep and add ?. safely.",
+  "read_time_sec": 30
+}

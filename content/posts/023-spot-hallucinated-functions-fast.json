@@ -1,0 +1,12 @@
+{
+  "id": "023",
+  "tag": "ai-assisted-dev",
+  "level": "intermediate",
+  "title": "Spot hallucinated functions fast",
+  "why_it_matters": "AI confidently invents methods that don't exist.",
+  "explanation": "Red flags: a method you've never seen, an import path that looks too neat, or an error saying 'is not a function'. Search the official docs for the name, or check your editor's autocomplete. If it doesn't appear, it was made up.",
+  "code": "// [[1], [2]].flatten();  // TypeError: not a function (invented)\nconsole.log([[1], [2]].flat()); // [1, 2] (real)",
+  "language": "js",
+  "try_it": "Pick one unfamiliar method from AI code and verify it in the docs.",
+  "read_time_sec": 30
+}

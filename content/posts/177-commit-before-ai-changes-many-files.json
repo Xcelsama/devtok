@@ -1,0 +1,12 @@
+{
+  "id": "177",
+  "tag": "ai-assisted-dev",
+  "level": "beginner",
+  "title": "Commit before AI changes many files",
+  "why_it_matters": "Git is your undo button when a change goes wrong.",
+  "explanation": "Make a commit, or a branch, before letting AI touch several files. If the result breaks things, git restore or reset brings back your working version. Review changes with git diff before keeping them.",
+  "code": "git add -A\ngit commit -m \"Checkpoint before AI refactor\"\ngit switch -c ai-refactor",
+  "language": "bash",
+  "try_it": "Make a checkpoint commit before your next AI-assisted change.",
+  "read_time_sec": 30
+}

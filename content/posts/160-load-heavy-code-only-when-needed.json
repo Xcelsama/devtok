@@ -1,0 +1,12 @@
+{
+  "id": "160",
+  "tag": "a11y-performance",
+  "level": "intermediate",
+  "title": "Load heavy code only when needed",
+  "why_it_matters": "A big library for a rarely used feature slows every visitor.",
+  "explanation": "A dynamic import downloads code at the moment you use it, not at page load. Use it for charts, editors, PDF tools or anything behind a button. The first paint gets lighter, which matters on slow phone connections.",
+  "code": "button.addEventListener(\"click\", async () => {\n  const { drawChart } = await import(\"./chart.js\");\n  drawChart();\n});",
+  "language": "js",
+  "try_it": "Find your biggest dependency and check whether you can lazy load it.",
+  "read_time_sec": 30
+}

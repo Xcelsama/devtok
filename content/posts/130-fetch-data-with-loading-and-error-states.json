@@ -1,0 +1,12 @@
+{
+  "id": "130",
+  "tag": "react",
+  "level": "intermediate",
+  "title": "Fetch data with loading and error states",
+  "why_it_matters": "Real users see loading and failure, not just the happy path.",
+  "explanation": "Keep three pieces of state: the data, a loading flag and an error flag. Start loading as true. In finally, set loading to false. Show a different message for each state so the screen is never blank.",
+  "code": "useEffect(() => {\n  fetch(\"/api/items\")\n    .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))\n    .then(setItems)\n    .catch(() => setError(true))\n    .finally(() => setLoading(false));\n}, []);",
+  "language": "jsx",
+  "try_it": "Add a visible error message for when the request fails.",
+  "read_time_sec": 35
+}

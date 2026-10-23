@@ -1,0 +1,12 @@
+{
+  "id": "074",
+  "tag": "career",
+  "level": "beginner",
+  "title": "Write a README that sells the project",
+  "why_it_matters": "A good README is your project's job interview.",
+  "explanation": "Cover what it does, why you built it, the tech stack, how to run it locally, and a live link. Add one or two things you learned or found hard. If someone can understand your project in 30 seconds, you win.",
+  "code": null,
+  "language": null,
+  "try_it": "Fix the README of your best project using this checklist.",
+  "read_time_sec": 25
+}

@@ -1,0 +1,12 @@
+{
+  "id": "137",
+  "tag": "css",
+  "level": "intermediate",
+  "title": "Animate transform, not left",
+  "why_it_matters": "Animations that stutter on phones usually move the wrong property.",
+  "explanation": "Animating left, top, width or height forces the browser to recalculate layout on every frame. transform and opacity can usually be handled much more cheaply. Use translate to move things, and scale to resize them.",
+  "code": "/* before: recalculates layout */\n.box { transition: left 300ms; }\n\n/* after: cheaper */\n.box { transition: transform 300ms; }",
+  "language": "css",
+  "try_it": "Convert one animation in a project from left or top to transform: translate.",
+  "read_time_sec": 30
+}

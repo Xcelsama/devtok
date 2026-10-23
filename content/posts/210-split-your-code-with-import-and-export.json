@@ -1,0 +1,12 @@
+{
+  "id": "210",
+  "tag": "javascript",
+  "level": "intermediate",
+  "title": "Split your code with import and export",
+  "why_it_matters": "One giant file becomes unreadable fast.",
+  "explanation": "A module is a file that exports things and imports what it needs. Named exports are imported with curly braces and must match the name. A default export can be imported under any name. Modules keep your code organised.",
+  "code": "// math.js contains:\n// export const double = (n) => n * 2;\n\n// app.js:\nimport { double } from \"./math.js\";\nconsole.log(double(4));",
+  "language": "js",
+  "try_it": "Move one helper function from your main file into its own file.",
+  "read_time_sec": 35
+}

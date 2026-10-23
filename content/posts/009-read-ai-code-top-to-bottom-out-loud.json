@@ -1,0 +1,12 @@
+{
+  "id": "009",
+  "tag": "ai-assisted-dev",
+  "level": "beginner",
+  "title": "Read AI code top to bottom, out loud",
+  "why_it_matters": "You can't maintain code you can't explain.",
+  "explanation": "Go one line at a time and say what each does in plain words. Anything you can't explain is where bugs will hide. Ask the AI to explain only those lines. Start with imports, then inputs, then outputs.",
+  "code": null,
+  "language": null,
+  "try_it": "Take one AI-written function and explain every line to yourself.",
+  "read_time_sec": 25
+}

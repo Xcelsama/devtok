@@ -1,0 +1,12 @@
+{
+  "id": "204",
+  "tag": "ai-assisted-dev",
+  "level": "intermediate",
+  "title": "Check that an npm package really exists",
+  "why_it_matters": "Invented package names can lead you to install something malicious.",
+  "explanation": "AI sometimes suggests packages that don't exist, and attackers sometimes publish fakes with those names. Before npm install, check the name on the registry, its publisher, and that others actually use it. This one command shows details.",
+  "code": "npm view react name version",
+  "language": "bash",
+  "try_it": "Check one dependency in your project: who publishes it?",
+  "read_time_sec": 25
+}

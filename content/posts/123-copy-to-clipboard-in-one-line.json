@@ -1,0 +1,12 @@
+{
+  "id": "123",
+  "tag": "browser-apis",
+  "level": "beginner",
+  "title": "Copy to clipboard in one line",
+  "why_it_matters": "Copy buttons are a tiny feature users love.",
+  "explanation": "navigator.clipboard.writeText returns a promise. It requires a secure context, meaning https or localhost, and normally a user action like a click. Show feedback such as 'Copied', since the clipboard gives no visual cue.",
+  "code": "button.addEventListener(\"click\", async () => {\n  await navigator.clipboard.writeText(\"copied!\");\n  button.textContent = \"Copied\";\n});",
+  "language": "js",
+  "try_it": "Add a copy button next to a code block on a page you built.",
+  "read_time_sec": 30
+}

@@ -1,0 +1,12 @@
+{
+  "id": "083",
+  "tag": "css",
+  "level": "beginner",
+  "title": "Myth: 100vh fits the phone screen",
+  "why_it_matters": "Full-screen hero sections often get cut off by mobile browser bars.",
+  "explanation": "On phones the address bar slides away as you scroll, so 100vh is sometimes taller than the visible area. The dvh unit means dynamic viewport height and follows the real visible space. Use it for full-screen sections.",
+  "code": ".hero {\n  min-height: 100vh;   /* fallback */\n  min-height: 100dvh;  /* better on phones */\n}",
+  "language": "css",
+  "try_it": "Open a full-height page on your phone, scroll a little, and see if the bottom button hides.",
+  "read_time_sec": 35
+}

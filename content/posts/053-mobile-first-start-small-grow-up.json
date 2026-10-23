@@ -1,0 +1,12 @@
+{
+  "id": "053",
+  "tag": "css",
+  "level": "beginner",
+  "title": "Mobile-first: start small, grow up",
+  "why_it_matters": "Most of your users are on phones, so phones should get the simple CSS.",
+  "explanation": "Write the phone layout as your default styles. Then use min-width media queries to add things for bigger screens. You end up with less overriding, and phones don't have to download and undo desktop rules.",
+  "code": ".cards { display: grid; gap: 1rem; }\n\n@media (min-width: 700px) {\n  .cards { grid-template-columns: 1fr 1fr; }\n}",
+  "language": "css",
+  "try_it": "Take a page you built desktop-first and move one section to this pattern.",
+  "read_time_sec": 35
+}

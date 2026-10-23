@@ -1,0 +1,12 @@
+{
+  "id": "139",
+  "tag": "supabase-sql",
+  "level": "beginner",
+  "title": "Filter with eq and fetch one row",
+  "why_it_matters": "Fetching one record by id is a daily task.",
+  "explanation": "eq adds a where column = value filter. Chain more filters for more conditions. single returns one object instead of an array and gives an error if there isn't exactly one match. Perfect for a profile page.",
+  "code": "const { data, error } = await supabase\n  .from(\"profiles\")\n  .select(\"*\")\n  .eq(\"id\", userId)\n  .single();",
+  "language": "js",
+  "try_it": "Call it with an id that doesn't exist and see the error.",
+  "read_time_sec": 35
+}

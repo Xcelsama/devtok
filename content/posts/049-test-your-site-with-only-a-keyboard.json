@@ -1,0 +1,12 @@
+{
+  "id": "049",
+  "tag": "a11y-performance",
+  "level": "beginner",
+  "title": "Test your site with only a keyboard",
+  "why_it_matters": "It finds more accessibility bugs than any tool in two minutes.",
+  "explanation": "Put your mouse away and press Tab. Can you reach every link and button? Can you always see where you are? Does Enter or Space activate things? Does a modal let you escape and return focus? Fix whatever breaks.",
+  "code": null,
+  "language": null,
+  "try_it": "Tab through your homepage and write down the first thing that breaks.",
+  "read_time_sec": 25
+}

@@ -1,0 +1,12 @@
+{
+  "id": "191",
+  "tag": "ai-assisted-dev",
+  "level": "beginner",
+  "title": "Quiz yourself on the code you shipped",
+  "why_it_matters": "Understanding beats a working app you can't explain.",
+  "explanation": "After each feature, ask the AI to write five questions about the code it gave you, then answer them without looking. Wrong answers show exactly what to study next. Over time, you'll need the AI less for basics.",
+  "code": null,
+  "language": null,
+  "try_it": "Generate five questions about your last feature, answer them cold.",
+  "read_time_sec": 25
+}

@@ -1,0 +1,12 @@
+{
+  "id": "109",
+  "tag": "css",
+  "level": "beginner",
+  "title": "Keep box shapes with aspect-ratio",
+  "why_it_matters": "It stops layouts from jumping around while content loads.",
+  "explanation": "aspect-ratio reserves a shape for an element based on its width. A 16 / 9 box stays that shape at any size. It is great for video embeds, cards and placeholders, and replaces the old padding-top hack.",
+  "code": ".video-box {\n  width: 100%;\n  aspect-ratio: 16 / 9;\n  background: #000;\n}",
+  "language": "css",
+  "try_it": "Make a square avatar placeholder with aspect-ratio: 1.",
+  "read_time_sec": 30
+}

@@ -1,0 +1,12 @@
+{
+  "id": "121",
+  "tag": "react",
+  "level": "intermediate",
+  "title": "Clean up your effects",
+  "why_it_matters": "Forgotten timers and listeners pile up and cause memory leaks.",
+  "explanation": "If an effect starts something ongoing, like an interval or an event listener, return a cleanup function. React calls it before running the effect again and when the component disappears. It keeps your app from doing work nobody sees.",
+  "code": "useEffect(() => {\n  const id = setInterval(() => console.log(\"tick\"), 1000);\n  return () => clearInterval(id);\n}, []);",
+  "language": "jsx",
+  "try_it": "Remove the cleanup and watch how many ticks you get after unmounting.",
+  "read_time_sec": 30
+}

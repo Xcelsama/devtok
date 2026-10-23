@@ -1,0 +1,12 @@
+{
+  "id": "196",
+  "tag": "browser-apis",
+  "level": "beginner",
+  "title": "Read and build URLs with URLSearchParams",
+  "why_it_matters": "Filters and pagination are easier to share when they live in the URL.",
+  "explanation": "URLSearchParams parses the query string for you. get reads a value, set changes it, and toString builds the new text with proper escaping. It's much safer than slicing strings by hand.",
+  "code": "const params = new URLSearchParams(\"?page=1&sort=new\");\nconsole.log(params.get(\"page\"));  // \"1\"\nparams.set(\"page\", \"2\");\nconsole.log(params.toString());   // page=2&sort=new",
+  "language": "js",
+  "try_it": "Build a link with a search term that contains a space and an ampersand.",
+  "read_time_sec": 30
+}

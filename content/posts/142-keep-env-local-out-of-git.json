@@ -1,0 +1,12 @@
+{
+  "id": "142",
+  "tag": "nextjs",
+  "level": "beginner",
+  "title": "Keep .env.local out of Git",
+  "why_it_matters": "Leaked keys in a public repo get found and abused fast.",
+  "explanation": "Your secrets file must never be committed. A fresh Next.js project usually ignores env files already, but checking takes five seconds. This command prints the rule that ignores the file. No output means it is not ignored.",
+  "code": "git check-ignore -v .env.local",
+  "language": "bash",
+  "try_it": "Run the command in your project folder right now.",
+  "read_time_sec": 25
+}

@@ -1,0 +1,12 @@
+{
+  "id": "135",
+  "tag": "ai-assisted-dev",
+  "level": "intermediate",
+  "title": "Test AI code with awkward inputs",
+  "why_it_matters": "It works on the happy path and falls over on the real one.",
+  "explanation": "Try an empty list, null, a very long string, a negative number, and a slow or failed network. AI tends to code for the example you gave it. Five awkward inputs find most of the bugs it left behind.",
+  "code": null,
+  "language": null,
+  "try_it": "List five awkward inputs for your signup form and try each.",
+  "read_time_sec": 25
+}

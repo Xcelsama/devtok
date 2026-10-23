@@ -1,0 +1,12 @@
+{
+  "id": "050",
+  "tag": "git-deploy",
+  "level": "beginner",
+  "title": "Set up .gitignore on day one",
+  "why_it_matters": "It keeps junk and secrets out of your repository.",
+  "explanation": "Files named in .gitignore are skipped by Git. Always ignore node_modules, build output like .next, and env files holding secrets. Add it before the first commit, because ignoring doesn't remove already tracked files.",
+  "code": "printf \"node_modules\\n.next\\n.env.local\\n\" >> .gitignore",
+  "language": "bash",
+  "try_it": "Open your .gitignore and check these three lines exist.",
+  "read_time_sec": 25
+}

@@ -1,0 +1,12 @@
+{
+  "id": "128",
+  "tag": "css",
+  "level": "beginner",
+  "title": "A smooth hover in two rules",
+  "why_it_matters": "Small transitions make a UI feel polished without any JavaScript.",
+  "explanation": "Put the transition on the normal state, not the hover state, so it plays both in and out. Name the property you animate rather than using all. On touch screens hover is unreliable, so never hide something important behind it.",
+  "code": ".btn { transition: transform 150ms ease; }\n.btn:hover { transform: translateY(-2px); }",
+  "language": "css",
+  "try_it": "Add a transition to one button and try the same page on your phone.",
+  "read_time_sec": 30
+}

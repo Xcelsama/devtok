@@ -1,0 +1,12 @@
+{
+  "id": "188",
+  "tag": "supabase-sql",
+  "level": "intermediate",
+  "title": "RLS insert needs WITH CHECK",
+  "why_it_matters": "Without it, users can create rows that belong to someone else.",
+  "explanation": "using filters rows that exist. with check validates rows being written. An insert policy needs with check, otherwise a user could insert rows with another person's user_id. Match it to auth.uid() to stop that.",
+  "code": "create policy \"insert own todos\"\non todos for insert\nto authenticated\nwith check (auth.uid() = user_id);",
+  "language": "sql",
+  "try_it": "Try inserting a row with someone else's user_id and read the error.",
+  "read_time_sec": 30
+}

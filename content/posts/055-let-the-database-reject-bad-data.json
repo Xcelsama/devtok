@@ -1,0 +1,12 @@
+{
+  "id": "055",
+  "tag": "supabase-sql",
+  "level": "intermediate",
+  "title": "Let the database reject bad data",
+  "why_it_matters": "Constraints protect you even when your app code has a bug.",
+  "explanation": "not null forbids empty values. check enforces a rule, like nights above zero. unique stops duplicates, like two accounts with the same email. Database rules apply to every client, so they are your last line of defense.",
+  "code": "alter table bookings\n  add constraint nights_positive check (nights > 0);\n\nalter table bookings\n  alter column guest_name set not null;",
+  "language": "sql",
+  "try_it": "Try to insert a booking with 0 nights and read the error.",
+  "read_time_sec": 35
+}

@@ -1,0 +1,12 @@
+{
+  "id": "108",
+  "tag": "javascript",
+  "level": "intermediate",
+  "title": "?? vs ||: the zero bug",
+  "why_it_matters": "|| treats 0 and empty string as missing, which corrupts real data.",
+  "explanation": "|| falls back whenever the left side is falsy, including 0 and ''. ?? only falls back for null or undefined. If 0 or an empty string is a valid value, like a quantity, use ??.",
+  "code": "const qty = 0;\nconsole.log(qty || 1);  // 1 (wrong, 0 was valid)\nconsole.log(qty ?? 1);  // 0 (correct)",
+  "language": "js",
+  "try_it": "Set qty to an empty string and compare both lines.",
+  "read_time_sec": 30
+}

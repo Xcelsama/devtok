@@ -1,0 +1,12 @@
+{
+  "id": "152",
+  "tag": "react",
+  "level": "intermediate",
+  "title": "Don't store what you can compute",
+  "why_it_matters": "Duplicate state drifts out of sync and creates bugs.",
+  "explanation": "If a value can be calculated from existing state or props, calculate it during render. A total derived from the items list never gets out of date, because it is recomputed each time. Extra state means extra places to forget to update.",
+  "code": "const [items, setItems] = useState([]);\nconst total = items.reduce((sum, i) => sum + i.price, 0);\n// no useState for total",
+  "language": "jsx",
+  "try_it": "Find one piece of state in your code that is really derived.",
+  "read_time_sec": 30
+}

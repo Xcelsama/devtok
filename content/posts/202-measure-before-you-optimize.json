@@ -1,0 +1,12 @@
+{
+  "id": "202",
+  "tag": "a11y-performance",
+  "level": "intermediate",
+  "title": "Measure before you optimize",
+  "why_it_matters": "Guessing what's slow wastes time on the wrong things.",
+  "explanation": "console.time and console.timeEnd give you a quick stopwatch around any code. For whole pages, use the DevTools Performance tab. Fix the thing the numbers point at, then measure again to confirm it really improved.",
+  "code": "const bigList = Array.from({ length: 100000 }, (_, i) => ({\n  active: i % 2 === 0,\n}));\nconsole.time(\"filter\");\nconst result = bigList.filter((x) => x.active);\nconsole.timeEnd(\"filter\");",
+  "language": "js",
+  "try_it": "Time a function in your own project and write down the result.",
+  "read_time_sec": 35
+}

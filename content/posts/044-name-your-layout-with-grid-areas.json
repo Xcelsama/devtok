@@ -1,0 +1,12 @@
+{
+  "id": "044",
+  "tag": "css",
+  "level": "intermediate",
+  "title": "Name your layout with grid areas",
+  "why_it_matters": "Named areas make a page layout readable like a drawing.",
+  "explanation": "grid-template-areas lets you draw the layout in text. Each quoted row is a row of the grid, and each word is a cell name. Then assign elements to names with grid-area. Rearranging for mobile is just rewriting the drawing.",
+  "code": ".page {\n  display: grid;\n  grid-template-areas:\n    \"header header\"\n    \"nav main\";\n  grid-template-columns: 200px 1fr;\n}\nheader { grid-area: header; }\nnav { grid-area: nav; }\nmain { grid-area: main; }",
+  "language": "css",
+  "try_it": "Sketch a page with header, nav, main and footer, then write the areas for it.",
+  "read_time_sec": 40
+}

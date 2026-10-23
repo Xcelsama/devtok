@@ -1,0 +1,12 @@
+{
+  "id": "066",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "find vs filter: one or many?",
+  "why_it_matters": "Mixing them up gives you an array when you wanted an object.",
+  "explanation": "find returns the first matching item, or undefined if there is none. filter returns an array of every match, which may be empty. Use find when you expect one result, like looking a user up by id.",
+  "code": "const users = [{ id: 1 }, { id: 2 }];\nconsole.log(users.find((u) => u.id === 2));   // { id: 2 }\nconsole.log(users.filter((u) => u.id === 2)); // [{ id: 2 }]",
+  "language": "js",
+  "try_it": "Look up an item by id with find, then print its name.",
+  "read_time_sec": 30
+}

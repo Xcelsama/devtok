@@ -1,0 +1,12 @@
+{
+  "id": "065",
+  "tag": "ai-assisted-dev",
+  "level": "beginner",
+  "title": "Paste the exact error, with the code",
+  "why_it_matters": "Paraphrasing an error removes the clue.",
+  "explanation": "Copy the full error message and the few lines of code around where it points. Add what you expected to happen. Leave out unrelated files. Exact text lets the AI, and you, search for the real cause instead of guessing.",
+  "code": null,
+  "language": null,
+  "try_it": "Next error you get, copy it exactly and read it before asking anyone.",
+  "read_time_sec": 25
+}

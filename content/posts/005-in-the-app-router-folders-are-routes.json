@@ -1,0 +1,12 @@
+{
+  "id": "005",
+  "tag": "nextjs",
+  "level": "beginner",
+  "title": "In the App Router, folders are routes",
+  "why_it_matters": "Understanding this file structure is half of Next.js.",
+  "explanation": "Inside the app folder, every folder is a URL segment. A route becomes public only when it has a page file. So app/about/page.js is the /about page. No router configuration is needed.",
+  "code": "mkdir -p app/about\ntouch app/about/page.js\n# now /about exists",
+  "language": "bash",
+  "try_it": "Create a /contact route and open it in the browser.",
+  "read_time_sec": 30
+}

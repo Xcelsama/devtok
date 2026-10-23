@@ -1,0 +1,12 @@
+{
+  "id": "195",
+  "tag": "nextjs",
+  "level": "intermediate",
+  "title": "Read query strings with searchParams",
+  "why_it_matters": "Search pages and filters live in the URL, so they can be shared.",
+  "explanation": "Server pages receive searchParams as a prop, holding the part after the question mark. Awaiting it is safe in all versions. Using the URL for state means refresh, back and share links all keep working.",
+  "code": "export default async function Page({ searchParams }) {\n  const { q } = await searchParams;\n  return <p>Searching: {q ?? \"nothing\"}</p>;\n}",
+  "language": "jsx",
+  "try_it": "Visit /?q=sql and read the output.",
+  "read_time_sec": 30
+}

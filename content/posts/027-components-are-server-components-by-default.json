@@ -1,0 +1,12 @@
+{
+  "id": "027",
+  "tag": "nextjs",
+  "level": "beginner",
+  "title": "Components are server components by default",
+  "why_it_matters": "It changes where your code runs and what you can use.",
+  "explanation": "In the App Router, a component without any directive runs on the server. Its console.log shows in your terminal. It can read secrets and talk to the database directly, but can't use useState, effects or browser events.",
+  "code": "// app/page.js (no \"use client\")\nexport default function Home() {\n  console.log(\"logs in the terminal, not the browser\");\n  return <h1>Hello</h1>;\n}",
+  "language": "jsx",
+  "try_it": "Add a console.log to a page and find where it prints.",
+  "read_time_sec": 35
+}

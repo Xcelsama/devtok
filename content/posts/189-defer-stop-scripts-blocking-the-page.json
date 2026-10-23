@@ -1,0 +1,12 @@
+{
+  "id": "189",
+  "tag": "a11y-performance",
+  "level": "beginner",
+  "title": "defer: stop scripts blocking the page",
+  "why_it_matters": "Render-blocking scripts delay what your visitors can see.",
+  "explanation": "A normal script in the head pauses HTML parsing while it downloads and runs. The defer attribute downloads it in the background and runs it after the page is parsed, in order. It's the simplest speed win for plain HTML.",
+  "code": "<!-- blocks rendering -->\n<script src=\"app.js\"></script>\n\n<!-- doesn't block -->\n<script src=\"app.js\" defer></script>",
+  "language": "html",
+  "try_it": "Add defer to a script in a project and check it still works.",
+  "read_time_sec": 35
+}

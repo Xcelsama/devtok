@@ -1,0 +1,12 @@
+{
+  "id": "165",
+  "tag": "browser-apis",
+  "level": "beginner",
+  "title": "Make it installable with a manifest",
+  "why_it_matters": "An install prompt turns your site into a home-screen app.",
+  "explanation": "A manifest.json describes your app: name, short_name, start_url, display set to standalone, and a set of icons. Link it in the head, and add a theme-color. Together with a service worker, browsers can offer to install it.",
+  "code": "<link rel=\"manifest\" href=\"/manifest.json\">\n<meta name=\"theme-color\" content=\"#4f46e5\">",
+  "language": "html",
+  "try_it": "Check DevTools, Application, Manifest for warnings on your site.",
+  "read_time_sec": 25
+}

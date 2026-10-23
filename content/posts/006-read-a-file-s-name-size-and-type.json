@@ -1,0 +1,12 @@
+{
+  "id": "006",
+  "tag": "browser-apis",
+  "level": "beginner",
+  "title": "Read a file's name, size and type",
+  "why_it_matters": "Client-side file tools all start with the file input.",
+  "explanation": "An input of type file gives you a FileList in input.files. Each File has name, size in bytes and type. Always check that a file was chosen, because users can cancel the dialog and files[0] becomes undefined.",
+  "code": "const input = document.querySelector(\"input[type=file]\");\ninput.addEventListener(\"change\", () => {\n  const file = input.files[0];\n  if (!file) return;\n  console.log(file.name, file.size, file.type);\n});",
+  "language": "js",
+  "try_it": "Choose a file and convert its size to kilobytes.",
+  "read_time_sec": 35
+}

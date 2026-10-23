@@ -1,0 +1,12 @@
+{
+  "id": "072",
+  "tag": "supabase-sql",
+  "level": "intermediate",
+  "title": "JOIN: combine two tables",
+  "why_it_matters": "Real screens need data from more than one table.",
+  "explanation": "A join matches rows using a shared value, usually a foreign key. The on clause says which columns match. An inner join returns only rows that have a match on both sides. Table aliases like b and p keep it short.",
+  "code": "select b.guest_name, p.amount_cents\nfrom bookings b\njoin payments p on p.booking_id = b.id;",
+  "language": "sql",
+  "try_it": "List each booking beside its payment amount.",
+  "read_time_sec": 30
+}

@@ -1,0 +1,12 @@
+{
+  "id": "095",
+  "tag": "css",
+  "level": "beginner",
+  "title": "CSS variables: change a theme once",
+  "why_it_matters": "Colors and sizes defined once stay consistent across the whole project.",
+  "explanation": "Custom properties start with two dashes and are read with var(). Declare them on :root so everything can use them. Changing one value updates every place it is used, which makes themes and brand tweaks painless.",
+  "code": ":root {\n  --brand: #4f46e5;\n  --radius: 12px;\n}\n.btn {\n  background: var(--brand);\n  border-radius: var(--radius);\n}",
+  "language": "css",
+  "try_it": "Move your three most repeated colors into variables.",
+  "read_time_sec": 35
+}

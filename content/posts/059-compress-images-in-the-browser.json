@@ -1,0 +1,12 @@
+{
+  "id": "059",
+  "tag": "browser-apis",
+  "level": "intermediate",
+  "title": "Compress images in the browser",
+  "why_it_matters": "Smaller uploads save your users' data and your storage costs.",
+  "explanation": "Decode the file into a bitmap, draw it on a canvas, then export with toBlob and a lower quality value. Quality only applies to JPEG and WebP. You can also shrink width and height before drawing for bigger savings.",
+  "code": "async function compress(file, quality = 0.7) {\n  const bitmap = await createImageBitmap(file);\n  const canvas = document.createElement(\"canvas\");\n  canvas.width = bitmap.width;\n  canvas.height = bitmap.height;\n  canvas.getContext(\"2d\").drawImage(bitmap, 0, 0);\n  return new Promise((res) => canvas.toBlob(res, \"image/jpeg\", quality));\n}",
+  "language": "js",
+  "try_it": "Compare file.size with the returned blob.size for three quality values.",
+  "read_time_sec": 35
+}

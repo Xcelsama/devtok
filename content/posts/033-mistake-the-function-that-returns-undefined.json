@@ -1,0 +1,12 @@
+{
+  "id": "033",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Mistake: the function that returns undefined",
+  "why_it_matters": "Forgetting return is one of the most common beginner bugs.",
+  "explanation": "Arrow functions with curly braces need an explicit return. Without braces, the value after the arrow is returned automatically. If a function gives you undefined, check for a missing return first.",
+  "code": "const double = (n) => { n * 2 };   // no return\nconst doubleOk = (n) => n * 2;     // implicit return\nconsole.log(double(4), doubleOk(4)); // undefined 8",
+  "language": "js",
+  "try_it": "Write a function with braces and no return, log it, then fix it.",
+  "read_time_sec": 30
+}

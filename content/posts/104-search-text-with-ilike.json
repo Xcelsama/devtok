@@ -1,0 +1,12 @@
+{
+  "id": "104",
+  "tag": "supabase-sql",
+  "level": "intermediate",
+  "title": "Search text with ILIKE",
+  "why_it_matters": "Search boxes need case-insensitive matching.",
+  "explanation": "LIKE matches patterns, where % means any characters. ILIKE is the Postgres version that ignores case. A leading % can't use a normal index, so very large tables may need a better approach later.",
+  "code": "select name\nfrom products\nwhere name ilike '%shirt%';",
+  "language": "sql",
+  "try_it": "Search your own table for names that start with 'a' (use 'a%').",
+  "read_time_sec": 25
+}

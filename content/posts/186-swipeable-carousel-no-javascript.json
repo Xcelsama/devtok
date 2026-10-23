@@ -1,0 +1,12 @@
+{
+  "id": "186",
+  "tag": "css",
+  "level": "intermediate",
+  "title": "Swipeable carousel, no JavaScript",
+  "why_it_matters": "Horizontal swiping is native on phones, so use it.",
+  "explanation": "Make a flex row that scrolls horizontally, then add scroll-snap. The container snaps items into place, and each child declares where it aligns. Children at about 80% width let the next one peek out, hinting there is more.",
+  "code": ".row {\n  display: flex;\n  gap: 1rem;\n  overflow-x: auto;\n  scroll-snap-type: x mandatory;\n}\n.row > * { flex: 0 0 80%; scroll-snap-align: start; }",
+  "language": "css",
+  "try_it": "Build a row of five cards and swipe it on your phone.",
+  "read_time_sec": 35
+}

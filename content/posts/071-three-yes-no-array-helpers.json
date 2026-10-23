@@ -1,0 +1,12 @@
+{
+  "id": "071",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Three yes/no array helpers",
+  "why_it_matters": "They replace clumsy loops with a single readable line.",
+  "explanation": "includes checks if a value is in the array. some asks whether at least one item passes a test. every asks whether all of them do. Each returns a plain true or false, so they fit right inside an if.",
+  "code": "const scores = [40, 75, 90];\nconsole.log(scores.some((s) => s > 80));   // true\nconsole.log(scores.every((s) => s >= 50)); // false\nconsole.log(scores.includes(75));          // true",
+  "language": "js",
+  "try_it": "Check whether every item in a list of prices is above zero.",
+  "read_time_sec": 30
+}

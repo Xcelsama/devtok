@@ -1,0 +1,12 @@
+{
+  "id": "163",
+  "tag": "react",
+  "level": "intermediate",
+  "title": "Lift state up to share it",
+  "why_it_matters": "Two sibling components can't talk directly in React.",
+  "explanation": "When two components need the same data, move the state to their closest common parent and pass it down as props. The child receives a value and a function to change it. Data flows down, events flow up.",
+  "code": "function Parent() {\n  const [open, setOpen] = useState(false);\n  return (\n    <>\n      <Button onClick={() => setOpen(!open)} />\n      <Panel open={open} />\n    </>\n  );\n}",
+  "language": "jsx",
+  "try_it": "Sketch a small page with two components that share one value.",
+  "read_time_sec": 40
+}

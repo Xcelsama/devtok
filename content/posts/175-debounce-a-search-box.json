@@ -1,0 +1,12 @@
+{
+  "id": "175",
+  "tag": "a11y-performance",
+  "level": "intermediate",
+  "title": "Debounce a search box",
+  "why_it_matters": "Firing a request on every keystroke wastes data and flickers.",
+  "explanation": "Debouncing waits until the user stops typing for a short moment before running your function. Each new keystroke cancels the previous timer. 300 milliseconds is a common starting point. It keeps API calls and rendering under control.",
+  "code": "function debounce(fn, ms = 300) {\n  let timer;\n  return (...args) => {\n    clearTimeout(timer);\n    timer = setTimeout(() => fn(...args), ms);\n  };\n}",
+  "language": "js",
+  "try_it": "Wrap a search handler in debounce and watch the network tab.",
+  "read_time_sec": 35
+}

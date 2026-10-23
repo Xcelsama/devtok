@@ -1,0 +1,12 @@
+{
+  "id": "112",
+  "tag": "browser-apis",
+  "level": "intermediate",
+  "title": "Store files in IndexedDB",
+  "why_it_matters": "It can save Blobs, which localStorage can't.",
+  "explanation": "IndexedDB handles structured data, including Blobs and Files. That makes it perfect for file viewers that remember recent documents or work offline. Writes go inside a transaction, and oncomplete tells you they finished.",
+  "code": "const open = indexedDB.open(\"viewer\", 1);\nopen.onupgradeneeded = () =>\n  open.result.createObjectStore(\"files\", { keyPath: \"name\" });\nopen.onsuccess = () => {\n  const blob = new Blob([\"hi\"], { type: \"text/plain\" });\n  open.result.transaction(\"files\", \"readwrite\")\n    .objectStore(\"files\").put({ name: \"hi.txt\", blob });\n};",
+  "language": "js",
+  "try_it": "Save a chosen file, reload, and read it back.",
+  "read_time_sec": 35
+}

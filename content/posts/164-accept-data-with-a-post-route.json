@@ -1,0 +1,12 @@
+{
+  "id": "164",
+  "tag": "nextjs",
+  "level": "intermediate",
+  "title": "Accept data with a POST route",
+  "why_it_matters": "Forms and fetch calls need somewhere to send data.",
+  "explanation": "Export a POST function and read the body with await request.json(). Validate what you receive before using it, because anyone can call your endpoint. Return a status code that matches what happened, like 201 for created.",
+  "code": "export async function POST(request) {\n  const body = await request.json();\n  return Response.json({ received: body.name }, { status: 201 });\n}",
+  "language": "js",
+  "try_it": "Call it with fetch and a JSON body from the browser console.",
+  "read_time_sec": 30
+}

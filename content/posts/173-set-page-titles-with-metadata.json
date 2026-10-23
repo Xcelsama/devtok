@@ -1,0 +1,12 @@
+{
+  "id": "173",
+  "tag": "nextjs",
+  "level": "beginner",
+  "title": "Set page titles with metadata",
+  "why_it_matters": "Titles and descriptions decide how your site looks in search and shares.",
+  "explanation": "Export a metadata object from a layout or page, and Next.js writes the head tags for you. Each page can override the layout's values. Write a different title for every page so tabs and search results make sense.",
+  "code": "export const metadata = {\n  title: \"DevTok\",\n  description: \"Short front-end dev posts\",\n};",
+  "language": "js",
+  "try_it": "Give three pages three different titles and check the browser tabs.",
+  "read_time_sec": 30
+}

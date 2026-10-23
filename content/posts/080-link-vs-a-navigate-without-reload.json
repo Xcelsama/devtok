@@ -1,0 +1,12 @@
+{
+  "id": "080",
+  "tag": "nextjs",
+  "level": "beginner",
+  "title": "Link vs <a>: navigate without reload",
+  "why_it_matters": "It makes navigation feel instant like an app.",
+  "explanation": "The Link component from next/link switches pages on the client without a full reload. It can also fetch the next page's code ahead of time. Use it for internal links, and plain a tags for outside websites.",
+  "code": "import Link from \"next/link\";\n\nexport default function Nav() {\n  return <Link href=\"/about\">About</Link>;\n}",
+  "language": "jsx",
+  "try_it": "Replace one internal a tag in your project with Link.",
+  "read_time_sec": 30
+}

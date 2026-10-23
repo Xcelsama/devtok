@@ -1,0 +1,12 @@
+{
+  "id": "100",
+  "tag": "nextjs",
+  "level": "beginner",
+  "title": "loading.js gives instant feedback",
+  "why_it_matters": "Users forgive waiting when they can see something happening.",
+  "explanation": "Drop a loading file in a route folder. Next.js shows it immediately while the page's async work finishes. It is the easiest way to avoid a blank screen when you fetch data on the server.",
+  "code": "// app/dashboard/loading.js\nexport default function Loading() {\n  return <p>Loading dashboard…</p>;\n}",
+  "language": "jsx",
+  "try_it": "Add a 2-second delay to a page and watch your loading state.",
+  "read_time_sec": 30
+}
