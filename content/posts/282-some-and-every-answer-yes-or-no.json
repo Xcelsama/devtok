@@ -1,0 +1,12 @@
+{
+  "id": "282",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "some and every answer yes or no",
+  "why_it_matters": "They replace messy loops with a single readable line.",
+  "explanation": "some asks: does at least one item pass the test? every asks: do all items pass? Both return true or false and stop as soon as they know. One quirk: every on an empty array is true, because nothing fails.",
+  "code": "const ages = [17, 22, 30];\nconsole.log(ages.some((a) => a < 18));   // true\nconsole.log(ages.every((a) => a >= 18)); // false\nconsole.log([].every((a) => a > 100));   // true",
+  "language": "js",
+  "try_it": "Use every to check that all strings in ['a', 'b', ''] are non-empty.",
+  "read_time_sec": 30
+}

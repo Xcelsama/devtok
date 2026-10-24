@@ -1,0 +1,12 @@
+{
+  "id": "233",
+  "tag": "ai-assisted-dev",
+  "level": "intermediate",
+  "title": "Paste the exact error, not a summary",
+  "why_it_matters": "'It does not work' gives the AI nothing to reason about.",
+  "explanation": "Good debugging prompts include the full error text, the file it points to, and the code around that line. Add what you expected to happen and what happened instead. The more exact you are, the better the answer.",
+  "code": null,
+  "language": null,
+  "try_it": "Next time something breaks, write the three parts down before you prompt.",
+  "read_time_sec": 20
+}

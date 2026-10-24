@@ -1,0 +1,12 @@
+{
+  "id": "323",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Catch async errors with try/catch",
+  "why_it_matters": "Without it, a failed request leaves the user staring at nothing.",
+  "explanation": "When an awaited promise rejects, await throws the error at that line, so ordinary try/catch can catch it. Without a catch you get an unhandled rejection and the user sees nothing happen. Always decide what the user should see when a request fails.",
+  "code": "const fail = () => Promise.reject(new Error(\"Server said no\"));\nasync function run() {\n  try {\n    await fail();\n  } catch (e) {\n    console.log(\"Caught:\", e.message);\n  }\n}\nrun();",
+  "language": "js",
+  "try_it": "Add a finally block that logs 'done' whether or not it failed.",
+  "read_time_sec": 30
+}

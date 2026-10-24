@@ -1,0 +1,12 @@
+{
+  "id": "289",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Myth: b = a makes a copy",
+  "why_it_matters": "Shared arrays cause bugs where changing one list alters another.",
+  "explanation": "Fact: assigning an array to another variable doesn't copy it, both names point to the same array. Spread, [...a], builds a new array with the same items. It's the basic move for changing data without damaging the original.",
+  "code": "const a = [1, 2];\nconst b = a;       // same array, not a copy\nconst c = [...a];  // a real copy\nb.push(3);\nconsole.log(a, c); // [1, 2, 3] [1, 2]",
+  "language": "js",
+  "try_it": "Quiz: what does c hold if you push 4 into a after copying? Run it.",
+  "read_time_sec": 30
+}

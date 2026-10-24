@@ -1,0 +1,12 @@
+{
+  "id": "232",
+  "tag": "ai-assisted-dev",
+  "level": "beginner",
+  "title": "Make the AI explain line by line",
+  "why_it_matters": "Understanding the code is the whole point of learning with AI.",
+  "explanation": "Instead of only asking for a fix, paste the code and ask for each line explained. Tell it your level, for example: strong in HTML and CSS, new to JavaScript. Then explain it back in your own words.",
+  "code": null,
+  "language": null,
+  "try_it": "Pick one function from your project and ask for a line-by-line explanation.",
+  "read_time_sec": 20
+}

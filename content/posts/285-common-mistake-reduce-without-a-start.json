@@ -1,0 +1,12 @@
+{
+  "id": "285",
+  "tag": "javascript",
+  "level": "intermediate",
+  "title": "Common mistake: reduce without a start",
+  "why_it_matters": "It crashes on empty lists and breaks on arrays of objects.",
+  "explanation": "If you skip the second argument, reduce uses the first item as the starting total. That breaks with arrays of objects, and it throws an error on an empty array. Always pass a start value: 0 for sums, [] for lists, {} for objects.",
+  "code": "console.log([].reduce((a, b) => a + b, 0)); // 0 (safe)\nconst objs = [{ n: 1 }, { n: 2 }];\nconsole.log(objs.reduce((a, b) => a + b.n));    // [object Object]2\nconsole.log(objs.reduce((a, b) => a + b.n, 0)); // 3",
+  "language": "js",
+  "try_it": "Remove the 0 from the first line and read the error you get.",
+  "read_time_sec": 35
+}

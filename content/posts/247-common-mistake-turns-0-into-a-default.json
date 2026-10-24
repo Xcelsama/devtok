@@ -1,0 +1,12 @@
+{
+  "id": "247",
+  "tag": "javascript",
+  "level": "intermediate",
+  "title": "Common mistake: || turns 0 into a default",
+  "why_it_matters": "A quantity or discount of 0 is valid data, not 'missing'.",
+  "explanation": "|| falls back for any falsy value, including 0, false and an empty string. ?? falls back only for null or undefined. If zero or an empty string is a legitimate value, like a quantity, use ?? so you don't overwrite it by accident.",
+  "code": "const qty = 0;\nconsole.log(qty || 10);  // 10 (wrong, 0 was valid)\nconsole.log(qty ?? 10);  // 0  (right)\nconsole.log(null ?? 10); // 10",
+  "language": "js",
+  "try_it": "Find one || default in your code and ask: could 0 or '' be valid there?",
+  "read_time_sec": 30
+}

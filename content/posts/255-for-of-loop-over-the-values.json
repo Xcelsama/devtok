@@ -1,0 +1,12 @@
+{
+  "id": "255",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "for...of: loop over the values",
+  "why_it_matters": "It's the cleanest way to visit every item in an array.",
+  "explanation": "for...of hands you each item directly, with no index to manage. It reads almost like English: for each tool of tools. Choose it when you just need the values, or when you want to use break, continue or await inside the loop.",
+  "code": "const tools = [\"HTML\", \"CSS\", \"JS\"];\nfor (const tool of tools) {\n  console.log(tool);\n}",
+  "language": "js",
+  "try_it": "Rewrite a for loop in your code that only uses i to read tools[i].",
+  "read_time_sec": 25
+}

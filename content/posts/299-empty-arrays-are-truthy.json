@@ -1,0 +1,12 @@
+{
+  "id": "299",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Empty arrays are truthy",
+  "why_it_matters": "An empty list can pass an if check and show a blank screen.",
+  "explanation": "An empty array counts as true in an if, so if (results) passes even with zero items. To check whether a list has anything in it, use results.length. Zero is falsy and anything higher is truthy.",
+  "code": "const results = [];\nif (results) console.log(\"runs, even though it is empty\");\nif (results.length) console.log(\"never runs\");\nif (results.length === 0) console.log(\"No results found\");",
+  "language": "js",
+  "try_it": "Add an empty-state message check to one list in your project.",
+  "read_time_sec": 25
+}

@@ -1,0 +1,12 @@
+{
+  "id": "329",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Loading, error, success: model all three",
+  "why_it_matters": "Every screen with data needs these three states.",
+  "explanation": "Every request has three moments: waiting, success and failure. Model them with a status value, and your UI always has something honest to show: a spinner, the data, or a retry message. Skipping this makes screens flash empty or freeze.",
+  "code": "async function load(setState) {\n  setState({ status: \"loading\" });\n  try {\n    const res = await fetch(\"/api/items\");\n    if (!res.ok) throw new Error(\"Failed\");\n    setState({ status: \"success\", data: await res.json() });\n  } catch (e) {\n    setState({ status: \"error\", message: e.message });\n  }\n}",
+  "language": "js",
+  "try_it": "Sketch what your UI shows in each of the three states.",
+  "read_time_sec": 30
+}

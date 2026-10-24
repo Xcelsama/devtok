@@ -1,0 +1,12 @@
+{
+  "id": "257",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Infinite loops freeze your tab",
+  "why_it_matters": "One forgotten line can lock up the browser.",
+  "explanation": "A while loop repeats as long as its condition stays true. If nothing inside ever makes it false, the loop never stops and your tab freezes. Before running any loop, ask yourself: what eventually makes this condition false?",
+  "code": "let tries = 0;\nwhile (tries < 3) {\n  console.log(\"try\", tries);\n  tries++; // delete this line and the loop never ends\n}",
+  "language": "js",
+  "try_it": "Quiz: how many times does this print if tries starts at 5?",
+  "read_time_sec": 25
+}

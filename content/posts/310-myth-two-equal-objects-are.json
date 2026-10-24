@@ -1,0 +1,12 @@
+{
+  "id": "310",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Myth: two equal objects are ===",
+  "why_it_matters": "This is why React sometimes re-renders when nothing changed.",
+  "explanation": "Fact: === on objects and arrays checks whether both names point at the very same object, not whether their contents match. Two separate objects with identical contents aren't equal. A new object each render means a new reference.",
+  "code": "console.log({ a: 1 } === { a: 1 }); // false\nconst x = { a: 1 };\nconst y = x;\nconsole.log(x === y);               // true\nconsole.log(JSON.stringify({ a: 1 }) === JSON.stringify({ a: 1 })); // true",
+  "language": "js",
+  "try_it": "Quiz: is [] === [] true or false? Then check it.",
+  "read_time_sec": 30
+}

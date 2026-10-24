@@ -1,0 +1,12 @@
+{
+  "id": "298",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Remove duplicates with a Set",
+  "why_it_matters": "A Set is the shortest path from messy to unique.",
+  "explanation": "A Set stores each value only once. Pass an array in and duplicates vanish. Spread the Set back into an array and you're done. It works for numbers and strings; objects are compared by reference, so look-alike objects stay.",
+  "code": "const tags = [\"css\", \"js\", \"css\", \"sql\", \"js\"];\nconst unique = [...new Set(tags)];\nconsole.log(unique); // [\"css\", \"js\", \"sql\"]",
+  "language": "js",
+  "try_it": "Use a Set to count how many different letters are in 'banana'.",
+  "read_time_sec": 25
+}

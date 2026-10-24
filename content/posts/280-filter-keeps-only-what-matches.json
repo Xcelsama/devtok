@@ -1,0 +1,12 @@
+{
+  "id": "280",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "filter keeps only what matches",
+  "why_it_matters": "It's how you build search results and category tabs.",
+  "explanation": "filter runs a test on each item and keeps the ones where your function returns true. You get a new array, which may be shorter or even empty. Unlike map, the number of items can change, but the items themselves stay the same.",
+  "code": "const prices = [120, 50, 300, 80];\nconst cheap = prices.filter((p) => p < 100);\nconsole.log(cheap);  // [50, 80]\nconsole.log(prices); // original unchanged",
+  "language": "js",
+  "try_it": "Filter the array to keep only prices between 100 and 200.",
+  "read_time_sec": 30
+}

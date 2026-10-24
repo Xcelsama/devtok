@@ -1,0 +1,12 @@
+{
+  "id": "274",
+  "tag": "javascript",
+  "level": "intermediate",
+  "title": "Quiz: why does var print 3, 3, 3?",
+  "why_it_matters": "A classic interview question, and a real source of bugs.",
+  "explanation": "var shares one variable across the whole loop, so every callback sees its final value, 3, by the time the timers fire. let creates a fresh variable for each round, so each callback remembers its own number.",
+  "code": "for (var i = 0; i < 3; i++) {\n  setTimeout(() => console.log(\"var\", i), 0);\n}\nfor (let j = 0; j < 3; j++) {\n  setTimeout(() => console.log(\"let\", j), 0);\n}",
+  "language": "js",
+  "try_it": "Predict all six lines of output before running it.",
+  "read_time_sec": 30
+}

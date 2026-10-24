@@ -1,8 +1,8 @@
 # DevTok
 
-A short daily feed of front-end dev posts, built to replace doomscrolling. You get 12 posts a day, then the feed ends.
+A feed of short front-end dev posts. It starts each day with 12 posts and keeps loading more as you scroll, and a daily streak rewards you for showing up.
 
-- 210 posts in `data/posts.json` (no database, no API, no account)
+- 334 posts in `data/posts.json` (no database, no API, no account)
 - Your saves, "Got it" marks and today's feed live in your browser (localStorage)
 - Installable on your phone as an app (PWA)
 
@@ -30,8 +30,14 @@ Open `lib/daily.js`:
 | Setting | Default | What it does |
 |---|---|---|
 | `DAILY_COUNT` | 12 | Posts in today's feed |
-| `BONUS_COUNT` | 5 | Posts added each time you tap "Show more" |
-| `MAX_BONUS` | 2 | How many times per day you can ask for more |
+| `LOAD_COUNT` | 6 | Posts added each time infinite scroll loads more |
+| `LOAD_AHEAD` | 3 | Loads more when this many posts are left below you |
+
+Open `lib/streak.js` to change `STREAK_GOAL` (default 5): the number of posts you scroll to for a day to count.
+
+## Daily streak
+
+A day counts once you scroll to the 5th post. Counting days in a row builds your streak. Miss a full day and it resets to 0 (your best streak is kept). Tap the flame in the top corner of the feed to see your streak, your best, and the last 7 days. It is stored in your browser like everything else, and "Reset all progress" clears it.
 
 Topic colours live in `lib/tags.js`.
 
@@ -44,14 +50,14 @@ Fields: `id`, `tag`, `level`, `title`, `why_it_matters`, `explanation`, `code` (
 
 ## How the daily feed works
 
-The first time you open the app each day, it picks the next 12 posts you haven't seen, skipping anything you marked "Got it". Reloading the page keeps the same 12. When you have seen all 210, a new round starts.
+The first time you open the app each day, it picks the next 12 posts you haven't seen, skipping anything you marked "Got it". Reloading the page keeps the same 12. As you scroll near the bottom, 6 more posts load automatically (infinite scroll). When you have seen all 334, the feed ends for the day and a new round starts tomorrow.
 
 ## Project map
 
 ```
 app/            page, layout, styles, manifest
-components/     Feed, PostCard, Library, Saved, Nav, App (all the state)
-lib/            daily.js (batch logic), store.js (localStorage), tags.js
+components/     Feed, PostCard, StreakBadge, Library, Saved, Nav, App (all the state)
+lib/            daily.js (batch + infinite scroll logic), streak.js (daily streak), store.js (localStorage), tags.js
 data/posts.json the feed's content
 content/posts/  one file per post (source for data/posts.json)
 ```

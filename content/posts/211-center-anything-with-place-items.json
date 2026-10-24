@@ -1,0 +1,12 @@
+{
+  "id": "211",
+  "tag": "css",
+  "level": "beginner",
+  "title": "Center anything with place-items",
+  "why_it_matters": "Centering is a layout trick you will use every single day.",
+  "explanation": "Grid can center a child both ways in one line. place-items is shorthand for align-items and justify-items. Give the container a height, otherwise there is no empty space to center inside.",
+  "code": ".hero {\n  display: grid;\n  place-items: center;\n  min-height: 100dvh;\n}",
+  "language": "css",
+  "try_it": "Put this on a div with one heading inside, then resize the window.",
+  "read_time_sec": 20
+}

@@ -61,3 +61,9 @@ export const SearchIcon = (p) => (
     <path d="m20 20-3.5-3.5" />
   </Icon>
 );
+
+export const FlameIcon = ({ filled, ...p }) => (
+  <Icon fill={filled ? "currentColor" : "none"} {...p}>
+    <path d="M12 3c.6 3.2 4.5 5.2 4.5 9.6A4.5 4.5 0 0 1 12 17a4.5 4.5 0 0 1-4.5-4.4c0-1.6.7-2.8 1.6-3.7.2 1.2.8 1.9 1.6 2.2C10.5 8.1 11 5.4 12 3z" />
+  </Icon>
+);

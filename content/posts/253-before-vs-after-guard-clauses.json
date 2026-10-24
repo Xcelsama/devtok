@@ -1,0 +1,12 @@
+{
+  "id": "253",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Before vs after: guard clauses",
+  "why_it_matters": "Flat code is easier to read, especially on a small screen.",
+  "explanation": "Instead of wrapping everything in nested if blocks, handle the bad cases first and return straight away. The main logic then sits at the bottom with no extra indentation. Each early return removes one level of nesting.",
+  "code": "function greet(user) {\n  if (!user) return \"Hello, guest\";\n  if (!user.name) return \"Hello, friend\";\n  return `Hello, ${user.name}`;\n}\nconsole.log(greet(null));            // Hello, guest\nconsole.log(greet({ name: \"Ada\" })); // Hello, Ada",
+  "language": "js",
+  "try_it": "Find a function with three nested ifs and flip it into early returns.",
+  "read_time_sec": 30
+}

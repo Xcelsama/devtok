@@ -1,0 +1,12 @@
+{
+  "id": "231",
+  "tag": "ai-assisted-dev",
+  "level": "beginner",
+  "title": "Spot hallucinated imports fast",
+  "why_it_matters": "AI sometimes invents functions that sound completely real.",
+  "explanation": "If an AI suggests a package or method you have never seen, do not assume it exists. Check your package.json, your editor's autocomplete, and the official docs. If none of them know it, it is probably made up.",
+  "code": null,
+  "language": null,
+  "try_it": "Take the last AI answer you used and verify every import in it.",
+  "read_time_sec": 20
+}

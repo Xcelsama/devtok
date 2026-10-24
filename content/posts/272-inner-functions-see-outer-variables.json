@@ -1,0 +1,12 @@
+{
+  "id": "272",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Inner functions see outer variables",
+  "why_it_matters": "This is the idea behind scope, and later behind closures.",
+  "explanation": "A function can read variables from the places around where it was written, but outer code can't see inside it. JavaScript looks in the current scope first, then moves outward. That lookup path is called the scope chain.",
+  "code": "const taxRate = 0.2;\nfunction total(price) {\n  const fee = 5;\n  return price + price * taxRate + fee; // sees both\n}\nconsole.log(total(100)); // 125\n// console.log(fee);     // ReferenceError",
+  "language": "js",
+  "try_it": "Uncomment the last line and read the error message carefully.",
+  "read_time_sec": 30
+}

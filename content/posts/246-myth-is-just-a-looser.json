@@ -1,0 +1,12 @@
+{
+  "id": "246",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Myth: == is just a looser ===",
+  "why_it_matters": "Loose equality hides type conversions that break real logic.",
+  "explanation": "Fact: == converts types before comparing, using rules that are hard to predict. === compares type and value with no conversion, so it does what it looks like it does. Default to === everywhere and you'll rarely get surprised.",
+  "code": "console.log(0 == \"\");   // true\nconsole.log(\"1\" == 1);  // true\nconsole.log(0 === \"\");  // false\nconsole.log(\"1\" === 1); // false",
+  "language": "js",
+  "try_it": "Search your code for a double-equals comparison and change it to ===.",
+  "read_time_sec": 25
+}

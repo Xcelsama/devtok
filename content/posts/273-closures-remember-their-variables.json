@@ -1,0 +1,12 @@
+{
+  "id": "273",
+  "tag": "javascript",
+  "level": "intermediate",
+  "title": "Closures remember their variables",
+  "why_it_matters": "Event handlers and React hooks rely on this every day.",
+  "explanation": "When a function is created, it keeps access to the variables around it, even after the outer function has finished. That memory is a closure. Here, count lives on privately between calls, and nothing outside can touch it.",
+  "code": "function makeCounter() {\n  let count = 0;\n  return () => ++count;\n}\nconst next = makeCounter();\nconsole.log(next(), next(), next()); // 1 2 3",
+  "language": "js",
+  "try_it": "Create a second counter and check that it starts again at 1.",
+  "read_time_sec": 25
+}

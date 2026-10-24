@@ -1,0 +1,12 @@
+{
+  "id": "284",
+  "tag": "javascript",
+  "level": "intermediate",
+  "title": "reduce turns a list into one value",
+  "why_it_matters": "Totals, counts and lookups all come from the same idea.",
+  "explanation": "reduce walks through the array carrying an accumulator. Each round your function gets the running result and the current item, and returns the new result. The second argument, 0, is the starting value. Perfect for sums, counts and building objects.",
+  "code": "const cart = [{ price: 500 }, { price: 1200 }, { price: 300 }];\nconst total = cart.reduce((sum, item) => sum + item.price, 0);\nconsole.log(total); // 2000",
+  "language": "js",
+  "try_it": "Use reduce to find the largest number in [3, 9, 4].",
+  "read_time_sec": 30
+}

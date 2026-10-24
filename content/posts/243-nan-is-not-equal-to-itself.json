@@ -1,0 +1,12 @@
+{
+  "id": "243",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "NaN is not equal to itself",
+  "why_it_matters": "Checking for NaN the wrong way never works.",
+  "explanation": "NaN means 'not a number', and it's the one value that isn't equal to itself, so === can't detect it. Use Number.isNaN(value). It returns true only for the real NaN, unlike the old global isNaN, which converts its input first.",
+  "code": "console.log(NaN === NaN);                 // false\nconsole.log(Number.isNaN(NaN));           // true\nconsole.log(Number.isNaN(\"abc\"));         // false\nconsole.log(Number.isNaN(Number(\"abc\"))); // true",
+  "language": "js",
+  "try_it": "Quiz: what is 'abc' * 2? Run it, then test the result with Number.isNaN.",
+  "read_time_sec": 25
+}

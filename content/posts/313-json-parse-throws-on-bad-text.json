@@ -1,0 +1,12 @@
+{
+  "id": "313",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "JSON.parse throws on bad text",
+  "why_it_matters": "One bad string from storage can crash your whole page.",
+  "explanation": "JSON.parse throws an error if the text isn't valid JSON, like text someone edited by hand or a failed response. Wrap it in try/catch and return a fallback so your app doesn't crash. JSON needs double quotes around keys and strings.",
+  "code": "function safeParse(text, fallback = null) {\n  try {\n    return JSON.parse(text);\n  } catch {\n    return fallback;\n  }\n}\nconsole.log(safeParse(\"{bad json}\", [])); // []\nconsole.log(safeParse('{\"ok\":true}'));    // { ok: true }",
+  "language": "js",
+  "try_it": "Call safeParse with an empty string and see what comes back.",
+  "read_time_sec": 30
+}

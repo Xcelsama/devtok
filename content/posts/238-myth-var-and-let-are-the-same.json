@@ -1,0 +1,12 @@
+{
+  "id": "238",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Myth: var and let are the same",
+  "why_it_matters": "Old tutorials still use var, and it leaks in ways that surprise you.",
+  "explanation": "Fact: var ignores curly braces, so a variable made inside an if block or loop is still visible outside it. let and const stay inside their braces, which is what you'd expect. Modern code avoids var so variables can't leak into places you never planned.",
+  "code": "if (true) {\n  var a = 1;\n  let b = 2;\n}\nconsole.log(a);        // 1\nconsole.log(typeof b); // undefined",
+  "language": "js",
+  "try_it": "Swap var for let on line 2 and predict what console.log(a) does now.",
+  "read_time_sec": 30
+}

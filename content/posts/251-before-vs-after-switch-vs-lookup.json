@@ -1,0 +1,12 @@
+{
+  "id": "251",
+  "tag": "javascript",
+  "level": "intermediate",
+  "title": "Before vs after: switch vs lookup",
+  "why_it_matters": "A lookup object is shorter and easier to extend.",
+  "explanation": "When a switch only turns one value into another, an object does the same job with less code. Look up the key, and use ?? for the fallback. It's easier to read, test and extend when you add a new status.",
+  "code": "const labels = { pending: \"Waiting\", paid: \"Done\", failed: \"Retry\" };\nfunction label(status) {\n  return labels[status] ?? \"Unknown\";\n}\nconsole.log(label(\"paid\")); // Done\nconsole.log(label(\"oops\")); // Unknown",
+  "language": "js",
+  "try_it": "Find a switch in your code that only returns values and swap it for an object.",
+  "read_time_sec": 30
+}

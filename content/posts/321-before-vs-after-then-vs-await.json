@@ -1,0 +1,12 @@
+{
+  "id": "321",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Before vs after: then vs await",
+  "why_it_matters": "await makes async code read like normal top-to-bottom code.",
+  "explanation": "await pauses an async function until a promise is ready, then hands you the result, so the code reads top to bottom. It works inside functions marked async. Behind the scenes it's still promises, so everything you learn about them still applies.",
+  "code": "const getUser = () => Promise.resolve({ name: \"Ada\" });\n// before\ngetUser().then((u) => console.log(u.name));\n// after\nasync function show() {\n  const u = await getUser();\n  console.log(u.name);\n}\nshow();",
+  "language": "js",
+  "try_it": "Take one .then chain in your code and rewrite it with await.",
+  "read_time_sec": 30
+}

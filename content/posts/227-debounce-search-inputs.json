@@ -1,0 +1,12 @@
+{
+  "id": "227",
+  "tag": "a11y-performance",
+  "level": "intermediate",
+  "title": "Debounce search inputs",
+  "why_it_matters": "It stops you firing a request on every single keystroke.",
+  "explanation": "Debouncing waits until the user pauses before running your function. Each keystroke cancels the previous timer and starts a new one. Only the last timer survives to fire, so you send one request instead of many.",
+  "code": "let t;\ninput.addEventListener(\"input\", () => {\n  clearTimeout(t);\n  t = setTimeout(() => search(input.value), 300);\n});",
+  "language": "js",
+  "try_it": "Log inside search() and compare the call count with and without the timer.",
+  "read_time_sec": 25
+}

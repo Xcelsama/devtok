@@ -1,0 +1,12 @@
+{
+  "id": "268",
+  "tag": "javascript",
+  "level": "intermediate",
+  "title": "Pure functions are easy to trust",
+  "why_it_matters": "React expects your components to behave this way.",
+  "explanation": "A pure function uses only its inputs and changes nothing outside itself. The same input always gives the same output. That makes it simple to test and debug. Impure functions depend on, or change, things elsewhere, so results can vary.",
+  "code": "let total = 0;\nconst impure = (n) => (total += n); // changes outside state\nconst pure = (a, b) => a + b;\nconsole.log(pure(2, 3)); // 5, always\nconsole.log(impure(2));  // 2\nconsole.log(impure(2));  // 4 (different!)",
+  "language": "js",
+  "try_it": "List one pure and one impure function from your own project.",
+  "read_time_sec": 30
+}

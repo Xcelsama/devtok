@@ -1,0 +1,12 @@
+{
+  "id": "239",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "typeof null is a famous lie",
+  "why_it_matters": "typeof is a handy check, but it has two traps.",
+  "explanation": "typeof returns a value's type as text. It works for strings, numbers and booleans, but typeof null says 'object', an old mistake that can't be fixed. Arrays also say 'object'. Check null with === null, and arrays with Array.isArray.",
+  "code": "console.log(typeof \"hi\");       // string\nconsole.log(typeof 42);         // number\nconsole.log(typeof null);       // object\nconsole.log(typeof []);         // object\nconsole.log(Array.isArray([])); // true",
+  "language": "js",
+  "try_it": "Quiz: what is typeof undefined? And typeof a function? Check in the console.",
+  "read_time_sec": 25
+}

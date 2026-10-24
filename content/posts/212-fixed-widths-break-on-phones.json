@@ -1,0 +1,12 @@
+{
+  "id": "212",
+  "tag": "css",
+  "level": "beginner",
+  "title": "Fixed widths break on phones",
+  "why_it_matters": "A 500px box overflows a 360px screen and causes sideways scrolling.",
+  "explanation": "A fixed width ignores the screen size. min() picks the smaller of two values, so the box shrinks on small screens and stops growing on big ones. margin-inline: auto centers it.",
+  "code": "/* before */\n.card { width: 500px; }\n\n/* after */\n.card {\n  width: min(100%, 500px);\n  margin-inline: auto;\n}",
+  "language": "css",
+  "try_it": "Open DevTools device mode at 360px wide and compare both versions.",
+  "read_time_sec": 25
+}

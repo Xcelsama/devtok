@@ -1,0 +1,12 @@
+{
+  "id": "218",
+  "tag": "react",
+  "level": "beginner",
+  "title": "Use ids as list keys, not index",
+  "why_it_matters": "Wrong keys cause odd bugs when a list is reordered or filtered.",
+  "explanation": "React uses keys to tell which list item is which. Index keys shift when items are added, removed or sorted, so inputs can keep the wrong text. A stable id from your data is safer.",
+  "code": "{items.map(item => (\n  <li key={item.id}>{item.name}</li>\n))}",
+  "language": "jsx",
+  "try_it": "Check your last list: is the key a real id, or the array index?",
+  "read_time_sec": 25
+}

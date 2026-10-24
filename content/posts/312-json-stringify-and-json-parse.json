@@ -1,0 +1,12 @@
+{
+  "id": "312",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "JSON.stringify and JSON.parse",
+  "why_it_matters": "Saving data and sending it to an API both rely on this pair.",
+  "explanation": "JSON is text. stringify turns a JavaScript value into JSON text so you can save or send it, and parse turns the text back into a value. stringify drops functions and undefined, so JSON is for plain data only.",
+  "code": "const data = { name: \"Ada\", skills: [\"css\", \"js\"] };\nconst text = JSON.stringify(data);\nconsole.log(text); // {\"name\":\"Ada\",\"skills\":[\"css\",\"js\"]}\nconsole.log(JSON.parse(text).skills[1]); // js",
+  "language": "js",
+  "try_it": "Stringify an object, log the text, then parse it back.",
+  "read_time_sec": 25
+}

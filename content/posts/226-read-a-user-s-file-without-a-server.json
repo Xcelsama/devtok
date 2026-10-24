@@ -1,0 +1,12 @@
+{
+  "id": "226",
+  "tag": "browser-apis",
+  "level": "beginner",
+  "title": "Read a user's file without a server",
+  "why_it_matters": "This is the base of every client-side file viewer or compressor.",
+  "explanation": "The File API lets the browser read a file the user picks, entirely on their device. Nothing is uploaded. The file object has a name and methods like text() that return its contents.",
+  "code": "input.addEventListener(\"change\", async () => {\n  const file = input.files[0];\n  const text = await file.text();\n  console.log(file.name, text.length);\n});",
+  "language": "js",
+  "try_it": "Add an input of type file and log the size of any .txt file you pick.",
+  "read_time_sec": 25
+}

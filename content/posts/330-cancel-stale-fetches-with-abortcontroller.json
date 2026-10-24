@@ -1,0 +1,12 @@
+{
+  "id": "330",
+  "tag": "javascript",
+  "level": "intermediate",
+  "title": "Cancel stale fetches with AbortController",
+  "why_it_matters": "Fast typing can make old results overwrite new ones.",
+  "explanation": "If a user types fast, old requests can finish after newer ones and show stale results. An AbortController lets you cancel the earlier fetch: pass its signal, call abort(), and the promise rejects with an AbortError you can safely ignore.",
+  "code": "const controller = new AbortController();\nfetch(\"/api/search?q=css\", { signal: controller.signal })\n  .catch((e) => console.log(e.name)); // AbortError\ncontroller.abort();",
+  "language": "js",
+  "try_it": "Create a new controller for each search and abort the previous one.",
+  "read_time_sec": 25
+}

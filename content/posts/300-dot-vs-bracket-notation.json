@@ -1,0 +1,12 @@
+{
+  "id": "300",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Dot vs bracket notation",
+  "why_it_matters": "Picking the wrong one is a classic 'why is it undefined' bug.",
+  "explanation": "Dot notation is the short way when you know the key name. Use brackets when the key is stored in a variable, or contains characters like a hyphen or a space. user.field looks for a key literally named field, which is a common mistake.",
+  "code": "const user = { name: \"Ada\", \"home-city\": \"Paris\" };\nconst field = \"name\";\nconsole.log(user.name);         // Ada\nconsole.log(user[field]);       // Ada\nconsole.log(user[\"home-city\"]); // Paris\nconsole.log(user.field);        // undefined",
+  "language": "js",
+  "try_it": "Quiz: why is the last line undefined? Fix it so it prints Ada.",
+  "read_time_sec": 30
+}

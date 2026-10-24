@@ -532,3 +532,136 @@ input {
     transition: none;
   }
 }
+
+/* Infinite scroll: leave room for the streak pill above the post header */
+.feed .post {
+  padding-top: calc(env(safe-area-inset-top, 0px) + 66px);
+}
+
+@media (max-height: 700px) {
+  .feed .post {
+    padding-top: calc(env(safe-area-inset-top, 0px) + 60px);
+  }
+}
+
+/* Daily streak */
+.streak-pill {
+  position: absolute;
+  z-index: 6;
+  top: calc(env(safe-area-inset-top, 0px) + 22px);
+  right: 16px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  height: 30px;
+  padding: 0 11px 0 9px;
+  border: 1.5px solid var(--line);
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.3);
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.streak-pill.lit {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.sheet-backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 30;
+  display: flex;
+  align-items: flex-end;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.sheet {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+  padding: 22px 20px calc(env(safe-area-inset-bottom, 0px) + 20px);
+  border-radius: 22px 22px 0 0;
+  background: var(--bg);
+  border-top: 1px solid var(--line);
+}
+
+.sheet-top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.sheet-flame {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  border: 1.5px solid var(--line);
+  color: var(--muted);
+}
+
+.sheet-flame.lit {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.sheet-big {
+  margin: 0;
+  font-size: 1.9rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.sheet-small,
+.sheet-msg {
+  margin: 0;
+  color: var(--muted);
+}
+
+.week {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.week li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.week-dot {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border: 1.5px solid var(--line);
+  border-radius: 50%;
+  font-size: 0.95rem;
+  font-weight: 800;
+}
+
+.week li.hit .week-dot {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.week li.today .week-label {
+  color: var(--ink);
+}

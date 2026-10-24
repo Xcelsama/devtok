@@ -1,0 +1,12 @@
+{
+  "id": "224",
+  "tag": "supabase-sql",
+  "level": "intermediate",
+  "title": "Row level security in two statements",
+  "why_it_matters": "Without it, anyone with your public key may read your table.",
+  "explanation": "Row level security makes the database check a rule for every row. First you turn it on for the table. Then a policy says who may do what. This policy lets a signed-in user read only their own notes.",
+  "code": "alter table notes enable row level security;\n\ncreate policy \"read own notes\"\non notes for select\nusing (auth.uid() = user_id);",
+  "language": "sql",
+  "try_it": "Turn RLS on for a test table, then try a select with no policy and see zero rows.",
+  "read_time_sec": 30
+}

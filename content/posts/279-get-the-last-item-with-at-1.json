@@ -1,0 +1,12 @@
+{
+  "id": "279",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Get the last item with at(-1)",
+  "why_it_matters": "It's shorter, and harder to get wrong than length - 1.",
+  "explanation": "Square brackets can't take negative indexes, so the old way to get the last item was length - 1. The at method accepts negative numbers and counts from the end. at(-1) is the last item, at(-2) the one before it.",
+  "code": "const scores = [70, 85, 92];\nconsole.log(scores[scores.length - 1]); // 92\nconsole.log(scores.at(-1));             // 92\nconsole.log(scores.at(-2));             // 85",
+  "language": "js",
+  "try_it": "Use at(-1) to get the last character of 'DevTok'. Strings have at too.",
+  "read_time_sec": 25
+}

@@ -1,0 +1,12 @@
+{
+  "id": "223",
+  "tag": "supabase-sql",
+  "level": "beginner",
+  "title": "JOIN joins rows by matching ids",
+  "why_it_matters": "Real data lives in several tables, and JOIN is how you combine them.",
+  "explanation": "Orders store a customer_id instead of the customer's name. A JOIN matches that id to the customers table so you can show both together. The ON line says which columns must be equal.",
+  "code": "select orders.id, customers.name\nfrom orders\njoin customers\n  on customers.id = orders.customer_id;",
+  "language": "sql",
+  "try_it": "Draw two small tables on paper and match the ids by hand first.",
+  "read_time_sec": 25
+}

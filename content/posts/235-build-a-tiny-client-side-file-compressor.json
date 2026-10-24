@@ -1,0 +1,12 @@
+{
+  "id": "235",
+  "tag": "career",
+  "level": "beginner",
+  "title": "Build a tiny client-side file compressor",
+  "why_it_matters": "A small, finished tool beats a big abandoned one.",
+  "explanation": "Pick a project you can finish in a weekend. A browser tool that reads an image or text file, shrinks it, and offers a download needs no backend. It shows File API skills and is easy to demo.",
+  "code": null,
+  "language": null,
+  "try_it": "Write down three features that fit one weekend, and cut one.",
+  "read_time_sec": 20
+}

@@ -1,0 +1,12 @@
+{
+  "id": "304",
+  "tag": "javascript",
+  "level": "intermediate",
+  "title": "Destructuring: rename and set defaults",
+  "why_it_matters": "It turns messy incoming data into clean, predictable variables.",
+  "explanation": "Write key: newName to rename a property while destructuring. Write = value to give it a default when the key is missing or undefined. Defaults ignore null, so null stays null. Use both together to tidy messy API data.",
+  "code": "const user = { name: \"Ada\", plan: undefined };\nconst { name: fullName, plan = \"free\", role = \"user\" } = user;\nconsole.log(fullName, plan, role); // Ada free user",
+  "language": "js",
+  "try_it": "Quiz: what would plan be if it was null instead of undefined?",
+  "read_time_sec": 30
+}

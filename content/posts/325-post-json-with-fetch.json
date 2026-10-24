@@ -1,0 +1,12 @@
+{
+  "id": "325",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "POST JSON with fetch",
+  "why_it_matters": "Every form, login and booking in your apps does this.",
+  "explanation": "For a POST you pass an options object: the method, a Content-Type header saying the body is JSON, and the body as a JSON string. Forgetting JSON.stringify sends the useless text '[object Object]'.",
+  "code": "async function createNote(text) {\n  const res = await fetch(\"/api/notes\", {\n    method: \"POST\",\n    headers: { \"Content-Type\": \"application/json\" },\n    body: JSON.stringify({ text }),\n  });\n  return res.json();\n}",
+  "language": "js",
+  "try_it": "Write the same call for another endpoint, like /api/bookings, with two fields.",
+  "read_time_sec": 25
+}

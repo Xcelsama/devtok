@@ -1,0 +1,12 @@
+{
+  "id": "215",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Common mistake: forgetting await",
+  "why_it_matters": "This one bug causes most 'why is it undefined' moments with fetch.",
+  "explanation": "fetch returns a Promise, which is a placeholder for a future value. Without await you get the placeholder, not the data. Both fetch and res.json() need await inside an async function.",
+  "code": "async function load() {\n  const res = await fetch(\"/api/items\");\n  const items = await res.json();\n  console.log(items);\n}\nload();",
+  "language": "js",
+  "try_it": "Remove one await and log the result to see the Promise object instead.",
+  "read_time_sec": 25
+}

@@ -1,0 +1,12 @@
+{
+  "id": "302",
+  "tag": "javascript",
+  "level": "intermediate",
+  "title": "Computed keys: build a key on the fly",
+  "why_it_matters": "One change handler can then update any form field.",
+  "explanation": "Square brackets inside an object literal evaluate the expression and use the result as the key. This is how a single onChange handler can update any form field: it builds { [e.target.name]: e.target.value } for whichever input fired.",
+  "code": "const field = \"email\";\nconst form = { [field]: \"ada@example.com\" };\nconsole.log(form); // { email: 'ada@example.com' }\nconst update = (key, value) => ({ [key]: value });\nconsole.log(update(\"age\", 30)); // { age: 30 }",
+  "language": "js",
+  "try_it": "Write setField(obj, key, value) that returns a copy with that key changed.",
+  "read_time_sec": 30
+}

@@ -1,0 +1,12 @@
+{
+  "id": "317",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "console.table beats console.log for lists",
+  "why_it_matters": "Small debugging habits save a lot of squinting.",
+  "explanation": "console.table prints an array of objects as a neat table. Wrapping a variable in braces, console.log({ users }), also prints its name as a label, so you always know which value is which. Small habits that make debugging faster.",
+  "code": "const users = [{ name: \"Ada\", age: 30 }, { name: \"Sam\", age: 25 }];\nconsole.log(\"users:\", users);\nconsole.table(users);\nconsole.log({ users }); // prints the variable's name too",
+  "language": "js",
+  "try_it": "Use console.table on an array from your own project.",
+  "read_time_sec": 30
+}

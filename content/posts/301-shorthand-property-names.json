@@ -1,0 +1,12 @@
+{
+  "id": "301",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Shorthand property names",
+  "why_it_matters": "You'll see this in nearly every modern code example.",
+  "explanation": "When a variable has the same name as the key you want, write it once. { name, age } means the same as { name: name, age: age }. It's especially handy when building objects to send to an API.",
+  "code": "const name = \"Ada\";\nconst age = 30;\nconst user = { name, age };\nconsole.log(user); // { name: 'Ada', age: 30 }",
+  "language": "js",
+  "try_it": "Create an object from three variables using only shorthand.",
+  "read_time_sec": 25
+}

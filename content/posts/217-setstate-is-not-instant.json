@@ -1,0 +1,12 @@
+{
+  "id": "217",
+  "tag": "react",
+  "level": "beginner",
+  "title": "setState is not instant",
+  "why_it_matters": "It explains why your console.log shows the old value.",
+  "explanation": "A state update is scheduled, not applied on the spot. Inside the same function call your variable still holds the old value. The new value appears on the next render, so read it there.",
+  "code": "const [n, setN] = useState(0);\n\nfunction add() {\n  setN(n + 1);\n  console.log(n); // still the old value\n}",
+  "language": "jsx",
+  "try_it": "Click the button once and compare the console value with what the screen shows.",
+  "read_time_sec": 25
+}

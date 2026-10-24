@@ -1,0 +1,12 @@
+{
+  "id": "281",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "find returns one, filter returns many",
+  "why_it_matters": "Mixing them up gives you an array when you wanted an object.",
+  "explanation": "find returns the first matching item itself, or undefined if nothing matches. filter returns an array of every match. Looking up one record by id? Use find. Building a shorter list? Use filter.",
+  "code": "const users = [{ id: 1, name: \"Ada\" }, { id: 2, name: \"Sam\" }];\nconsole.log(users.find((u) => u.id === 2));   // { id: 2, name: 'Sam' }\nconsole.log(users.filter((u) => u.id === 2)); // [{ id: 2, name: 'Sam' }]\nconsole.log(users.find((u) => u.id === 9));   // undefined",
+  "language": "js",
+  "try_it": "Quiz: what does filter return when nothing matches, an empty array or undefined?",
+  "read_time_sec": 35
+}

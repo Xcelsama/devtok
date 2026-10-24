@@ -1,0 +1,12 @@
+{
+  "id": "293",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "split and join: strings and arrays",
+  "why_it_matters": "They are opposites, and together they solve many small tasks.",
+  "explanation": "split cuts a string into an array at a separator. join glues an array back into a string with the separator you choose. Together they handle CSV text, URL parts and class names without any loops.",
+  "code": "const csv = \"html,css,js\";\nconst list = csv.split(\",\");\nconsole.log(list);             // [\"html\", \"css\", \"js\"]\nconsole.log(list.join(\" | \")); // html | css | js",
+  "language": "js",
+  "try_it": "Turn 'my cool title' into 'my-cool-title' using split and join.",
+  "read_time_sec": 25
+}

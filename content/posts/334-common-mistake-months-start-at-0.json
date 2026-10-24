@@ -1,0 +1,12 @@
+{
+  "id": "334",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Common mistake: months start at 0",
+  "why_it_matters": "Showing the wrong month on a booking screen looks careless.",
+  "explanation": "In JavaScript dates, months are numbered 0 to 11, so January is 0 and December is 11, while days start at 1. Add 1 when you show a month number to users. For display, toLocaleDateString saves you the maths.",
+  "code": "const d = new Date(2026, 0, 15); // month 0 = January\nconsole.log(d.getMonth());       // 0\nconsole.log(d.getMonth() + 1);   // 1\nconsole.log(d.getFullYear());    // 2026\nconsole.log(d.toLocaleDateString(\"en-GB\")); // 15/01/2026",
+  "language": "js",
+  "try_it": "Create a date for 25 December and print its month number.",
+  "read_time_sec": 30
+}

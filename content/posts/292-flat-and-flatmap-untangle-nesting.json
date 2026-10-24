@@ -1,0 +1,12 @@
+{
+  "id": "292",
+  "tag": "javascript",
+  "level": "intermediate",
+  "title": "flat and flatMap untangle nesting",
+  "why_it_matters": "Nested arrays show up in API data all the time.",
+  "explanation": "flat removes one level of nesting from an array. flatMap maps each item and then flattens the result by one level, in a single step. It's useful when each item turns into several items, like splitting sentences into words.",
+  "code": "const nested = [[1, 2], [3], [4, 5]];\nconsole.log(nested.flat()); // [1, 2, 3, 4, 5]\nconst phrases = [\"hi there\", \"good day\"];\nconsole.log(phrases.flatMap((p) => p.split(\" \")));\n// [\"hi\", \"there\", \"good\", \"day\"]",
+  "language": "js",
+  "try_it": "Flatten [[1], [2, [3]]] with flat(), then try flat(2).",
+  "read_time_sec": 30
+}

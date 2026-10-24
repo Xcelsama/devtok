@@ -1,0 +1,12 @@
+{
+  "id": "236",
+  "tag": "career",
+  "level": "beginner",
+  "title": "Pin your three best repos",
+  "why_it_matters": "Your GitHub profile is often the first thing an employer opens.",
+  "explanation": "GitHub lets you pin repositories at the top of your profile. Choose three that are finished, have a README, and show different skills. Add a short bio line saying what you are learning and looking for.",
+  "code": null,
+  "language": null,
+  "try_it": "Pin three repos and read your profile as a stranger would.",
+  "read_time_sec": 20
+}

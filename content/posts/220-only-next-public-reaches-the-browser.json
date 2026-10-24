@@ -1,0 +1,12 @@
+{
+  "id": "220",
+  "tag": "nextjs",
+  "level": "beginner",
+  "title": "Only NEXT_PUBLIC_ reaches the browser",
+  "why_it_matters": "A secret behind the wrong prefix is visible to every visitor.",
+  "explanation": "Next.js sends only variables starting with NEXT_PUBLIC_ to the browser. Everything else stays on the server. Never put a secret key behind that prefix, because anyone can read it in your shipped JavaScript.",
+  "code": "# .env.local\nNEXT_PUBLIC_SITE_NAME=DevTok\nDB_PASSWORD=server-only-value",
+  "language": "bash",
+  "try_it": "Log both variables in a client component and see which one is undefined.",
+  "read_time_sec": 20
+}

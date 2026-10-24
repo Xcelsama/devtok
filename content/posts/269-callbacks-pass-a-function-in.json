@@ -1,0 +1,12 @@
+{
+  "id": "269",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Callbacks: pass a function in",
+  "why_it_matters": "Click handlers, timers and map all work this way.",
+  "explanation": "Functions are values, so you can pass one into another. The receiving function calls it when ready, and that's a callback. Event listeners, timers and array methods like map all use callbacks. Pass the function itself, not its result.",
+  "code": "function repeat(times, action) {\n  for (let i = 0; i < times; i++) action(i);\n}\nrepeat(3, (i) => console.log(\"Hello\", i));",
+  "language": "js",
+  "try_it": "Call repeat with a callback that logs only even rounds.",
+  "read_time_sec": 25
+}

@@ -1,0 +1,12 @@
+{
+  "id": "240",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Common mistake: ignoring the returned string",
+  "why_it_matters": "Forgetting to save the result makes string methods look broken.",
+  "explanation": "Strings can't be changed in place. Methods like trim and toUpperCase return a brand new string and leave the original alone. If you don't store or use the result, nothing seems to happen.",
+  "code": "const raw = \"  ada  \";\nraw.trim();               // result thrown away\nconsole.log(raw);         // \"  ada  \" (unchanged)\nconst clean = raw.trim();\nconsole.log(clean);       // \"ada\"",
+  "language": "js",
+  "try_it": "Quiz: does 'hello'.toUpperCase() change a variable that holds 'hello'?",
+  "read_time_sec": 25
+}

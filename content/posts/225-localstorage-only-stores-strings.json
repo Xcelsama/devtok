@@ -1,0 +1,12 @@
+{
+  "id": "225",
+  "tag": "browser-apis",
+  "level": "beginner",
+  "title": "localStorage only stores strings",
+  "why_it_matters": "Saving an array directly gives you the useless text '[object Object]'.",
+  "explanation": "localStorage keeps text only. Turn arrays and objects into a string with JSON.stringify before saving, and back with JSON.parse when reading. The ?? gives a safe default when nothing is saved yet.",
+  "code": "localStorage.setItem(\"cart\", JSON.stringify([1, 2]));\nconst raw = localStorage.getItem(\"cart\");\nconst cart = JSON.parse(raw ?? \"[]\");\nconsole.log(cart);",
+  "language": "js",
+  "try_it": "Save an object, refresh the page, and read it back in the console.",
+  "read_time_sec": 25
+}

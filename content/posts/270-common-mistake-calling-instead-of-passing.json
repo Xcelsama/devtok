@@ -1,0 +1,12 @@
+{
+  "id": "270",
+  "tag": "javascript",
+  "level": "intermediate",
+  "title": "Common mistake: calling instead of passing",
+  "why_it_matters": "Adding () runs the function right now, not later.",
+  "explanation": "sayHi() with parentheses runs the function immediately and passes its result along. sayHi without them hands over the function itself, to be called later. This slip breaks setTimeout, event listeners, and React onClick handlers.",
+  "code": "function sayHi() { console.log(\"Hi\"); }\nsetTimeout(sayHi, 1000);         // right: runs later\nsetTimeout(() => sayHi(), 1000); // also right\n// setTimeout(sayHi(), 1000);    // wrong: runs sayHi right now",
+  "language": "js",
+  "try_it": "In your browser console, try the wrong line and watch when 'Hi' appears.",
+  "read_time_sec": 30
+}

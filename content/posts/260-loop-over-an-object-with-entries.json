@@ -1,0 +1,12 @@
+{
+  "id": "260",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Loop over an object with entries",
+  "why_it_matters": "Plain objects can't be used with for...of directly.",
+  "explanation": "Object.entries turns an object into an array of [key, value] pairs. Combine it with for...of and destructuring to read both at once. It's the cleanest way to loop over an object, and it works with break and continue too.",
+  "code": "const prices = { tea: 500, rice: 1200 };\nfor (const [item, price] of Object.entries(prices)) {\n  console.log(item, price);\n}",
+  "language": "js",
+  "try_it": "Add a third item to the object and see the loop pick it up.",
+  "read_time_sec": 25
+}

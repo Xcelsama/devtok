@@ -1,0 +1,12 @@
+{
+  "id": "266",
+  "tag": "javascript",
+  "level": "intermediate",
+  "title": "Rest parameters collect the extras",
+  "why_it_matters": "One function can accept any number of inputs.",
+  "explanation": "...nums gathers all the remaining arguments into a real array, so one function can take any number of inputs. The rest parameter must come last. Don't confuse it with spread, which does the opposite and unpacks an array.",
+  "code": "function sum(...nums) {\n  return nums.reduce((total, n) => total + n, 0);\n}\nconsole.log(sum(1, 2, 3)); // 6\nconsole.log(sum());        // 0",
+  "language": "js",
+  "try_it": "Write maxOf(...nums) using Math.max and spread.",
+  "read_time_sec": 25
+}

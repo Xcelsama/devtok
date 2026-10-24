@@ -1,0 +1,12 @@
+{
+  "id": "242",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Number() or parseInt(): which one?",
+  "why_it_matters": "Choosing wrong silently turns '12px' into 12 or NaN.",
+  "explanation": "Number reads the whole string and gives NaN if anything is off. parseInt reads digits from the start and stops at the first non-digit, dropping any decimals. Use Number for strict checks and parseInt for things like '12px'. Pass 10 as the second argument to parseInt.",
+  "code": "console.log(Number(\"12px\"));       // NaN\nconsole.log(parseInt(\"12px\", 10)); // 12\nconsole.log(Number(\"3.5\"));        // 3.5\nconsole.log(parseInt(\"3.5\", 10));  // 3",
+  "language": "js",
+  "try_it": "Run all four with the input '  42  ' and note which ones cope with spaces.",
+  "read_time_sec": 30
+}

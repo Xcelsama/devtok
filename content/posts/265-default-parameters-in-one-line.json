@@ -1,0 +1,12 @@
+{
+  "id": "265",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Default parameters in one line",
+  "why_it_matters": "They make your functions safe when an argument is missing.",
+  "explanation": "Give a parameter a default value with =. It's used only when the argument is missing or undefined. This replaces the old pattern name = name || 'friend', which also overwrote valid falsy values like 0.",
+  "code": "function greet(name = \"friend\") {\n  return `Hi, ${name}!`;\n}\nconsole.log(greet());      // Hi, friend!\nconsole.log(greet(\"Ada\")); // Hi, Ada!",
+  "language": "js",
+  "try_it": "Add a second parameter, punctuation, that defaults to an exclamation mark.",
+  "read_time_sec": 25
+}

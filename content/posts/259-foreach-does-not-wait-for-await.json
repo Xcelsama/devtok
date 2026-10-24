@@ -1,0 +1,12 @@
+{
+  "id": "259",
+  "tag": "javascript",
+  "level": "intermediate",
+  "title": "forEach does not wait for await",
+  "why_it_matters": "This bug makes code run in an order you didn't expect.",
+  "explanation": "forEach ignores whatever your callback returns, so it won't wait for async functions, and you can't break out of it. Here, 'finished?' prints before any 'done'. When you need await or an early exit, use a for...of loop.",
+  "code": "const ids = [1, 2, 3];\nids.forEach(async (id) => {\n  await Promise.resolve();\n  console.log(\"done\", id);\n});\nconsole.log(\"finished?\"); // prints first",
+  "language": "js",
+  "try_it": "Rewrite this with for...of inside an async function and compare the order.",
+  "read_time_sec": 25
+}

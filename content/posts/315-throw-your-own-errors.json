@@ -1,0 +1,12 @@
+{
+  "id": "315",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Throw your own errors",
+  "why_it_matters": "Failing loudly beats returning a wrong number quietly.",
+  "explanation": "throw stops a function and sends an error up to the nearest catch. Throw an Error object, not a plain string, so you get a message and a stack trace. Validate inputs at the start so bad data can't produce wrong results.",
+  "code": "function withdraw(balance, amount) {\n  if (amount > balance) throw new Error(\"Insufficient funds\");\n  return balance - amount;\n}\ntry {\n  withdraw(50, 80);\n} catch (e) {\n  console.log(e.message); // Insufficient funds\n}",
+  "language": "js",
+  "try_it": "Add a second check that throws when amount is negative.",
+  "read_time_sec": 30
+}

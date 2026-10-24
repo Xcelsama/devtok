@@ -1,0 +1,12 @@
+{
+  "id": "291",
+  "tag": "javascript",
+  "level": "intermediate",
+  "title": "Array.from builds arrays from anything",
+  "why_it_matters": "Handy for page numbers, placeholder items and Sets.",
+  "explanation": "Array.from creates an array from anything list-like or iterable, such as a string or a Set. Give it an object with just a length, plus a mapping function, and you can generate sequences like page numbers or dummy items for testing.",
+  "code": "console.log(Array.from({ length: 3 }, (_, i) => i + 1)); // [1, 2, 3]\nconsole.log(Array.from(\"abc\"));                          // [\"a\", \"b\", \"c\"]\nconsole.log(Array.from(new Set([1, 1, 2])));             // [1, 2]",
+  "language": "js",
+  "try_it": "Generate [10, 20, 30, 40] with Array.from and a mapping function.",
+  "read_time_sec": 30
+}

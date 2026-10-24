@@ -1,0 +1,12 @@
+{
+  "id": "275",
+  "tag": "javascript",
+  "level": "intermediate",
+  "title": "Recursion in plain English",
+  "why_it_matters": "Nested data like folders and comment threads needs it.",
+  "explanation": "Recursion means a function calling itself on a smaller version of the problem. It needs a stopping case, called the base case, or it never ends. Here n === 0 stops the chain. Great for nested data such as folders or replies.",
+  "code": "function countdown(n) {\n  if (n === 0) return \"Go!\";\n  console.log(n);\n  return countdown(n - 1);\n}\nconsole.log(countdown(3)); // 3, 2, 1, then Go!",
+  "language": "js",
+  "try_it": "Write sumTo(n) that adds 1 + 2 + ... + n using recursion.",
+  "read_time_sec": 30
+}

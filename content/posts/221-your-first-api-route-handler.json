@@ -1,0 +1,12 @@
+{
+  "id": "221",
+  "tag": "nextjs",
+  "level": "intermediate",
+  "title": "Your first API route handler",
+  "why_it_matters": "Route handlers are how your frontend talks to your own server code.",
+  "explanation": "In the App Router, a file named route.js inside a folder becomes an endpoint. Export a function named after the HTTP method, like GET or POST. Return a Response and Next.js sends it to the caller.",
+  "code": "// app/api/ping/route.js\nexport async function GET() {\n  return Response.json({ ok: true });\n}",
+  "language": "js",
+  "try_it": "Create this file, run the dev server, and open /api/ping in your browser.",
+  "read_time_sec": 25
+}

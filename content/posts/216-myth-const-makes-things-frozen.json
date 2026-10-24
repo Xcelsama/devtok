@@ -1,0 +1,12 @@
+{
+  "id": "216",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Myth: const makes things frozen",
+  "why_it_matters": "Knowing this stops confusing errors with objects and arrays.",
+  "explanation": "Myth: const values can never change. Fact: const stops you reassigning the variable, but an object's contents can still change. You can edit properties or push to an array, just not point the name somewhere else.",
+  "code": "const user = { name: \"Ada\" };\nuser.name = \"Grace\"; // allowed\ntry {\n  user = {};\n} catch (e) {\n  console.log(e.name); // TypeError\n}",
+  "language": "js",
+  "try_it": "Declare a const array, push an item into it, then try reassigning it.",
+  "read_time_sec": 30
+}

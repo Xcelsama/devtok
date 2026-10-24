@@ -1,0 +1,12 @@
+{
+  "id": "320",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "A Promise is an IOU for a value",
+  "why_it_matters": "fetch and nearly every modern async API returns one.",
+  "explanation": "A Promise is an object standing in for a value that isn't ready yet. It starts pending, then either fulfills with a result or rejects with an error. Use then to run code when it fulfills, and catch to handle a rejection.",
+  "code": "const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));\nwait(500).then(() => console.log(\"500ms later\"));\nconsole.log(\"runs first\");",
+  "language": "js",
+  "try_it": "Chain a second then that logs 'and again' after the first one.",
+  "read_time_sec": 25
+}

@@ -1,0 +1,12 @@
+{
+  "id": "261",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Three ways to write a function",
+  "why_it_matters": "You'll meet all three in real code, so learn to read each.",
+  "explanation": "A declaration starts with the function keyword. An expression stores a function in a variable. An arrow function is a shorter expression. All three create something you can call. Arrow functions are the most common in modern React and Next.js code.",
+  "code": "function add(a, b) { return a + b; }\nconst sub = function (a, b) { return a - b; };\nconst mul = (a, b) => a * b;\nconsole.log(add(2, 3), sub(5, 2), mul(2, 4)); // 5 3 8",
+  "language": "js",
+  "try_it": "Rewrite add as an arrow function without looking at the others.",
+  "read_time_sec": 35
+}

@@ -1,0 +1,12 @@
+{
+  "id": "263",
+  "tag": "javascript",
+  "level": "intermediate",
+  "title": "Returning an object from an arrow",
+  "why_it_matters": "Without parentheses, JavaScript thinks the braces are a function body.",
+  "explanation": "Curly braces after an arrow are read as a function body, not an object. Wrap the object in parentheses so JavaScript sees a value. You'll need this all the time with map, like users.map(u => ({ id: u.id })).",
+  "code": "const wrong = () => { name: \"Ada\" };\nconst right = () => ({ name: \"Ada\" });\nconsole.log(wrong()); // undefined\nconsole.log(right()); // { name: 'Ada' }",
+  "language": "js",
+  "try_it": "Use map with an arrow to turn [1, 2, 3] into [{ n: 1 }, { n: 2 }, { n: 3 }].",
+  "read_time_sec": 30
+}

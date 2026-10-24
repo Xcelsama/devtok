@@ -1,0 +1,12 @@
+{
+  "id": "319",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Quiz: why does timeout 0 print last?",
+  "why_it_matters": "Understanding this order removes a lot of async confusion.",
+  "explanation": "setTimeout schedules a function for later, and even with 0 milliseconds it waits until the current code has finished. JavaScript does one thing at a time, so timers wait in a queue for their turn.",
+  "code": "console.log(\"1 start\");\nsetTimeout(() => console.log(\"2 timeout\"), 0);\nconsole.log(\"3 end\");\n// prints: 1 start, 3 end, 2 timeout",
+  "language": "js",
+  "try_it": "Add a fourth console.log after the timeout and predict where it appears.",
+  "read_time_sec": 25
+}

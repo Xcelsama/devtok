@@ -1,0 +1,12 @@
+{
+  "id": "311",
+  "tag": "javascript",
+  "level": "intermediate",
+  "title": "Map: a smarter lookup table",
+  "why_it_matters": "Use it when keys change a lot or aren't plain strings.",
+  "explanation": "A Map stores key-value pairs like an object, but keys can be anything, it remembers insertion order, and it has a size. Use a Map for lookup tables that change often. Use plain objects for fixed-shape records.",
+  "code": "const seen = new Map();\nseen.set(\"ada\", 3);\nseen.set(\"sam\", 5);\nconsole.log(seen.get(\"ada\")); // 3\nconsole.log(seen.has(\"bob\")); // false\nconsole.log(seen.size);       // 2",
+  "language": "js",
+  "try_it": "Store two keys in a Map and read one back.",
+  "read_time_sec": 25
+}

@@ -1,0 +1,12 @@
+{
+  "id": "237",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Default to const, switch to let",
+  "why_it_matters": "Fewer reassignments means fewer surprise bugs.",
+  "explanation": "Use const for any value you never reassign, which is most of them. Use let only when the variable must change, like a counter. Reading code gets easier, because const promises that the name always points at the same thing.",
+  "code": "const siteName = \"DevTok\";\nlet views = 0;\nviews = views + 1;\nconsole.log(siteName, views); // DevTok 1",
+  "language": "js",
+  "try_it": "Pick one let in your code, change it to const, and see if anything breaks.",
+  "read_time_sec": 25
+}

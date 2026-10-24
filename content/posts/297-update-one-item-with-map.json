@@ -1,0 +1,12 @@
+{
+  "id": "297",
+  "tag": "javascript",
+  "level": "intermediate",
+  "title": "Update one item with map",
+  "why_it_matters": "Toggling a todo or editing a row needs exactly this move.",
+  "explanation": "Map over the array and return a changed copy of the matching item, while keeping all the others as they are. Spread copies the old fields, then you override one. The original array and object stay untouched, which is what React state needs.",
+  "code": "const todos = [{ id: 1, done: false }, { id: 2, done: false }];\nconst next = todos.map((t) => (t.id === 2 ? { ...t, done: true } : t));\nconsole.log(next[1]);        // { id: 2, done: true }\nconsole.log(todos[1].done);  // false",
+  "language": "js",
+  "try_it": "Change the code so it toggles done, true to false and back, instead of setting it.",
+  "read_time_sec": 35
+}

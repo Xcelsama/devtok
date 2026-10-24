@@ -1,0 +1,12 @@
+{
+  "id": "234",
+  "tag": "career",
+  "level": "beginner",
+  "title": "Give every project a real README",
+  "why_it_matters": "Recruiters often judge a repo by its README in seconds.",
+  "explanation": "A short README should say what the project is, show how to run it, and list the tech used. Add one sentence on a problem you solved. It proves you can communicate, which is half of a developer's job.",
+  "code": null,
+  "language": null,
+  "try_it": "Write a five-line README for your best project right now.",
+  "read_time_sec": 20
+}

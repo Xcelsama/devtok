@@ -1,0 +1,12 @@
+{
+  "id": "290",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Merge arrays with spread",
+  "why_it_matters": "Add or combine items in any position, in one line.",
+  "explanation": "Spread unpacks an array's items into a new one, so you can merge arrays and insert items anywhere in a single line. It reads like the result you want, and it never changes the originals.",
+  "code": "const front = [\"HTML\", \"CSS\"];\nconst back = [\"SQL\"];\nconst all = [...front, \"JS\", ...back];\nconsole.log(all); // [\"HTML\", \"CSS\", \"JS\", \"SQL\"]",
+  "language": "js",
+  "try_it": "Build a new array with 'Git' added at the start of all.",
+  "read_time_sec": 25
+}

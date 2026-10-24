@@ -1,0 +1,12 @@
+{
+  "id": "249",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "&& works as a tiny if",
+  "why_it_matters": "It's the trick behind 'show this only when that is true'.",
+  "explanation": "a && b gives back a if it's falsy, otherwise b. That makes it a shortcut for 'if a, then b'. Be careful when the left side can be 0: you'll get 0 back, and in React that 0 shows on screen.",
+  "code": "const isLoggedIn = true;\nconsole.log(isLoggedIn && \"Welcome back\"); // Welcome back\nconsole.log(false && \"never seen\");        // false\nconsole.log(0 && \"never seen\");            // 0",
+  "language": "js",
+  "try_it": "Predict the output of '' && 'hi' before you run it.",
+  "read_time_sec": 30
+}

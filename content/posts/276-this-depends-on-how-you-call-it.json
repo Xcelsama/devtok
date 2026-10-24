@@ -1,0 +1,12 @@
+{
+  "id": "276",
+  "tag": "javascript",
+  "level": "intermediate",
+  "title": "this depends on how you call it",
+  "why_it_matters": "A lost 'this' is behind many broken event handlers.",
+  "explanation": "Inside a method, this means whatever sits before the dot when you call it. Pull the method out into a variable and that link is lost. bind(user) locks this to a chosen object. Arrow functions have no this of their own; they use the surrounding one.",
+  "code": "const user = {\n  name: \"Ada\",\n  hi() { return `Hi ${this.name}`; },\n};\nconst hi = user.hi.bind(user);\nconsole.log(user.hi()); // Hi Ada\nconsole.log(hi());      // Hi Ada",
+  "language": "js",
+  "try_it": "Remove .bind(user), call hi() as a plain function, and read the result.",
+  "read_time_sec": 30
+}

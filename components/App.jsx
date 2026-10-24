@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import posts from "@/data/posts.json";
 import Feed from "./Feed";
 import Library from "./Library";
@@ -10,7 +10,8 @@ import PostCard from "./PostCard";
 import { BackIcon } from "./icons";
 import { tagStyle } from "@/lib/tags";
 import { loadState, saveState, EMPTY_STATE } from "@/lib/store";
-import { BONUS_COUNT, DAILY_COUNT, MAX_BONUS, pickIds, todayKey } from "@/lib/daily";
+import { DAILY_COUNT, LOAD_COUNT, pickIds, pickMore, todayKey } from "@/lib/daily";
+import { liveStreak, recordViewed } from "@/lib/streak";
 
 const ALL_IDS = posts.map((p) => p.id);
 const BY_ID = new Map(posts.map((p) => [p.id, p]));
@@ -21,7 +22,7 @@ function withToday(state) {
   const hasPosts = state.today.ids.some((id) => BY_ID.has(id));
   if (state.today.date === key && hasPosts) return state;
   const { ids, seen } = pickIds(ALL_IDS, state.done, state.seen, DAILY_COUNT);
-  return { ...state, seen, today: { date: key, ids, bonus: 0 } };
+  return { ...state, seen, today: { date: key, ids, viewed: 0 } };
 }
 
 export default function App() {
@@ -79,14 +80,20 @@ export default function App() {
     });
   }
 
-  function showMore() {
+  // Infinite scroll: add more posts to today's feed when you get near the end.
+  const loadMore = useCallback(() => {
     setState((s) => {
-      if (s.today.bonus >= MAX_BONUS) return s;
-      const { ids, seen } = pickIds(ALL_IDS, s.done, s.seen, BONUS_COUNT);
-      const fresh = ids.filter((id) => !s.today.ids.includes(id));
-      return { ...s, seen, today: { ...s.today, ids: [...s.today.ids, ...fresh], bonus: s.today.bonus + 1 } };
+      if (!s) return s;
+      const more = pickMore(ALL_IDS, s.done, s.seen, s.today.ids, LOAD_COUNT);
+      if (!more || more.ids.length === 0) return s;
+      return { ...s, seen: more.seen, today: { ...s.today, ids: [...s.today.ids, ...more.ids] } };
     });
-  }
+  }, []);
+
+  // The feed reports how far you scrolled; this drives the daily streak.
+  const onViewed = useCallback((count) => {
+    setState((s) => (s ? recordViewed(s, count) : s));
+  }, []);
 
   function resetAll() {
     setReader(null);
@@ -107,11 +114,16 @@ export default function App() {
             savedSet={savedSet}
             doneSet={doneSet}
             savedCount={state.saved.length}
-            canMore={state.today.bonus < MAX_BONUS}
+            canMore={state.today.ids.length < ALL_IDS.length}
+            streak={liveStreak(state.streak)}
+            bestStreak={state.streak.best}
+            streakDays={state.streak.days}
+            viewedToday={state.today.viewed || 0}
             visible={view === "today" && !reader}
             onSave={(id) => toggle("saved", id)}
             onDone={(id) => toggle("done", id)}
-            onMore={showMore}
+            onMore={loadMore}
+            onViewed={onViewed}
             onActiveTag={setThemeTag}
             onGoSaved={() => setView("saved")}
           />

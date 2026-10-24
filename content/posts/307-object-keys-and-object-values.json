@@ -1,0 +1,12 @@
+{
+  "id": "307",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Object.keys and Object.values",
+  "why_it_matters": "Plain objects have no length or map, but these fix that.",
+  "explanation": "Plain objects don't have map or length, but these helpers turn them into arrays that do. keys gives the names, values gives the data. Object.keys(obj).length is the usual way to count properties.",
+  "code": "const stock = { tea: 5, rice: 0 };\nconsole.log(Object.keys(stock));        // [\"tea\", \"rice\"]\nconsole.log(Object.values(stock));      // [5, 0]\nconsole.log(Object.keys(stock).length); // 2",
+  "language": "js",
+  "try_it": "Use Object.values and reduce to total up the stock numbers.",
+  "read_time_sec": 25
+}

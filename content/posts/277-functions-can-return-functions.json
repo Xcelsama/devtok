@@ -1,0 +1,12 @@
+{
+  "id": "277",
+  "tag": "javascript",
+  "level": "intermediate",
+  "title": "Functions can return functions",
+  "why_it_matters": "This pattern powers helpers, middleware and many React tools.",
+  "explanation": "Because functions are values, one function can build and return another. multiplyBy remembers factor through a closure, so each function it creates has its own multiplier. It's a handy way to create small custom helpers from one template.",
+  "code": "const multiplyBy = (factor) => (n) => n * factor;\nconst double = multiplyBy(2);\nconst tenX = multiplyBy(10);\nconsole.log(double(5), tenX(5)); // 10 50",
+  "language": "js",
+  "try_it": "Build addTax(rate) that returns a function adding that tax to a price.",
+  "read_time_sec": 25
+}

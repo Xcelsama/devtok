@@ -1,0 +1,12 @@
+{
+  "id": "303",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Destructure objects by key name",
+  "why_it_matters": "It's how React components read their props.",
+  "explanation": "Object destructuring pulls out properties by name, not by position. Take only the ones you need. It's the standard way to read props in React components and fields from API responses.",
+  "code": "const user = { name: \"Ada\", age: 30, city: \"Paris\" };\nconst { name, city } = user;\nconsole.log(name, city); // Ada Paris",
+  "language": "js",
+  "try_it": "Destructure two fields from any object in your project.",
+  "read_time_sec": 25
+}

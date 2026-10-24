@@ -1,0 +1,12 @@
+{
+  "id": "326",
+  "tag": "javascript",
+  "level": "intermediate",
+  "title": "Promise.all runs tasks together",
+  "why_it_matters": "Independent requests should not wait in line.",
+  "explanation": "Promise.all starts several promises at once and waits until all finish, giving you an array of results in the same order. If any one fails, the whole thing rejects. Use it for independent requests, like loading a profile and its orders.",
+  "code": "const wait = (ms, v) => new Promise((r) => setTimeout(() => r(v), ms));\nasync function run() {\n  const [a, b] = await Promise.all([wait(300, \"A\"), wait(300, \"B\")]);\n  console.log(a, b); // A B after about 300ms, not 600\n}\nrun();",
+  "language": "js",
+  "try_it": "Time it with console.time to prove it takes about 300ms, not 600.",
+  "read_time_sec": 30
+}

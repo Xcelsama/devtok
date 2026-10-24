@@ -1,0 +1,12 @@
+{
+  "id": "314",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Decode: Cannot read properties of undefined",
+  "why_it_matters": "It's the most common JavaScript error you will ever see.",
+  "explanation": "This error means the thing before the dot is undefined or null. The message names the property you tried to read. Work backwards: where was this variable supposed to get its value? Usually the data hasn't loaded yet, or the name is wrong.",
+  "code": "const user = undefined;\ntry {\n  console.log(user.name);\n} catch (e) {\n  console.log(e.message);\n}\n// Cannot read properties of undefined (reading 'name')",
+  "language": "js",
+  "try_it": "Trigger this error on purpose, then fix it with optional chaining.",
+  "read_time_sec": 30
+}

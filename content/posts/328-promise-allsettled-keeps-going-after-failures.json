@@ -1,0 +1,12 @@
+{
+  "id": "328",
+  "tag": "javascript",
+  "level": "intermediate",
+  "title": "Promise.allSettled keeps going after failures",
+  "why_it_matters": "Use it when partial success is still a success.",
+  "explanation": "Promise.all gives up if one promise fails. Promise.allSettled waits for every one and reports what happened to each, with a status and a value or reason. Use it when partial success is fine, like loading several dashboard widgets.",
+  "code": "const tasks = [Promise.resolve(\"ok\"), Promise.reject(new Error(\"bad\"))];\nPromise.allSettled(tasks).then((results) => {\n  console.log(results.map((r) => r.status)); // [\"fulfilled\", \"rejected\"]\n});",
+  "language": "js",
+  "try_it": "Log the reason of the rejected result as well.",
+  "read_time_sec": 25
+}

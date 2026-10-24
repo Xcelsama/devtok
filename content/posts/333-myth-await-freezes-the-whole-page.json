@@ -1,0 +1,12 @@
+{
+  "id": "333",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Myth: await freezes the whole page",
+  "why_it_matters": "Knowing this keeps you from fearing await in click handlers.",
+  "explanation": "Fact: await pauses only the async function it's inside. The rest of your page, including clicks and animations, keeps running, because the browser is free to do other work while it waits. Code after the call runs straight away.",
+  "code": "async function slow() {\n  await new Promise((r) => setTimeout(r, 1000));\n  console.log(\"slow done\");\n}\nslow();\nconsole.log(\"page keeps running\"); // prints first",
+  "language": "js",
+  "try_it": "Quiz: which line prints first if you add await before slow()?",
+  "read_time_sec": 25
+}

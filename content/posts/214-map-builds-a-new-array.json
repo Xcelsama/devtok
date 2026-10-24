@@ -1,0 +1,12 @@
+{
+  "id": "214",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "map() builds a new array",
+  "why_it_matters": "It is the tool for turning a list of data into a list of UI items.",
+  "explanation": "map runs your function on every item and collects the results into a new array. The original array is not changed. Use it when you want the same number of items, each one transformed.",
+  "code": "const prices = [100, 250, 400];\nconst withFee = prices.map(p => p + 50);\nconsole.log(withFee); // [150, 300, 450]\nconsole.log(prices);  // [100, 250, 400]",
+  "language": "js",
+  "try_it": "Predict what prices.map(p => p * 2) returns, then run it in the console.",
+  "read_time_sec": 30
+}

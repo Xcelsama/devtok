@@ -1,0 +1,12 @@
+{
+  "id": "322",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "async functions always return a Promise",
+  "why_it_matters": "It explains why you sometimes log a Promise instead of data.",
+  "explanation": "Even if you return a plain value, an async function wraps it in a promise. To read the value, use await inside another async function, or use .then. A frequent bug is printing the function's result and wondering why you see a Promise.",
+  "code": "async function getNumber() {\n  return 42;\n}\nconsole.log(getNumber()); // a Promise, not 42\ngetNumber().then((n) => console.log(n)); // 42",
+  "language": "js",
+  "try_it": "Call it with await inside another async function and log the number.",
+  "read_time_sec": 30
+}

@@ -1,0 +1,12 @@
+{
+  "id": "305",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Spread copies and updates objects",
+  "why_it_matters": "It's how you 'change' an object without mutating it.",
+  "explanation": "{ ...user } copies every property into a new object. Properties written after the spread override the copied ones, so put your changes last. The original object stays exactly as it was, which is what React state updates need.",
+  "code": "const user = { name: \"Ada\", plan: \"free\" };\nconst upgraded = { ...user, plan: \"pro\" };\nconsole.log(upgraded); // { name: 'Ada', plan: 'pro' }\nconsole.log(user);     // { name: 'Ada', plan: 'free' }",
+  "language": "js",
+  "try_it": "Move plan: 'pro' before ...user and see why the override stops working.",
+  "read_time_sec": 30
+}

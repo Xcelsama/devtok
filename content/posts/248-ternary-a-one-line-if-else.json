@@ -1,0 +1,12 @@
+{
+  "id": "248",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Ternary: a one-line if/else",
+  "why_it_matters": "You'll see this in almost every React component.",
+  "explanation": "condition ? valueIfTrue : valueIfFalse is an expression, so it produces a value you can store or drop straight into JSX. Keep it for one simple choice. Once you need to nest ternaries, switch to a normal if/else.",
+  "code": "const age = 17;\nconst label = age >= 18 ? \"Adult\" : \"Minor\";\nconsole.log(label); // Minor",
+  "language": "js",
+  "try_it": "Turn one small if/else in your code into a ternary.",
+  "read_time_sec": 25
+}

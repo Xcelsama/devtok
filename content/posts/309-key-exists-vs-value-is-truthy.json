@@ -1,0 +1,12 @@
+{
+  "id": "309",
+  "tag": "javascript",
+  "level": "intermediate",
+  "title": "Key exists vs value is truthy",
+  "why_it_matters": "A value of 0 exists, but a truthy check says it doesn't.",
+  "explanation": "To ask whether a key exists, use Object.hasOwn or the in operator. Testing the value itself, like if (stock.tea), fails when the value is falsy: tea exists with 0, but the check says it's missing. Existence and truthiness are different questions.",
+  "code": "const stock = { tea: 0 };\nconsole.log(Object.hasOwn(stock, \"tea\"));        // true\nconsole.log(\"tea\" in stock);                     // true\nconsole.log(stock.tea ? \"in stock\" : \"missing\"); // missing (wrong!)\nconsole.log(Object.hasOwn(stock, \"milk\"));       // false",
+  "language": "js",
+  "try_it": "Check a key in one of your own objects using Object.hasOwn.",
+  "read_time_sec": 30
+}

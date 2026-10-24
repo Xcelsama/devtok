@@ -1,0 +1,12 @@
+{
+  "id": "213",
+  "tag": "css",
+  "level": "beginner",
+  "title": "Use gap instead of margins",
+  "why_it_matters": "It removes the 'extra space on the last item' bug.",
+  "explanation": "Flex and grid both support gap, which adds space only between items. No margin-right on every child, no special case for the last one. Add flex-wrap and the row wraps neatly on narrow phones.",
+  "code": ".row {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 12px;\n}",
+  "language": "css",
+  "try_it": "Replace margins on a row of buttons with gap and delete the old margin rules.",
+  "read_time_sec": 25
+}

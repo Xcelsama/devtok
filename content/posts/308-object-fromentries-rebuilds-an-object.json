@@ -1,0 +1,12 @@
+{
+  "id": "308",
+  "tag": "javascript",
+  "level": "intermediate",
+  "title": "Object.fromEntries rebuilds an object",
+  "why_it_matters": "It's map for objects, and it's easier than it looks.",
+  "explanation": "Object.entries turns an object into pairs, you map those pairs, and fromEntries turns them back into an object. Use it to transform every value in an object, like applying a discount to all prices.",
+  "code": "const prices = { tea: 500, rice: 1200 };\nconst discounted = Object.fromEntries(\n  Object.entries(prices).map(([item, p]) => [item, p / 2])\n);\nconsole.log(discounted); // { tea: 250, rice: 600 }",
+  "language": "js",
+  "try_it": "Change the callback so it adds 100 to every price instead.",
+  "read_time_sec": 30
+}

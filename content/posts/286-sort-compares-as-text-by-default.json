@@ -1,0 +1,12 @@
+{
+  "id": "286",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "sort() compares as text by default",
+  "why_it_matters": "Numbers sort in an order that looks completely wrong.",
+  "explanation": "Without a compare function, sort converts items to strings and compares them letter by letter, so '10' comes before '9'. Pass (a, b) => a - b for ascending numbers, or b - a for descending.",
+  "code": "const nums = [10, 9, 1, 100];\nconsole.log([...nums].sort());                // [1, 10, 100, 9]\nconsole.log([...nums].sort((a, b) => a - b)); // [1, 9, 10, 100]\nconsole.log([...nums].sort((a, b) => b - a)); // [100, 10, 9, 1]",
+  "language": "js",
+  "try_it": "Quiz: where does 100 land in the default sort of [5, 100, 25]? Check it.",
+  "read_time_sec": 30
+}

@@ -1,0 +1,12 @@
+{
+  "id": "219",
+  "tag": "react",
+  "level": "intermediate",
+  "title": "Clean up effects or leak timers",
+  "why_it_matters": "Forgotten cleanup makes timers pile up and slows your app.",
+  "explanation": "An effect can return a function that React runs before the next effect and when the component leaves the screen. Use it to stop timers and remove listeners, otherwise they keep running forever.",
+  "code": "useEffect(() => {\n  const id = setInterval(() => console.log(\"tick\"), 1000);\n  return () => clearInterval(id);\n}, []);",
+  "language": "jsx",
+  "try_it": "Remove the return line, hide the component, and watch the console keep ticking.",
+  "read_time_sec": 25
+}

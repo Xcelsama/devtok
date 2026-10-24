@@ -1,0 +1,12 @@
+{
+  "id": "267",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Parameters vs arguments, finally clear",
+  "why_it_matters": "Argument order mistakes give wrong answers with no error.",
+  "explanation": "Parameters are the names in a function's definition. Arguments are the real values you pass when calling it. JavaScript matches them by position, not by name, so swapping two arguments silently gives a wrong result.",
+  "code": "function discount(price, percent) { // parameters\n  return price - (price * percent) / 100;\n}\nconsole.log(discount(200, 10)); // 180 (arguments)\nconsole.log(discount(10, 200)); // -10 (swapped!)",
+  "language": "js",
+  "try_it": "Change discount to take one object, { price, percent }, so order can't matter.",
+  "read_time_sec": 30
+}

@@ -1,0 +1,12 @@
+{
+  "id": "228",
+  "tag": "git-deploy",
+  "level": "beginner",
+  "title": "Commit small, commit often",
+  "why_it_matters": "Small commits make bugs easy to find and easy to undo.",
+  "explanation": "One commit should do one thing, with a message that says what. git add -p lets you pick which chunks of changes go in, so unrelated edits do not get bundled together.",
+  "code": "git add -p\ngit commit -m \"Add login form validation\"\ngit push",
+  "language": "bash",
+  "try_it": "Make two unrelated edits, then commit them as two separate commits.",
+  "read_time_sec": 20
+}

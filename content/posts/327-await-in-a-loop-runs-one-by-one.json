@@ -1,0 +1,12 @@
+{
+  "id": "327",
+  "tag": "javascript",
+  "level": "intermediate",
+  "title": "await in a loop runs one by one",
+  "why_it_matters": "Sometimes that is right, and sometimes it is slow.",
+  "explanation": "An await inside a for loop pauses each round, so tasks run one after another. That's correct when order matters or the next step needs the last result. For independent requests, start them together with Promise.all and your total wait shrinks a lot.",
+  "code": "const wait = (ms) => new Promise((r) => setTimeout(r, ms));\nasync function slow() {\n  for (const id of [1, 2, 3]) {\n    await wait(200); // each waits for the one before\n    console.log(\"done\", id);\n  }\n}\nslow(); // about 600ms in total",
+  "language": "js",
+  "try_it": "Rewrite slow() with Promise.all and map so it takes about 200ms.",
+  "read_time_sec": 35
+}

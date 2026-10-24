@@ -1,0 +1,12 @@
+{
+  "id": "264",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "No return means undefined",
+  "why_it_matters": "Printing a value and returning it are not the same thing.",
+  "explanation": "A function only gives something back when you use return. Without it you get undefined, even if the function printed something on screen. Printing shows a value to you, while returning hands it to the code that called the function.",
+  "code": "function show(msg) {\n  console.log(msg);\n}\nconst result = show(\"hi\");\nconsole.log(result); // undefined",
+  "language": "js",
+  "try_it": "Change show so it returns the message in upper case instead of printing it.",
+  "read_time_sec": 25
+}

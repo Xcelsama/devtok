@@ -1,0 +1,12 @@
+{
+  "id": "262",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Common mistake: arrow braces need return",
+  "why_it_matters": "You get undefined and no error to point at the bug.",
+  "explanation": "Without braces, an arrow function returns its expression automatically. With braces, it's a normal function body, so you must write return yourself. Forgetting it is a classic bug that silently hands back undefined.",
+  "code": "const double = (n) => n * 2;           // implicit return\nconst triple = (n) => { return n * 3; };\nconst broken = (n) => { n * 4 };       // no return!\nconsole.log(double(2), triple(2), broken(2)); // 4 6 undefined",
+  "language": "js",
+  "try_it": "Fix broken so it returns 8 when called with 2.",
+  "read_time_sec": 30
+}

@@ -2,7 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 import PostCard from "./PostCard";
-import { BONUS_COUNT } from "@/lib/daily";
+import StreakBadge from "./StreakBadge";
+import { DAILY_COUNT, LOAD_AHEAD } from "@/lib/daily";
 
 // The vertical, snap-scrolling feed of today's posts.
 export default function Feed({
@@ -11,15 +12,19 @@ export default function Feed({
   doneSet,
   savedCount,
   canMore,
+  streak,
+  bestStreak,
+  streakDays,
+  viewedToday,
   visible,
   onSave,
   onDone,
   onMore,
+  onViewed,
   onActiveTag,
   onGoSaved,
 }) {
   const listRef = useRef(null);
-  const prevLength = useRef(posts.length);
   const [active, setActive] = useState(0);
 
   // Track which card is on screen.
@@ -43,11 +48,15 @@ export default function Feed({
     if (visible) onActiveTag(posts[active]?.tag ?? null);
   }, [active, visible, posts, onActiveTag]);
 
-  // After "show more", jump to the first new post.
+  // Infinite scroll: ask for more posts before you hit the bottom.
   useEffect(() => {
-    if (posts.length > prevLength.current) scrollToIndex(prevLength.current);
-    prevLength.current = posts.length;
-  }, [posts.length]);
+    if (visible && canMore && active >= posts.length - LOAD_AHEAD) onMore();
+  }, [active, posts.length, canMore, visible, onMore]);
+
+  // Report how far you have scrolled today (for the daily streak).
+  useEffect(() => {
+    if (visible && posts.length > 0) onViewed(Math.min(active + 1, posts.length));
+  }, [active, visible, posts.length, onViewed]);
 
   // j / k and arrow keys on desktop.
   useEffect(() => {
@@ -82,10 +91,17 @@ export default function Feed({
   return (
     <div className="feed-wrap">
       <div className="progress" aria-hidden="true">
-        {posts.map((post, i) => (
-          <span key={post.id} className={i <= active ? "on" : ""} />
+        {Array.from({ length: Math.min(posts.length, DAILY_COUNT) }, (_, i) => (
+          <span key={i} className={i <= active ? "on" : ""} />
         ))}
       </div>
+
+      <StreakBadge
+        streak={streak}
+        best={bestStreak}
+        days={streakDays}
+        viewedToday={viewedToday}
+      />
 
       <div className="feed" ref={listRef}>
         {posts.map((post, i) => (
@@ -100,26 +116,23 @@ export default function Feed({
           </section>
         ))}
 
-        <section className="card end" data-index={posts.length}>
-          <div className="post end-inner">
-            <h2 className="title">That&rsquo;s everything for today.</h2>
-            <p className="explain">
-              You reached the end of today&rsquo;s {posts.length} posts and marked {doneToday} as
-              &ldquo;Got it&rdquo;. Close the app and build something with one of them. New posts
-              arrive tomorrow.
-            </p>
-            <div className="end-actions">
-              {canMore ? (
-                <button type="button" className="btn" onClick={onMore}>
-                  Show {BONUS_COUNT} more
+        {!canMore ? (
+          <section className="card end" data-index={posts.length}>
+            <div className="post end-inner">
+              <h2 className="title">You&rsquo;ve seen every post.</h2>
+              <p className="explain">
+                That was all {posts.length} posts, and you marked {doneToday} as &ldquo;Got it&rdquo;.
+                Close the app and build something with one of them. Scrolling starts a new round
+                tomorrow.
+              </p>
+              <div className="end-actions">
+                <button type="button" className="btn" onClick={onGoSaved}>
+                  Review saved posts ({savedCount})
                 </button>
-              ) : null}
-              <button type="button" className="btn" onClick={onGoSaved}>
-                Review saved posts ({savedCount})
-              </button>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        ) : null}
       </div>
     </div>
   );

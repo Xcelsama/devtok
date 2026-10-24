@@ -1,0 +1,12 @@
+{
+  "id": "256",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Common mistake: for...in on arrays",
+  "why_it_matters": "It returns index strings, not the items you wanted.",
+  "explanation": "for...in loops over an object's keys. On an array, those keys are index strings like '0', not the items, so you'll get the wrong thing. Use for...of for arrays, and keep for...in for plain objects when you need keys.",
+  "code": "const tools = [\"HTML\", \"CSS\"];\nfor (const key in tools) {\n  console.log(typeof key, key); // string 0, string 1\n}\nfor (const tool of tools) {\n  console.log(tool);            // HTML, CSS\n}",
+  "language": "js",
+  "try_it": "Run both loops and compare what the loop variable holds each time.",
+  "read_time_sec": 30
+}

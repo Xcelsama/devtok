@@ -5,7 +5,7 @@ import PostList from "./PostList";
 // Posts you bookmarked, plus a way to start over.
 export default function Saved({ posts, savedSet, doneSet, onOpen, onReset }) {
   function confirmReset() {
-    if (window.confirm("Clear all saved posts, Got it marks and today's feed?")) onReset();
+    if (window.confirm("Clear all saved posts, Got it marks, your streak and today's feed?")) onReset();
   }
 
   return (

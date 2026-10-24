@@ -1,0 +1,12 @@
+{
+  "id": "283",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Common mistake: indexOf in an if",
+  "why_it_matters": "-1 is truthy, so a missing item can pass the check.",
+  "explanation": "To check whether an array holds something, includes gives a clear true or false. indexOf returns a position, and -1 when the item is missing. Since -1 is truthy, if (list.indexOf(x)) is wrong in both directions: missing passes, and position 0 fails.",
+  "code": "const tags = [\"css\", \"js\"];\nconsole.log(tags.includes(\"js\"));  // true\nconsole.log(tags.indexOf(\"sql\"));  // -1\nconsole.log(tags.includes(\"sql\")); // false\nif (tags.indexOf(\"sql\")) console.log(\"runs, though it's missing!\");",
+  "language": "js",
+  "try_it": "Replace one indexOf check in your code with includes.",
+  "read_time_sec": 30
+}

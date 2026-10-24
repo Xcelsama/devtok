@@ -1,0 +1,12 @@
+{
+  "id": "222",
+  "tag": "supabase-sql",
+  "level": "beginner",
+  "title": "SELECT, WHERE, ORDER BY in one query",
+  "why_it_matters": "These three words cover most of the reads you will ever write.",
+  "explanation": "SELECT picks columns, FROM picks the table, WHERE keeps only matching rows, and ORDER BY sorts what is left. Read it top to bottom like a sentence and you can write most basic queries.",
+  "code": "select name, price\nfrom products\nwhere price < 5000\norder by price;",
+  "language": "sql",
+  "try_it": "Write the same query for a table of your own with a different WHERE.",
+  "read_time_sec": 25
+}

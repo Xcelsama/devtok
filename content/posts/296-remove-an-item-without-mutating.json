@@ -1,0 +1,12 @@
+{
+  "id": "296",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Remove an item without mutating",
+  "why_it_matters": "This is the standard way to delete from React state.",
+  "explanation": "To delete an item from a list, use filter to keep everything except that one. You get a new array while the old one stays intact. React notices the new array and updates the screen, which wouldn't happen if you edited the original.",
+  "code": "const todos = [{ id: 1 }, { id: 2 }, { id: 3 }];\nconst next = todos.filter((t) => t.id !== 2);\nconsole.log(next);         // [{ id: 1 }, { id: 3 }]\nconsole.log(todos.length); // 3 (original untouched)",
+  "language": "js",
+  "try_it": "Write removeById(list, id) that returns a new array and never edits the old one.",
+  "read_time_sec": 35
+}

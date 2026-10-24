@@ -1,0 +1,12 @@
+{
+  "id": "241",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Why '5' + 3 gives '53'",
+  "why_it_matters": "This one explains half of all weird form-input bugs.",
+  "explanation": "The + operator joins text if either side is a string. The other math operators, like - and *, convert strings into numbers instead. So the same inputs behave differently depending on the symbol. Convert with Number() before you add.",
+  "code": "console.log(\"5\" + 3);         // 53\nconsole.log(\"5\" - 3);         // 2\nconsole.log(\"5\" * 3);         // 15\nconsole.log(Number(\"5\") + 3); // 8",
+  "language": "js",
+  "try_it": "Quiz: what does '10' / '2' give? Predict first, then test.",
+  "read_time_sec": 25
+}

@@ -1,0 +1,12 @@
+{
+  "id": "331",
+  "tag": "javascript",
+  "level": "intermediate",
+  "title": "Quiz: promises beat timers, even at 0",
+  "why_it_matters": "It explains odd orderings in your console logs.",
+  "explanation": "JavaScript runs normal code first, then promise callbacks, then timers. Promise callbacks sit in a faster queue called the microtask queue. So even a 0ms timeout loses to an already-resolved promise.",
+  "code": "setTimeout(() => console.log(\"timeout\"), 0);\nPromise.resolve().then(() => console.log(\"promise\"));\nconsole.log(\"sync\");\n// prints: sync, promise, timeout",
+  "language": "js",
+  "try_it": "Predict the order if you add a second Promise.resolve().then(...) line.",
+  "read_time_sec": 20
+}

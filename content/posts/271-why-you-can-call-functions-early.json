@@ -1,0 +1,12 @@
+{
+  "id": "271",
+  "tag": "javascript",
+  "level": "intermediate",
+  "title": "Why you can call functions early",
+  "why_it_matters": "Hoisting explains confusing 'before initialization' errors.",
+  "explanation": "JavaScript reads function declarations before running anything, so you can call them above where they're written. let, const, and arrow functions stored in const don't work that way. Touching them early throws a ReferenceError. Define things before you use them and you're safe.",
+  "code": "console.log(add(1, 2)); // 3\nfunction add(a, b) { return a + b; }\n\ntry { mul(2, 3); } catch (e) { console.log(e.name); } // ReferenceError\nconst mul = (a, b) => a * b;",
+  "language": "js",
+  "try_it": "Move the add declaration to the bottom of your file and check it still works.",
+  "read_time_sec": 30
+}

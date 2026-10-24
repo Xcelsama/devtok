@@ -1,0 +1,12 @@
+{
+  "id": "278",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "push, pop, shift, unshift cheat sheet",
+  "why_it_matters": "Four methods cover most array edits you'll ever make.",
+  "explanation": "push and pop work on the end of an array. unshift and shift work on the start. All four change the original array. pop and shift also return the item they removed, which makes them handy for stacks and queues.",
+  "code": "const q = [\"b\", \"c\"];\nq.push(\"d\");            // end:   b c d\nq.unshift(\"a\");         // start: a b c d\nconsole.log(q.pop());   // d\nconsole.log(q.shift()); // a\nconsole.log(q);         // [\"b\", \"c\"]",
+  "language": "js",
+  "try_it": "Quiz: for [1, 2], what is left after q.push(9), q.pop(), q.shift()?",
+  "read_time_sec": 30
+}

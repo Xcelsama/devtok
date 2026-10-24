@@ -1,0 +1,12 @@
+{
+  "id": "318",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Pause your code with debugger",
+  "why_it_matters": "Stepping through code beats scattering ten console.logs.",
+  "explanation": "The debugger keyword pauses your code at that line when DevTools is open. You can then inspect every variable and step forward one line at a time. Remove it before you commit.",
+  "code": "function total(items) {\n  let sum = 0;\n  for (const item of items) {\n    debugger; // pauses here when DevTools is open\n    sum += item.price;\n  }\n  return sum;\n}",
+  "language": "js",
+  "try_it": "Add debugger to a loop, open DevTools, and press F10 to step.",
+  "read_time_sec": 25
+}

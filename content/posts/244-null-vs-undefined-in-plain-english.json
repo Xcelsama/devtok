@@ -1,0 +1,12 @@
+{
+  "id": "244",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "null vs undefined in plain English",
+  "why_it_matters": "Mixing them up makes data bugs harder to hunt down.",
+  "explanation": "undefined means no value was ever set, like a missing property or an argument nobody passed. null means empty on purpose, a value you chose to set. Both are falsy, but they tell different stories when you're hunting a bug.",
+  "code": "let a;\nconst b = null;\nconst user = { name: \"Ada\" };\nconsole.log(a);        // undefined\nconsole.log(b);        // null\nconsole.log(user.age); // undefined",
+  "language": "js",
+  "try_it": "Declare a variable without a value and log it. Then set it to null on purpose.",
+  "read_time_sec": 30
+}

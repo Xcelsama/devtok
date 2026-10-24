@@ -1,0 +1,12 @@
+{
+  "id": "229",
+  "tag": "git-deploy",
+  "level": "beginner",
+  "title": "Never commit your .env file",
+  "why_it_matters": "A leaked key on GitHub can be found and abused within minutes.",
+  "explanation": "List secret files in .gitignore before the first commit. If a file is already tracked, git rm --cached stops tracking it. If a real key was already pushed, treat it as leaked and create a new one.",
+  "code": "echo \".env.local\" >> .gitignore\ngit rm --cached .env.local\ngit commit -m \"Stop tracking env file\"",
+  "language": "bash",
+  "try_it": "Open your repo's .gitignore and check your env files are listed.",
+  "read_time_sec": 25
+}

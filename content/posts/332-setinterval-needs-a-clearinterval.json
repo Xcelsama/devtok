@@ -1,0 +1,12 @@
+{
+  "id": "332",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "setInterval needs a clearInterval",
+  "why_it_matters": "Forgotten intervals keep running and leak memory.",
+  "explanation": "setInterval repeats a function every set number of milliseconds and returns an id. Pass that id to clearInterval to stop it. Forgetting to stop intervals keeps them running forever, which in React means leaks when a component unmounts.",
+  "code": "let n = 0;\nconst id = setInterval(() => {\n  n++;\n  console.log(\"tick\", n);\n  if (n === 3) clearInterval(id);\n}, 500);",
+  "language": "js",
+  "try_it": "Change it to stop after five ticks, then run it.",
+  "read_time_sec": 25
+}

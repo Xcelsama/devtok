@@ -1,0 +1,12 @@
+{
+  "id": "324",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "fetch does not throw on a 404",
+  "why_it_matters": "Most beginner fetch code misses this and shows broken pages.",
+  "explanation": "fetch only rejects when the network itself fails. A 404 or 500 response still counts as a success, so res.json() may fail or give you an error page. Check res.ok and throw your own error when it's false.",
+  "code": "async function getJson(url) {\n  const res = await fetch(url);\n  if (!res.ok) {\n    throw new Error(`Request failed: ${res.status}`);\n  }\n  return res.json();\n}",
+  "language": "js",
+  "try_it": "Call getJson on a URL that doesn't exist and read the error you throw.",
+  "read_time_sec": 30
+}

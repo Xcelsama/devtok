@@ -1,0 +1,12 @@
+{
+  "id": "254",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Anatomy of a for loop",
+  "why_it_matters": "Every other loop idea builds on these three parts.",
+  "explanation": "A for loop has three parts: where to start, when to keep going, and what changes each round. JavaScript counts from 0, and i < 3 stops before 3, so this loop runs three times, not four.",
+  "code": "for (let i = 0; i < 3; i++) {\n  console.log(\"Round\", i);\n}\n// Round 0, Round 1, Round 2",
+  "language": "js",
+  "try_it": "Change the loop to count from 1 to 5 instead.",
+  "read_time_sec": 25
+}

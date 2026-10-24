@@ -1,0 +1,12 @@
+{
+  "id": "245",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "The falsy values you must memorize",
+  "why_it_matters": "Every if statement in JavaScript depends on this list.",
+  "explanation": "JavaScript treats a few values as false inside an if: false, 0, an empty string, null, undefined and NaN. Everything else counts as true, including the string '0' and empty arrays or objects.",
+  "code": "const falsy = [false, 0, \"\", null, undefined, NaN];\nconsole.log(falsy.filter(Boolean).length); // 0\nconsole.log(Boolean(\"0\"));                 // true\nconsole.log(Boolean([]));                  // true",
+  "language": "js",
+  "try_it": "Quiz: is the string 'false' truthy or falsy? Test it with Boolean('false').",
+  "read_time_sec": 25
+}

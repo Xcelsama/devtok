@@ -1,0 +1,12 @@
+{
+  "id": "294",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Array destructuring unpacks by position",
+  "why_it_matters": "This is exactly how you read useState in React.",
+  "explanation": "Destructuring pulls items out of an array into named variables, by position. ...rest collects the leftovers. As a bonus, [x, y] = [y, x] swaps two variables without a temporary one. React's useState returns an array, so you destructure it.",
+  "code": "const [first, second, ...rest] = [\"a\", \"b\", \"c\", \"d\"];\nconsole.log(first, second, rest); // a b [\"c\", \"d\"]\nlet x = 1, y = 2;\n[x, y] = [y, x];\nconsole.log(x, y);                // 2 1",
+  "language": "js",
+  "try_it": "Swap two variables of your own using destructuring.",
+  "read_time_sec": 30
+}

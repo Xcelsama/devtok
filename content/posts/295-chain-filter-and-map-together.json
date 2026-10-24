@@ -1,0 +1,12 @@
+{
+  "id": "295",
+  "tag": "javascript",
+  "level": "beginner",
+  "title": "Chain filter and map together",
+  "why_it_matters": "Real UI lists usually need both: pick items, then shape them.",
+  "explanation": "Array methods return arrays, so you can chain them. Filter first to pick the items, then map to reshape them. Read left to right it tells a story: keep in-stock products, then take their names. Filtering first also means less work for map.",
+  "code": "const products = [\n  { name: \"Tea\", price: 500, inStock: true },\n  { name: \"Rice\", price: 1200, inStock: false },\n  { name: \"Milk\", price: 800, inStock: true },\n];\nconst names = products.filter((p) => p.inStock).map((p) => p.name);\nconsole.log(names); // [\"Tea\", \"Milk\"]",
+  "language": "js",
+  "try_it": "Extend the chain so it also requires a price over 600.",
+  "read_time_sec": 35
+}

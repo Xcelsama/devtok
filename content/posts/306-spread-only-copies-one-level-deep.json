@@ -1,0 +1,12 @@
+{
+  "id": "306",
+  "tag": "javascript",
+  "level": "intermediate",
+  "title": "Spread only copies one level deep",
+  "why_it_matters": "Nested data stays shared, and edits leak into the original.",
+  "explanation": "Spread makes a shallow copy: nested objects and arrays are still shared between the copy and the original, so changing one changes both. structuredClone makes a deep copy where nested data is fully independent. It can't copy functions, though.",
+  "code": "const a = { name: \"Ada\", skills: [\"css\"] };\nconst b = { ...a };\nb.skills.push(\"js\");\nconsole.log(a.skills); // [\"css\", \"js\"] (shared!)\nconst c = structuredClone(a);\nc.skills.push(\"sql\");\nconsole.log(a.skills); // [\"css\", \"js\"] (unchanged)",
+  "language": "js",
+  "try_it": "Quiz: after the code runs, what does c.skills contain?",
+  "read_time_sec": 30
+}

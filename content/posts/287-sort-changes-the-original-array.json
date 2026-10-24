@@ -1,0 +1,12 @@
+{
+  "id": "287",
+  "tag": "javascript",
+  "level": "intermediate",
+  "title": "sort changes the original array",
+  "why_it_matters": "It can silently break other code, and React state.",
+  "explanation": "sort rearranges the array in place, which quietly changes data other code may be using. Copy first with [...arr], then sort the copy. Newer browsers also have toSorted, which returns a sorted copy and leaves the original alone.",
+  "code": "const a = [3, 1, 2];\nconst b = [...a].sort((x, y) => x - y); // copy, then sort\nconsole.log(a, b); // [3, 1, 2] [1, 2, 3]\na.sort((x, y) => x - y);\nconsole.log(a);    // [1, 2, 3] (the original changed!)",
+  "language": "js",
+  "try_it": "Log an array before and after calling sort directly on it.",
+  "read_time_sec": 30
+}

@@ -1,0 +1,12 @@
+{
+  "id": "230",
+  "tag": "git-deploy",
+  "level": "beginner",
+  "title": "Changed a Vercel variable? Redeploy",
+  "why_it_matters": "It explains why the new value does not seem to work.",
+  "explanation": "Environment variables are applied when a deployment is built or started. Editing one in the dashboard does not change deployments that already exist. Trigger a new deployment, and check the variable is set for the right environment.",
+  "code": null,
+  "language": null,
+  "try_it": "Change a harmless variable, redeploy, and confirm the page shows the new value.",
+  "read_time_sec": 20
+}

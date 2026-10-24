@@ -1,0 +1,12 @@
+{
+  "id": "250",
+  "tag": "javascript",
+  "level": "intermediate",
+  "title": "Set a default once with ??=",
+  "why_it_matters": "It replaces a clunky if (x === undefined) block.",
+  "explanation": "a ??= b means: assign b only if a is null or undefined. It's the short way to fill in a default. There's also ||= and &&=, but ??= is the safest because it keeps real values like 0 and an empty string.",
+  "code": "const settings = { theme: null, size: 0 };\nsettings.theme ??= \"light\";\nsettings.size ??= 16;\nconsole.log(settings); // { theme: 'light', size: 0 }",
+  "language": "js",
+  "try_it": "Add a missing default to an object in your code using ??=.",
+  "read_time_sec": 30
+}

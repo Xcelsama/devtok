@@ -1,0 +1,12 @@
+{
+  "id": "316",
+  "tag": "javascript",
+  "level": "intermediate",
+  "title": "finally always runs",
+  "why_it_matters": "It's the right place for cleanup like hiding a spinner.",
+  "explanation": "The finally block runs whether the try worked or threw an error. Use it for cleanup, like hiding a loading spinner or re-enabling a button, so you don't repeat that code in both the success and failure branches.",
+  "code": "function load() {\n  try {\n    throw new Error(\"network down\");\n  } catch (e) {\n    console.log(\"error:\", e.message);\n  } finally {\n    console.log(\"hide spinner\"); // always runs\n  }\n}\nload();",
+  "language": "js",
+  "try_it": "Remove the throw line and check that finally still runs.",
+  "read_time_sec": 25
+}
